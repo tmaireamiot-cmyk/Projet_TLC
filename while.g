@@ -1,57 +1,123 @@
 grammar while;
 
-ID  :	('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'0'..'9'|'_')*
-    ;
+options {
+    output=AST; // Configure ANTLR pour générer un AST
+    backtrack=true;
+}
 
-INT :	'0'..'9'+
-    ;
+tokens{
+	PROGRAM;
+	FUNCTION;
+	DEFINITION;
+	INPUT;
+	INPUTSUB;
+	OUTPUT;
+	COMMANDS;
+	COMMAND;
+	VARS;
+	EXPRS;
+	EXPRESSION;
+	EXPRBASE;
+	LEXPR;
+	NOP;
+	VARIABLES;
+	EXPRESSIONS;
+	VAR;
+	IF;
+}
 
-FLOAT
-    :   ('0'..'9')+ '.' ('0'..'9')* EXPONENT?
-    |   '.' ('0'..'9')+ EXPONENT?
-    |   ('0'..'9')+ EXPONENT
-    ;
+@parser::header
+{ package antlr; }
+@lexer::header
+{ package antlr; }
 
-COMMENT
-    :   '//' ~('\n'|'\r')* '\r'? '\n' {$channel=HIDDEN;}
-    |   '/*' ( options {greedy=false;} : . )* '*/' {$channel=HIDDEN;}
-    ;
+MAJ	:	'A'..'Z'
+;
+MIN	:	'a'..'z'
+;
+DEC 	:	'0'..'1'
+;
+VARIABLE:	MAJ(MAJ|MIN|DEC)*('!'|'?')?
+;
+SYMBOL	:	MIN(MAJ|MIN|DEC)*('!'|'?')?
+;
 
-WS  :   ( ' '
-        | '\t'
-        | '\r'
-        | '\n'
-        ) {$channel=HIDDEN;}
-    ;
+program	:	function+ -> ^(PROGRAM function+) 
+;
+function:	'function' s=SYMBOL':' definition -> ^(FUNCTION $s definition)
+;
+definition
+	:	'read' i=input '%' c=commands '%' 'write' o=output -> ^(DEFINITION ^(INPUT $i) ^(OUTPUT $o) $c)
+;
+input	:	ip=inputsub? -> ^(INPUT ($ip)?)
+;
+inputsub:	v=VARIABLE (',' v=VARIABLE)* -> $v+
+;
+output	:	v=VARIABLE (',' v=VARIABLE)* -> ^(OUTPUT $v+)
+;
+vars	:	v=VARIABLE (',' v=VARIABLE)* -> ^(VARIABLES $v+)
+;
+exprs 	:	e=expression (',' e=expression)* -> ^(EXPRESSIONS $e+)
+;
+commands:	c=command (';' c=command)* -> ^(COMMANDS $c+)
+;
+command_nop	:	'nop' -> ^('nop')
+;
+command_var
+	:	vars ':=' exprs -> ^(VAR vars exprs)
+;
+command_if
+	:	'if' expression 'then' c1=commands ('else' c2=commands)? 'fi' -> ^(COMMAND 'if' expression $c1 ($c2)?)
+;
+command_while
+	:	'while' expression 'do' commands 'od'-> ^(COMMAND 'while' expression commands)
+;
+command_for
+	:	'for' expression 'do' commands 'od'-> ^(COMMAND 'for' expression commands)
+;
+command_foreach
+	:	'foreach' VARIABLE 'in' expression 'do' commands 'od'-> ^(COMMAND 'foreach' VARIABLE expression commands)
+;
+command
+    : command_nop
+    | command_var
+    | command_if
+    | command_while
+    | command_for
+    | command_foreach
+;
+exprbase_symbol: s=SYMBOL -> ^(EXPRBASE $s)
+;
 
-STRING
-    :  '"' ( ESC_SEQ | ~('\\'|'"') )* '"'
-    ;
+exprbase_variable: v=VARIABLE-> ^(EXPRBASE $v)
+;
 
-CHAR:  '\'' ( ESC_SEQ | ~('\''|'\\') ) '\''
-    ;
+exprbase_nil: 'nil'-> ^(EXPRBASE 'nil')
+;
 
-fragment
-EXPONENT : ('e'|'E') ('+'|'-')? ('0'..'9')+ ;
+exprbase_list: '(' 'list' lexpr ')' -> ^(EXPRBASE 'list' lexpr)
+;
 
-fragment
-HEX_DIGIT : ('0'..'9'|'a'..'f'|'A'..'F') ;
+exprbase_cons: '(' 'cons' lexpr ')'-> ^(EXPRBASE 'cons' lexpr )
+;
 
-fragment
-ESC_SEQ
-    :   '\\' ('b'|'t'|'n'|'f'|'r'|'\"'|'\''|'\\')
-    |   UNICODE_ESC
-    |   OCTAL_ESC
-    ;
+exprbase_hd: '(' 'hd' exprbase ')' -> ^(EXPRBASE 'hd' exprbase)
+;
 
-fragment
-OCTAL_ESC
-    :   '\\' ('0'..'3') ('0'..'7') ('0'..'7')
-    |   '\\' ('0'..'7') ('0'..'7')
-    |   '\\' ('0'..'7')
-    ;
+exprbase_tl: '(' 'tl' exprbase ')'-> ^(EXPRBASE 'tl' exprbase)
+;
 
-fragment
-UNICODE_ESC
-    :   '\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT
-    ;
+exprbase_symbol2: '(' a=SYMBOL lexpr ')'-> ^(EXPRBASE $a lexpr)
+;
+
+exprbase	:	exprbase_nil | exprbase_variable | exprbase_list | exprbase_cons | exprbase_hd  | exprbase_tl |  exprbase_symbol2 | exprbase_symbol
+;
+
+exprbase_compare: c=exprbase '=?' d=exprbase -> ^(EXPRESSION $c $d)
+;
+
+expression: exprbase_compare | exprbase
+;
+
+lexpr: e+=exprbase* -> ^(LEXPR $e*);
+
