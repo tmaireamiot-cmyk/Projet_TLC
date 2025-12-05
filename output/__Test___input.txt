@@ -1,10 +1,9 @@
-function f1:
-read X,Y% 
-  X := nil;
+function f1: read X,Y % 
+  X := nil; 
   if X =? Y then 
     nop 
   else 
-    Y := cons(X,Y) 
+    Y := (cons X Y) 
   fi 
 % 
 write X,Y
