@@ -1,9 +1,14 @@
-function f1: read X,Y % 
-  X := nil; 
-  if X =? Y then 
-    nop 
-  else 
-    Y := (cons X Y) 
-  fi 
-% 
-write X,Y
+function and :
+read Op1, Op2
+%
+if (not Op1) then
+Result := (false)
+else
+if (not Op2) then
+Result := (false)
+else
+Result := (true)
+fi
+fi
+%
+write Result
