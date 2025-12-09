@@ -1,4 +1,4 @@
-function and :
+function main :
 read Op1, Op2
 %
 if (not Op1) then
