@@ -1,71 +1,73 @@
-// $ANTLR 3.5.1 C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g 2025-12-09 09:33:24
+// $ANTLR 3.5.2 while.g 2025-12-09 10:22:28
 
 import org.antlr.runtime.*;
 import java.util.Stack;
 import java.util.List;
 import java.util.ArrayList;
 
-import org.antlr.runtime.debug.*;
-import java.io.IOException;
 import org.antlr.runtime.tree.*;
 
 
 @SuppressWarnings("all")
-public class whileParser extends DebugParser {
+public class whileParser extends Parser {
 	public static final String[] tokenNames = new String[] {
 		"<invalid>", "<EOR>", "<DOWN>", "<UP>", "COMMA", "COMMAND", "COMMANDS", 
-		"CONS", "DEFINITION", "DO", "ELSE", "EXPRBASE", "EXPRESSION", "EXPRESSIONS", 
-		"EXPRS", "FI", "FOR", "FOREACH", "FUNCTION", "HD", "IF", "IN", "INPUT", 
-		"INPUTSUB", "LEXPR", "LIST", "NIL", "NOP", "OD", "OUTPUT", "PERCENT", 
-		"PROGRAM", "READ", "SYMBOL", "THEN", "TL", "VAR", "VARIABLE", "VARIABLES", 
-		"VARS", "WHILE", "WRITE", "WS", "'('", "')'", "':'", "':='", "';'", "'=?'"
+		"DEFINITION", "EXPRBASE", "EXPRESSION", "EXPRESSIONS", "EXPRS", "FUNCTION", 
+		"IF", "INPUT", "INPUTSUB", "LEXPR", "NOP", "OUTPUT", "PERCENT", "PROGRAM", 
+		"SYMBOL", "VAR", "VARIABLE", "VARIABLES", "VARS", "WS", "'('", "')'", 
+		"':'", "':='", "';'", "'=?'", "'cons'", "'do'", "'else'", "'fi'", "'for'", 
+		"'foreach'", "'function'", "'hd'", "'if'", "'in'", "'list'", "'nil'", 
+		"'nop'", "'od'", "'read'", "'then'", "'tl'", "'while'", "'write'"
 	};
 	public static final int EOF=-1;
+	public static final int T__27=27;
+	public static final int T__28=28;
+	public static final int T__29=29;
+	public static final int T__30=30;
+	public static final int T__31=31;
+	public static final int T__32=32;
+	public static final int T__33=33;
+	public static final int T__34=34;
+	public static final int T__35=35;
+	public static final int T__36=36;
+	public static final int T__37=37;
+	public static final int T__38=38;
+	public static final int T__39=39;
+	public static final int T__40=40;
+	public static final int T__41=41;
+	public static final int T__42=42;
 	public static final int T__43=43;
 	public static final int T__44=44;
 	public static final int T__45=45;
 	public static final int T__46=46;
 	public static final int T__47=47;
 	public static final int T__48=48;
+	public static final int T__49=49;
+	public static final int T__50=50;
+	public static final int T__51=51;
 	public static final int COMMA=4;
 	public static final int COMMAND=5;
 	public static final int COMMANDS=6;
-	public static final int CONS=7;
-	public static final int DEFINITION=8;
-	public static final int DO=9;
-	public static final int ELSE=10;
-	public static final int EXPRBASE=11;
-	public static final int EXPRESSION=12;
-	public static final int EXPRESSIONS=13;
-	public static final int EXPRS=14;
-	public static final int FI=15;
-	public static final int FOR=16;
-	public static final int FOREACH=17;
-	public static final int FUNCTION=18;
-	public static final int HD=19;
-	public static final int IF=20;
-	public static final int IN=21;
-	public static final int INPUT=22;
-	public static final int INPUTSUB=23;
-	public static final int LEXPR=24;
-	public static final int LIST=25;
-	public static final int NIL=26;
-	public static final int NOP=27;
-	public static final int OD=28;
-	public static final int OUTPUT=29;
-	public static final int PERCENT=30;
-	public static final int PROGRAM=31;
-	public static final int READ=32;
-	public static final int SYMBOL=33;
-	public static final int THEN=34;
-	public static final int TL=35;
-	public static final int VAR=36;
-	public static final int VARIABLE=37;
-	public static final int VARIABLES=38;
-	public static final int VARS=39;
-	public static final int WHILE=40;
-	public static final int WRITE=41;
-	public static final int WS=42;
+	public static final int DEFINITION=7;
+	public static final int EXPRBASE=8;
+	public static final int EXPRESSION=9;
+	public static final int EXPRESSIONS=10;
+	public static final int EXPRS=11;
+	public static final int FUNCTION=12;
+	public static final int IF=13;
+	public static final int INPUT=14;
+	public static final int INPUTSUB=15;
+	public static final int LEXPR=16;
+	public static final int NOP=17;
+	public static final int OUTPUT=18;
+	public static final int PERCENT=19;
+	public static final int PROGRAM=20;
+	public static final int SYMBOL=21;
+	public static final int VAR=22;
+	public static final int VARIABLE=23;
+	public static final int VARIABLES=24;
+	public static final int VARS=25;
+	public static final int WS=26;
 
 	// delegates
 	public Parser[] getDelegates() {
@@ -75,66 +77,23 @@ public class whileParser extends DebugParser {
 	// delegators
 
 
-	public static final String[] ruleNames = new String[] {
-		"invalidRule", "command", "vars", "expression", "exprs", "command_nop", 
-		"definition", "command_for", "function", "input", "command_if", "output", 
-		"program", "command_var", "lexpr", "commands", "command_while", "command_foreach", 
-		"exprbase", "exprbase_paren"
-	};
-
-	public static final boolean[] decisionCanBacktrack = new boolean[] {
-		false, // invalid decision
-		false, false, false, false, false, false, false, false, false, false, 
-		    false, false, false
-	};
-
- 
-	public int ruleLevel = 0;
-	public int getRuleLevel() { return ruleLevel; }
-	public void incRuleLevel() { ruleLevel++; }
-	public void decRuleLevel() { ruleLevel--; }
 	public whileParser(TokenStream input) {
-		this(input, DebugEventSocketProxy.DEFAULT_DEBUGGER_PORT, new RecognizerSharedState());
+		this(input, new RecognizerSharedState());
 	}
-	public whileParser(TokenStream input, int port, RecognizerSharedState state) {
+	public whileParser(TokenStream input, RecognizerSharedState state) {
 		super(input, state);
-		DebugEventSocketProxy proxy =
-			new DebugEventSocketProxy(this,port,adaptor);
-		setDebugListener(proxy);
-		setTokenStream(new DebugTokenStream(input,proxy));
-		try {
-			proxy.handshake();
-		}
-		catch (IOException ioe) {
-			reportError(ioe);
-		}
-		TreeAdaptor adap = new CommonTreeAdaptor();
-		setTreeAdaptor(adap);
-		proxy.setTreeAdaptor(adap);
 	}
 
-	public whileParser(TokenStream input, DebugEventListener dbg) {
-		super(input, dbg);
-		 
-		TreeAdaptor adap = new CommonTreeAdaptor();
-		setTreeAdaptor(adap);
+	protected TreeAdaptor adaptor = new CommonTreeAdaptor();
 
+	public void setTreeAdaptor(TreeAdaptor adaptor) {
+		this.adaptor = adaptor;
 	}
-
-	protected boolean evalPredicate(boolean result, String predicate) {
-		dbg.semanticPredicate(result, predicate);
-		return result;
+	public TreeAdaptor getTreeAdaptor() {
+		return adaptor;
 	}
-
-		protected DebugTreeAdaptor adaptor;
-		public void setTreeAdaptor(TreeAdaptor adaptor) {
-			this.adaptor = new DebugTreeAdaptor(dbg,adaptor);
-		}
-		public TreeAdaptor getTreeAdaptor() {
-			return adaptor;
-		}
 	@Override public String[] getTokenNames() { return whileParser.tokenNames; }
-	@Override public String getGrammarFileName() { return "C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g"; }
+	@Override public String getGrammarFileName() { return "while.g"; }
 
 
 	public static class program_return extends ParserRuleReturnScope {
@@ -145,7 +104,7 @@ public class whileParser extends DebugParser {
 
 
 	// $ANTLR start "program"
-	// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:55:1: program : ( function )+ -> ^( PROGRAM ( function )+ ) ;
+	// while.g:41:1: program : ( function )+ -> ^( PROGRAM ( function )+ ) ;
 	public final whileParser.program_return program() throws RecognitionException {
 		whileParser.program_return retval = new whileParser.program_return();
 		retval.start = input.LT(1);
@@ -156,42 +115,25 @@ public class whileParser extends DebugParser {
 
 		RewriteRuleSubtreeStream stream_function=new RewriteRuleSubtreeStream(adaptor,"rule function");
 
-		try { dbg.enterRule(getGrammarFileName(), "program");
-		if ( getRuleLevel()==0 ) {dbg.commence();}
-		incRuleLevel();
-		dbg.location(55, 0);
-
 		try {
-			// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:55:9: ( ( function )+ -> ^( PROGRAM ( function )+ ) )
-			dbg.enterAlt(1);
-
-			// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:56:5: ( function )+
+			// while.g:41:9: ( ( function )+ -> ^( PROGRAM ( function )+ ) )
+			// while.g:42:5: ( function )+
 			{
-			dbg.location(56,5);
-			// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:56:5: ( function )+
+			// while.g:42:5: ( function )+
 			int cnt1=0;
-			try { dbg.enterSubRule(1);
-
 			loop1:
 			while (true) {
 				int alt1=2;
-				try { dbg.enterDecision(1, decisionCanBacktrack[1]);
-
 				int LA1_0 = input.LA(1);
-				if ( (LA1_0==FUNCTION) ) {
+				if ( (LA1_0==39) ) {
 					alt1=1;
 				}
 
-				} finally {dbg.exitDecision(1);}
-
 				switch (alt1) {
 				case 1 :
-					dbg.enterAlt(1);
-
-					// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:56:5: function
+					// while.g:42:5: function
 					{
-					dbg.location(56,5);
-					pushFollow(FOLLOW_function_in_program498);
+					pushFollow(FOLLOW_function_in_program321);
 					function1=function();
 					state._fsp--;
 
@@ -202,13 +144,10 @@ public class whileParser extends DebugParser {
 				default :
 					if ( cnt1 >= 1 ) break loop1;
 					EarlyExitException eee = new EarlyExitException(1, input);
-					dbg.recognitionException(eee);
-
 					throw eee;
 				}
 				cnt1++;
 			}
-			} finally {dbg.exitSubRule(1);}
 
 			// AST REWRITE
 			// elements: function
@@ -221,20 +160,16 @@ public class whileParser extends DebugParser {
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.getTree():null);
 
 			root_0 = (Object)adaptor.nil();
-			// 56:15: -> ^( PROGRAM ( function )+ )
+			// 42:15: -> ^( PROGRAM ( function )+ )
 			{
-				dbg.location(56,18);
-				// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:56:18: ^( PROGRAM ( function )+ )
+				// while.g:42:18: ^( PROGRAM ( function )+ )
 				{
 				Object root_1 = (Object)adaptor.nil();
-				dbg.location(56,20);
 				root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(PROGRAM, "PROGRAM"), root_1);
-				dbg.location(56,28);
 				if ( !(stream_function.hasNext()) ) {
 					throw new RewriteEarlyExitException();
 				}
 				while ( stream_function.hasNext() ) {
-					dbg.location(56,28);
 					adaptor.addChild(root_1, stream_function.nextTree());
 				}
 				stream_function.reset();
@@ -263,15 +198,6 @@ public class whileParser extends DebugParser {
 		finally {
 			// do for sure before leaving
 		}
-		dbg.location(57, 4);
-
-		}
-		finally {
-			dbg.exitRule(getGrammarFileName(), "program");
-			decRuleLevel();
-			if ( getRuleLevel()==0 ) {dbg.terminate();}
-		}
-
 		return retval;
 	}
 	// $ANTLR end "program"
@@ -285,7 +211,7 @@ public class whileParser extends DebugParser {
 
 
 	// $ANTLR start "function"
-	// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:59:1: function : FUNCTION s= SYMBOL ':' definition -> ^( FUNCTION $s definition ) ;
+	// while.g:45:1: function : 'function' s= SYMBOL ':' definition -> ^( FUNCTION $s definition ) ;
 	public final whileParser.function_return function() throws RecognitionException {
 		whileParser.function_return retval = new whileParser.function_return();
 		retval.start = input.LT(1);
@@ -293,46 +219,38 @@ public class whileParser extends DebugParser {
 		Object root_0 = null;
 
 		Token s=null;
-		Token FUNCTION2=null;
+		Token string_literal2=null;
 		Token char_literal3=null;
 		ParserRuleReturnScope definition4 =null;
 
 		Object s_tree=null;
-		Object FUNCTION2_tree=null;
+		Object string_literal2_tree=null;
 		Object char_literal3_tree=null;
-		RewriteRuleTokenStream stream_45=new RewriteRuleTokenStream(adaptor,"token 45");
 		RewriteRuleTokenStream stream_SYMBOL=new RewriteRuleTokenStream(adaptor,"token SYMBOL");
-		RewriteRuleTokenStream stream_FUNCTION=new RewriteRuleTokenStream(adaptor,"token FUNCTION");
+		RewriteRuleTokenStream stream_39=new RewriteRuleTokenStream(adaptor,"token 39");
+		RewriteRuleTokenStream stream_29=new RewriteRuleTokenStream(adaptor,"token 29");
 		RewriteRuleSubtreeStream stream_definition=new RewriteRuleSubtreeStream(adaptor,"rule definition");
 
-		try { dbg.enterRule(getGrammarFileName(), "function");
-		if ( getRuleLevel()==0 ) {dbg.commence();}
-		incRuleLevel();
-		dbg.location(59, 0);
-
 		try {
-			// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:59:10: ( FUNCTION s= SYMBOL ':' definition -> ^( FUNCTION $s definition ) )
-			dbg.enterAlt(1);
-
-			// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:60:5: FUNCTION s= SYMBOL ':' definition
+			// while.g:45:10: ( 'function' s= SYMBOL ':' definition -> ^( FUNCTION $s definition ) )
+			// while.g:46:5: 'function' s= SYMBOL ':' definition
 			{
-			dbg.location(60,5);
-			FUNCTION2=(Token)match(input,FUNCTION,FOLLOW_FUNCTION_in_function525);  
-			stream_FUNCTION.add(FUNCTION2);
-			dbg.location(60,15);
-			s=(Token)match(input,SYMBOL,FOLLOW_SYMBOL_in_function529);  
+			string_literal2=(Token)match(input,39,FOLLOW_39_in_function348);  
+			stream_39.add(string_literal2);
+
+			s=(Token)match(input,SYMBOL,FOLLOW_SYMBOL_in_function352);  
 			stream_SYMBOL.add(s);
-			dbg.location(60,23);
-			char_literal3=(Token)match(input,45,FOLLOW_45_in_function531);  
-			stream_45.add(char_literal3);
-			dbg.location(60,27);
-			pushFollow(FOLLOW_definition_in_function533);
+
+			char_literal3=(Token)match(input,29,FOLLOW_29_in_function354);  
+			stream_29.add(char_literal3);
+
+			pushFollow(FOLLOW_definition_in_function356);
 			definition4=definition();
 			state._fsp--;
 
 			stream_definition.add(definition4.getTree());
 			// AST REWRITE
-			// elements: s, FUNCTION, definition
+			// elements: s, definition
 			// token labels: s
 			// rule labels: retval
 			// token list labels: 
@@ -343,16 +261,13 @@ public class whileParser extends DebugParser {
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.getTree():null);
 
 			root_0 = (Object)adaptor.nil();
-			// 61:9: -> ^( FUNCTION $s definition )
+			// 47:9: -> ^( FUNCTION $s definition )
 			{
-				dbg.location(61,12);
-				// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:61:12: ^( FUNCTION $s definition )
+				// while.g:47:12: ^( FUNCTION $s definition )
 				{
 				Object root_1 = (Object)adaptor.nil();
-				dbg.location(61,14);
-				root_1 = (Object)adaptor.becomeRoot(stream_FUNCTION.nextNode(), root_1);
-				dbg.location(61,24);
-				adaptor.addChild(root_1, stream_s.nextNode());dbg.location(61,26);
+				root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(FUNCTION, "FUNCTION"), root_1);
+				adaptor.addChild(root_1, stream_s.nextNode());
 				adaptor.addChild(root_1, stream_definition.nextTree());
 				adaptor.addChild(root_0, root_1);
 				}
@@ -378,15 +293,6 @@ public class whileParser extends DebugParser {
 		finally {
 			// do for sure before leaving
 		}
-		dbg.location(62, 4);
-
-		}
-		finally {
-			dbg.exitRule(getGrammarFileName(), "function");
-			decRuleLevel();
-			if ( getRuleLevel()==0 ) {dbg.terminate();}
-		}
-
 		return retval;
 	}
 	// $ANTLR end "function"
@@ -400,66 +306,50 @@ public class whileParser extends DebugParser {
 
 
 	// $ANTLR start "definition"
-	// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:64:1: definition : READ (i= input )? PERCENT c= commands PERCENT WRITE o= output -> ^( DEFINITION ^( INPUT ( $i)? ) ^( OUTPUT $o) $c) ;
+	// while.g:50:1: definition : 'read' (i= input )? PERCENT c= commands PERCENT 'write' o= output -> ^( DEFINITION ^( INPUT ( $i)? ) ^( OUTPUT $o) $c) ;
 	public final whileParser.definition_return definition() throws RecognitionException {
 		whileParser.definition_return retval = new whileParser.definition_return();
 		retval.start = input.LT(1);
 
 		Object root_0 = null;
 
-		Token READ5=null;
+		Token string_literal5=null;
 		Token PERCENT6=null;
 		Token PERCENT7=null;
-		Token WRITE8=null;
+		Token string_literal8=null;
 		ParserRuleReturnScope i =null;
 		ParserRuleReturnScope c =null;
 		ParserRuleReturnScope o =null;
 
-		Object READ5_tree=null;
+		Object string_literal5_tree=null;
 		Object PERCENT6_tree=null;
 		Object PERCENT7_tree=null;
-		Object WRITE8_tree=null;
-		RewriteRuleTokenStream stream_READ=new RewriteRuleTokenStream(adaptor,"token READ");
+		Object string_literal8_tree=null;
+		RewriteRuleTokenStream stream_47=new RewriteRuleTokenStream(adaptor,"token 47");
 		RewriteRuleTokenStream stream_PERCENT=new RewriteRuleTokenStream(adaptor,"token PERCENT");
-		RewriteRuleTokenStream stream_WRITE=new RewriteRuleTokenStream(adaptor,"token WRITE");
+		RewriteRuleTokenStream stream_51=new RewriteRuleTokenStream(adaptor,"token 51");
 		RewriteRuleSubtreeStream stream_output=new RewriteRuleSubtreeStream(adaptor,"rule output");
 		RewriteRuleSubtreeStream stream_input=new RewriteRuleSubtreeStream(adaptor,"rule input");
 		RewriteRuleSubtreeStream stream_commands=new RewriteRuleSubtreeStream(adaptor,"rule commands");
 
-		try { dbg.enterRule(getGrammarFileName(), "definition");
-		if ( getRuleLevel()==0 ) {dbg.commence();}
-		incRuleLevel();
-		dbg.location(64, 0);
-
 		try {
-			// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:64:12: ( READ (i= input )? PERCENT c= commands PERCENT WRITE o= output -> ^( DEFINITION ^( INPUT ( $i)? ) ^( OUTPUT $o) $c) )
-			dbg.enterAlt(1);
-
-			// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:65:7: READ (i= input )? PERCENT c= commands PERCENT WRITE o= output
+			// while.g:50:12: ( 'read' (i= input )? PERCENT c= commands PERCENT 'write' o= output -> ^( DEFINITION ^( INPUT ( $i)? ) ^( OUTPUT $o) $c) )
+			// while.g:51:7: 'read' (i= input )? PERCENT c= commands PERCENT 'write' o= output
 			{
-			dbg.location(65,7);
-			READ5=(Token)match(input,READ,FOLLOW_READ_in_definition571);  
-			stream_READ.add(READ5);
-			dbg.location(65,13);
-			// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:65:13: (i= input )?
-			int alt2=2;
-			try { dbg.enterSubRule(2);
-			try { dbg.enterDecision(2, decisionCanBacktrack[2]);
+			string_literal5=(Token)match(input,47,FOLLOW_47_in_definition394);  
+			stream_47.add(string_literal5);
 
+			// while.g:51:15: (i= input )?
+			int alt2=2;
 			int LA2_0 = input.LA(1);
 			if ( (LA2_0==VARIABLE) ) {
 				alt2=1;
 			}
-			} finally {dbg.exitDecision(2);}
-
 			switch (alt2) {
 				case 1 :
-					dbg.enterAlt(1);
-
-					// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:65:13: i= input
+					// while.g:51:15: i= input
 					{
-					dbg.location(65,13);
-					pushFollow(FOLLOW_input_in_definition575);
+					pushFollow(FOLLOW_input_in_definition398);
 					i=input();
 					state._fsp--;
 
@@ -468,29 +358,28 @@ public class whileParser extends DebugParser {
 					break;
 
 			}
-			} finally {dbg.exitSubRule(2);}
-			dbg.location(65,21);
-			PERCENT6=(Token)match(input,PERCENT,FOLLOW_PERCENT_in_definition578);  
+
+			PERCENT6=(Token)match(input,PERCENT,FOLLOW_PERCENT_in_definition401);  
 			stream_PERCENT.add(PERCENT6);
-			dbg.location(65,30);
-			pushFollow(FOLLOW_commands_in_definition582);
+
+			pushFollow(FOLLOW_commands_in_definition405);
 			c=commands();
 			state._fsp--;
 
-			stream_commands.add(c.getTree());dbg.location(65,40);
-			PERCENT7=(Token)match(input,PERCENT,FOLLOW_PERCENT_in_definition584);  
+			stream_commands.add(c.getTree());
+			PERCENT7=(Token)match(input,PERCENT,FOLLOW_PERCENT_in_definition407);  
 			stream_PERCENT.add(PERCENT7);
-			dbg.location(65,48);
-			WRITE8=(Token)match(input,WRITE,FOLLOW_WRITE_in_definition586);  
-			stream_WRITE.add(WRITE8);
-			dbg.location(65,55);
-			pushFollow(FOLLOW_output_in_definition590);
+
+			string_literal8=(Token)match(input,51,FOLLOW_51_in_definition409);  
+			stream_51.add(string_literal8);
+
+			pushFollow(FOLLOW_output_in_definition413);
 			o=output();
 			state._fsp--;
 
 			stream_output.add(o.getTree());
 			// AST REWRITE
-			// elements: i, o, c
+			// elements: i, c, o
 			// token labels: 
 			// rule labels: c, i, retval, o
 			// token list labels: 
@@ -503,41 +392,33 @@ public class whileParser extends DebugParser {
 			RewriteRuleSubtreeStream stream_o=new RewriteRuleSubtreeStream(adaptor,"rule o",o!=null?o.getTree():null);
 
 			root_0 = (Object)adaptor.nil();
-			// 66:7: -> ^( DEFINITION ^( INPUT ( $i)? ) ^( OUTPUT $o) $c)
+			// 52:7: -> ^( DEFINITION ^( INPUT ( $i)? ) ^( OUTPUT $o) $c)
 			{
-				dbg.location(66,10);
-				// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:66:10: ^( DEFINITION ^( INPUT ( $i)? ) ^( OUTPUT $o) $c)
+				// while.g:52:10: ^( DEFINITION ^( INPUT ( $i)? ) ^( OUTPUT $o) $c)
 				{
 				Object root_1 = (Object)adaptor.nil();
-				dbg.location(66,12);
 				root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(DEFINITION, "DEFINITION"), root_1);
-				dbg.location(66,23);
-				// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:66:23: ^( INPUT ( $i)? )
+				// while.g:52:23: ^( INPUT ( $i)? )
 				{
 				Object root_2 = (Object)adaptor.nil();
-				dbg.location(66,25);
 				root_2 = (Object)adaptor.becomeRoot((Object)adaptor.create(INPUT, "INPUT"), root_2);
-				dbg.location(66,32);
-				// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:66:32: ( $i)?
+				// while.g:52:32: ( $i)?
 				if ( stream_i.hasNext() ) {
-					dbg.location(66,32);
 					adaptor.addChild(root_2, stream_i.nextTree());
 				}
 				stream_i.reset();
 
 				adaptor.addChild(root_1, root_2);
 				}
-				dbg.location(66,36);
-				// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:66:36: ^( OUTPUT $o)
+
+				// while.g:52:36: ^( OUTPUT $o)
 				{
 				Object root_2 = (Object)adaptor.nil();
-				dbg.location(66,38);
 				root_2 = (Object)adaptor.becomeRoot((Object)adaptor.create(OUTPUT, "OUTPUT"), root_2);
-				dbg.location(66,46);
 				adaptor.addChild(root_2, stream_o.nextTree());
 				adaptor.addChild(root_1, root_2);
 				}
-				dbg.location(66,50);
+
 				adaptor.addChild(root_1, stream_c.nextTree());
 				adaptor.addChild(root_0, root_1);
 				}
@@ -563,15 +444,6 @@ public class whileParser extends DebugParser {
 		finally {
 			// do for sure before leaving
 		}
-		dbg.location(67, 4);
-
-		}
-		finally {
-			dbg.exitRule(getGrammarFileName(), "definition");
-			decRuleLevel();
-			if ( getRuleLevel()==0 ) {dbg.terminate();}
-		}
-
 		return retval;
 	}
 	// $ANTLR end "definition"
@@ -585,7 +457,7 @@ public class whileParser extends DebugParser {
 
 
 	// $ANTLR start "input"
-	// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:69:1: input : v= VARIABLE ( COMMA v= VARIABLE )* -> ^( INPUT ( $v)+ ) ;
+	// while.g:55:1: input : v= VARIABLE ( COMMA v= VARIABLE )* -> ^( INPUT ( $v)+ ) ;
 	public final whileParser.input_return input() throws RecognitionException {
 		whileParser.input_return retval = new whileParser.input_return();
 		retval.start = input.LT(1);
@@ -600,47 +472,30 @@ public class whileParser extends DebugParser {
 		RewriteRuleTokenStream stream_COMMA=new RewriteRuleTokenStream(adaptor,"token COMMA");
 		RewriteRuleTokenStream stream_VARIABLE=new RewriteRuleTokenStream(adaptor,"token VARIABLE");
 
-		try { dbg.enterRule(getGrammarFileName(), "input");
-		if ( getRuleLevel()==0 ) {dbg.commence();}
-		incRuleLevel();
-		dbg.location(69, 0);
-
 		try {
-			// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:69:7: (v= VARIABLE ( COMMA v= VARIABLE )* -> ^( INPUT ( $v)+ ) )
-			dbg.enterAlt(1);
-
-			// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:70:7: v= VARIABLE ( COMMA v= VARIABLE )*
+			// while.g:55:7: (v= VARIABLE ( COMMA v= VARIABLE )* -> ^( INPUT ( $v)+ ) )
+			// while.g:56:7: v= VARIABLE ( COMMA v= VARIABLE )*
 			{
-			dbg.location(70,8);
-			v=(Token)match(input,VARIABLE,FOLLOW_VARIABLE_in_input641);  
+			v=(Token)match(input,VARIABLE,FOLLOW_VARIABLE_in_input464);  
 			stream_VARIABLE.add(v);
-			dbg.location(70,18);
-			// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:70:18: ( COMMA v= VARIABLE )*
-			try { dbg.enterSubRule(3);
 
+			// while.g:56:18: ( COMMA v= VARIABLE )*
 			loop3:
 			while (true) {
 				int alt3=2;
-				try { dbg.enterDecision(3, decisionCanBacktrack[3]);
-
 				int LA3_0 = input.LA(1);
 				if ( (LA3_0==COMMA) ) {
 					alt3=1;
 				}
 
-				} finally {dbg.exitDecision(3);}
-
 				switch (alt3) {
 				case 1 :
-					dbg.enterAlt(1);
-
-					// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:70:19: COMMA v= VARIABLE
+					// while.g:56:19: COMMA v= VARIABLE
 					{
-					dbg.location(70,19);
-					COMMA9=(Token)match(input,COMMA,FOLLOW_COMMA_in_input644);  
+					COMMA9=(Token)match(input,COMMA,FOLLOW_COMMA_in_input467);  
 					stream_COMMA.add(COMMA9);
-					dbg.location(70,26);
-					v=(Token)match(input,VARIABLE,FOLLOW_VARIABLE_in_input648);  
+
+					v=(Token)match(input,VARIABLE,FOLLOW_VARIABLE_in_input471);  
 					stream_VARIABLE.add(v);
 
 					}
@@ -650,7 +505,6 @@ public class whileParser extends DebugParser {
 					break loop3;
 				}
 			}
-			} finally {dbg.exitSubRule(3);}
 
 			// AST REWRITE
 			// elements: v
@@ -664,20 +518,16 @@ public class whileParser extends DebugParser {
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.getTree():null);
 
 			root_0 = (Object)adaptor.nil();
-			// 71:7: -> ^( INPUT ( $v)+ )
+			// 57:7: -> ^( INPUT ( $v)+ )
 			{
-				dbg.location(71,10);
-				// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:71:10: ^( INPUT ( $v)+ )
+				// while.g:57:10: ^( INPUT ( $v)+ )
 				{
 				Object root_1 = (Object)adaptor.nil();
-				dbg.location(71,12);
 				root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(INPUT, "INPUT"), root_1);
-				dbg.location(71,19);
 				if ( !(stream_v.hasNext()) ) {
 					throw new RewriteEarlyExitException();
 				}
 				while ( stream_v.hasNext() ) {
-					dbg.location(71,19);
 					adaptor.addChild(root_1, stream_v.nextNode());
 				}
 				stream_v.reset();
@@ -706,15 +556,6 @@ public class whileParser extends DebugParser {
 		finally {
 			// do for sure before leaving
 		}
-		dbg.location(72, 4);
-
-		}
-		finally {
-			dbg.exitRule(getGrammarFileName(), "input");
-			decRuleLevel();
-			if ( getRuleLevel()==0 ) {dbg.terminate();}
-		}
-
 		return retval;
 	}
 	// $ANTLR end "input"
@@ -728,7 +569,7 @@ public class whileParser extends DebugParser {
 
 
 	// $ANTLR start "output"
-	// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:74:1: output : v= VARIABLE ( COMMA v= VARIABLE )* -> ^( OUTPUT ( $v)+ ) ;
+	// while.g:60:1: output : v= VARIABLE ( COMMA v= VARIABLE )* -> ^( OUTPUT ( $v)+ ) ;
 	public final whileParser.output_return output() throws RecognitionException {
 		whileParser.output_return retval = new whileParser.output_return();
 		retval.start = input.LT(1);
@@ -743,47 +584,30 @@ public class whileParser extends DebugParser {
 		RewriteRuleTokenStream stream_COMMA=new RewriteRuleTokenStream(adaptor,"token COMMA");
 		RewriteRuleTokenStream stream_VARIABLE=new RewriteRuleTokenStream(adaptor,"token VARIABLE");
 
-		try { dbg.enterRule(getGrammarFileName(), "output");
-		if ( getRuleLevel()==0 ) {dbg.commence();}
-		incRuleLevel();
-		dbg.location(74, 0);
-
 		try {
-			// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:74:8: (v= VARIABLE ( COMMA v= VARIABLE )* -> ^( OUTPUT ( $v)+ ) )
-			dbg.enterAlt(1);
-
-			// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:75:7: v= VARIABLE ( COMMA v= VARIABLE )*
+			// while.g:60:8: (v= VARIABLE ( COMMA v= VARIABLE )* -> ^( OUTPUT ( $v)+ ) )
+			// while.g:61:7: v= VARIABLE ( COMMA v= VARIABLE )*
 			{
-			dbg.location(75,8);
-			v=(Token)match(input,VARIABLE,FOLLOW_VARIABLE_in_output687);  
+			v=(Token)match(input,VARIABLE,FOLLOW_VARIABLE_in_output510);  
 			stream_VARIABLE.add(v);
-			dbg.location(75,18);
-			// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:75:18: ( COMMA v= VARIABLE )*
-			try { dbg.enterSubRule(4);
 
+			// while.g:61:18: ( COMMA v= VARIABLE )*
 			loop4:
 			while (true) {
 				int alt4=2;
-				try { dbg.enterDecision(4, decisionCanBacktrack[4]);
-
 				int LA4_0 = input.LA(1);
 				if ( (LA4_0==COMMA) ) {
 					alt4=1;
 				}
 
-				} finally {dbg.exitDecision(4);}
-
 				switch (alt4) {
 				case 1 :
-					dbg.enterAlt(1);
-
-					// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:75:19: COMMA v= VARIABLE
+					// while.g:61:19: COMMA v= VARIABLE
 					{
-					dbg.location(75,19);
-					COMMA10=(Token)match(input,COMMA,FOLLOW_COMMA_in_output690);  
+					COMMA10=(Token)match(input,COMMA,FOLLOW_COMMA_in_output513);  
 					stream_COMMA.add(COMMA10);
-					dbg.location(75,26);
-					v=(Token)match(input,VARIABLE,FOLLOW_VARIABLE_in_output694);  
+
+					v=(Token)match(input,VARIABLE,FOLLOW_VARIABLE_in_output517);  
 					stream_VARIABLE.add(v);
 
 					}
@@ -793,7 +617,6 @@ public class whileParser extends DebugParser {
 					break loop4;
 				}
 			}
-			} finally {dbg.exitSubRule(4);}
 
 			// AST REWRITE
 			// elements: v
@@ -807,20 +630,16 @@ public class whileParser extends DebugParser {
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.getTree():null);
 
 			root_0 = (Object)adaptor.nil();
-			// 76:7: -> ^( OUTPUT ( $v)+ )
+			// 62:7: -> ^( OUTPUT ( $v)+ )
 			{
-				dbg.location(76,10);
-				// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:76:10: ^( OUTPUT ( $v)+ )
+				// while.g:62:10: ^( OUTPUT ( $v)+ )
 				{
 				Object root_1 = (Object)adaptor.nil();
-				dbg.location(76,12);
 				root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(OUTPUT, "OUTPUT"), root_1);
-				dbg.location(76,20);
 				if ( !(stream_v.hasNext()) ) {
 					throw new RewriteEarlyExitException();
 				}
 				while ( stream_v.hasNext() ) {
-					dbg.location(76,20);
 					adaptor.addChild(root_1, stream_v.nextNode());
 				}
 				stream_v.reset();
@@ -849,15 +668,6 @@ public class whileParser extends DebugParser {
 		finally {
 			// do for sure before leaving
 		}
-		dbg.location(77, 4);
-
-		}
-		finally {
-			dbg.exitRule(getGrammarFileName(), "output");
-			decRuleLevel();
-			if ( getRuleLevel()==0 ) {dbg.terminate();}
-		}
-
 		return retval;
 	}
 	// $ANTLR end "output"
@@ -871,7 +681,7 @@ public class whileParser extends DebugParser {
 
 
 	// $ANTLR start "vars"
-	// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:79:1: vars : v= VARIABLE ( COMMA v= VARIABLE )* -> ^( VARIABLES ( $v)+ ) ;
+	// while.g:65:1: vars : v= VARIABLE ( COMMA v= VARIABLE )* -> ^( VARIABLES ( $v)+ ) ;
 	public final whileParser.vars_return vars() throws RecognitionException {
 		whileParser.vars_return retval = new whileParser.vars_return();
 		retval.start = input.LT(1);
@@ -886,47 +696,30 @@ public class whileParser extends DebugParser {
 		RewriteRuleTokenStream stream_COMMA=new RewriteRuleTokenStream(adaptor,"token COMMA");
 		RewriteRuleTokenStream stream_VARIABLE=new RewriteRuleTokenStream(adaptor,"token VARIABLE");
 
-		try { dbg.enterRule(getGrammarFileName(), "vars");
-		if ( getRuleLevel()==0 ) {dbg.commence();}
-		incRuleLevel();
-		dbg.location(79, 0);
-
 		try {
-			// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:79:6: (v= VARIABLE ( COMMA v= VARIABLE )* -> ^( VARIABLES ( $v)+ ) )
-			dbg.enterAlt(1);
-
-			// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:80:7: v= VARIABLE ( COMMA v= VARIABLE )*
+			// while.g:65:6: (v= VARIABLE ( COMMA v= VARIABLE )* -> ^( VARIABLES ( $v)+ ) )
+			// while.g:66:7: v= VARIABLE ( COMMA v= VARIABLE )*
 			{
-			dbg.location(80,8);
-			v=(Token)match(input,VARIABLE,FOLLOW_VARIABLE_in_vars733);  
+			v=(Token)match(input,VARIABLE,FOLLOW_VARIABLE_in_vars556);  
 			stream_VARIABLE.add(v);
-			dbg.location(80,18);
-			// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:80:18: ( COMMA v= VARIABLE )*
-			try { dbg.enterSubRule(5);
 
+			// while.g:66:18: ( COMMA v= VARIABLE )*
 			loop5:
 			while (true) {
 				int alt5=2;
-				try { dbg.enterDecision(5, decisionCanBacktrack[5]);
-
 				int LA5_0 = input.LA(1);
 				if ( (LA5_0==COMMA) ) {
 					alt5=1;
 				}
 
-				} finally {dbg.exitDecision(5);}
-
 				switch (alt5) {
 				case 1 :
-					dbg.enterAlt(1);
-
-					// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:80:19: COMMA v= VARIABLE
+					// while.g:66:19: COMMA v= VARIABLE
 					{
-					dbg.location(80,19);
-					COMMA11=(Token)match(input,COMMA,FOLLOW_COMMA_in_vars736);  
+					COMMA11=(Token)match(input,COMMA,FOLLOW_COMMA_in_vars559);  
 					stream_COMMA.add(COMMA11);
-					dbg.location(80,26);
-					v=(Token)match(input,VARIABLE,FOLLOW_VARIABLE_in_vars740);  
+
+					v=(Token)match(input,VARIABLE,FOLLOW_VARIABLE_in_vars563);  
 					stream_VARIABLE.add(v);
 
 					}
@@ -936,7 +729,6 @@ public class whileParser extends DebugParser {
 					break loop5;
 				}
 			}
-			} finally {dbg.exitSubRule(5);}
 
 			// AST REWRITE
 			// elements: v
@@ -950,20 +742,16 @@ public class whileParser extends DebugParser {
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.getTree():null);
 
 			root_0 = (Object)adaptor.nil();
-			// 81:7: -> ^( VARIABLES ( $v)+ )
+			// 67:7: -> ^( VARIABLES ( $v)+ )
 			{
-				dbg.location(81,10);
-				// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:81:10: ^( VARIABLES ( $v)+ )
+				// while.g:67:10: ^( VARIABLES ( $v)+ )
 				{
 				Object root_1 = (Object)adaptor.nil();
-				dbg.location(81,12);
 				root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(VARIABLES, "VARIABLES"), root_1);
-				dbg.location(81,23);
 				if ( !(stream_v.hasNext()) ) {
 					throw new RewriteEarlyExitException();
 				}
 				while ( stream_v.hasNext() ) {
-					dbg.location(81,23);
 					adaptor.addChild(root_1, stream_v.nextNode());
 				}
 				stream_v.reset();
@@ -992,15 +780,6 @@ public class whileParser extends DebugParser {
 		finally {
 			// do for sure before leaving
 		}
-		dbg.location(82, 4);
-
-		}
-		finally {
-			dbg.exitRule(getGrammarFileName(), "vars");
-			decRuleLevel();
-			if ( getRuleLevel()==0 ) {dbg.terminate();}
-		}
-
 		return retval;
 	}
 	// $ANTLR end "vars"
@@ -1014,7 +793,7 @@ public class whileParser extends DebugParser {
 
 
 	// $ANTLR start "exprs"
-	// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:84:1: exprs : e= expression ( COMMA e= expression )* -> ^( EXPRESSIONS ( $e)+ ) ;
+	// while.g:70:1: exprs : e= expression ( COMMA e= expression )* -> ^( EXPRESSIONS ( $e)+ ) ;
 	public final whileParser.exprs_return exprs() throws RecognitionException {
 		whileParser.exprs_return retval = new whileParser.exprs_return();
 		retval.start = input.LT(1);
@@ -1028,49 +807,32 @@ public class whileParser extends DebugParser {
 		RewriteRuleTokenStream stream_COMMA=new RewriteRuleTokenStream(adaptor,"token COMMA");
 		RewriteRuleSubtreeStream stream_expression=new RewriteRuleSubtreeStream(adaptor,"rule expression");
 
-		try { dbg.enterRule(getGrammarFileName(), "exprs");
-		if ( getRuleLevel()==0 ) {dbg.commence();}
-		incRuleLevel();
-		dbg.location(84, 0);
-
 		try {
-			// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:84:7: (e= expression ( COMMA e= expression )* -> ^( EXPRESSIONS ( $e)+ ) )
-			dbg.enterAlt(1);
-
-			// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:85:7: e= expression ( COMMA e= expression )*
+			// while.g:70:7: (e= expression ( COMMA e= expression )* -> ^( EXPRESSIONS ( $e)+ ) )
+			// while.g:71:7: e= expression ( COMMA e= expression )*
 			{
-			dbg.location(85,8);
-			pushFollow(FOLLOW_expression_in_exprs779);
+			pushFollow(FOLLOW_expression_in_exprs602);
 			e=expression();
 			state._fsp--;
 
-			stream_expression.add(e.getTree());dbg.location(85,20);
-			// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:85:20: ( COMMA e= expression )*
-			try { dbg.enterSubRule(6);
-
+			stream_expression.add(e.getTree());
+			// while.g:71:20: ( COMMA e= expression )*
 			loop6:
 			while (true) {
 				int alt6=2;
-				try { dbg.enterDecision(6, decisionCanBacktrack[6]);
-
 				int LA6_0 = input.LA(1);
 				if ( (LA6_0==COMMA) ) {
 					alt6=1;
 				}
 
-				} finally {dbg.exitDecision(6);}
-
 				switch (alt6) {
 				case 1 :
-					dbg.enterAlt(1);
-
-					// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:85:21: COMMA e= expression
+					// while.g:71:21: COMMA e= expression
 					{
-					dbg.location(85,21);
-					COMMA12=(Token)match(input,COMMA,FOLLOW_COMMA_in_exprs782);  
+					COMMA12=(Token)match(input,COMMA,FOLLOW_COMMA_in_exprs605);  
 					stream_COMMA.add(COMMA12);
-					dbg.location(85,28);
-					pushFollow(FOLLOW_expression_in_exprs786);
+
+					pushFollow(FOLLOW_expression_in_exprs609);
 					e=expression();
 					state._fsp--;
 
@@ -1082,7 +844,6 @@ public class whileParser extends DebugParser {
 					break loop6;
 				}
 			}
-			} finally {dbg.exitSubRule(6);}
 
 			// AST REWRITE
 			// elements: e
@@ -1096,20 +857,16 @@ public class whileParser extends DebugParser {
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.getTree():null);
 
 			root_0 = (Object)adaptor.nil();
-			// 86:7: -> ^( EXPRESSIONS ( $e)+ )
+			// 72:7: -> ^( EXPRESSIONS ( $e)+ )
 			{
-				dbg.location(86,10);
-				// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:86:10: ^( EXPRESSIONS ( $e)+ )
+				// while.g:72:10: ^( EXPRESSIONS ( $e)+ )
 				{
 				Object root_1 = (Object)adaptor.nil();
-				dbg.location(86,12);
 				root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(EXPRESSIONS, "EXPRESSIONS"), root_1);
-				dbg.location(86,25);
 				if ( !(stream_e.hasNext()) ) {
 					throw new RewriteEarlyExitException();
 				}
 				while ( stream_e.hasNext() ) {
-					dbg.location(86,25);
 					adaptor.addChild(root_1, stream_e.nextTree());
 				}
 				stream_e.reset();
@@ -1138,15 +895,6 @@ public class whileParser extends DebugParser {
 		finally {
 			// do for sure before leaving
 		}
-		dbg.location(87, 4);
-
-		}
-		finally {
-			dbg.exitRule(getGrammarFileName(), "exprs");
-			decRuleLevel();
-			if ( getRuleLevel()==0 ) {dbg.terminate();}
-		}
-
 		return retval;
 	}
 	// $ANTLR end "exprs"
@@ -1160,7 +908,7 @@ public class whileParser extends DebugParser {
 
 
 	// $ANTLR start "commands"
-	// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:89:1: commands : c= command ( ';' c= command )* -> ^( COMMANDS ( $c)+ ) ;
+	// while.g:75:1: commands : c= command ( ';' c= command )* -> ^( COMMANDS ( $c)+ ) ;
 	public final whileParser.commands_return commands() throws RecognitionException {
 		whileParser.commands_return retval = new whileParser.commands_return();
 		retval.start = input.LT(1);
@@ -1171,52 +919,35 @@ public class whileParser extends DebugParser {
 		ParserRuleReturnScope c =null;
 
 		Object char_literal13_tree=null;
-		RewriteRuleTokenStream stream_47=new RewriteRuleTokenStream(adaptor,"token 47");
+		RewriteRuleTokenStream stream_31=new RewriteRuleTokenStream(adaptor,"token 31");
 		RewriteRuleSubtreeStream stream_command=new RewriteRuleSubtreeStream(adaptor,"rule command");
 
-		try { dbg.enterRule(getGrammarFileName(), "commands");
-		if ( getRuleLevel()==0 ) {dbg.commence();}
-		incRuleLevel();
-		dbg.location(89, 0);
-
 		try {
-			// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:89:10: (c= command ( ';' c= command )* -> ^( COMMANDS ( $c)+ ) )
-			dbg.enterAlt(1);
-
-			// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:90:7: c= command ( ';' c= command )*
+			// while.g:75:10: (c= command ( ';' c= command )* -> ^( COMMANDS ( $c)+ ) )
+			// while.g:76:7: c= command ( ';' c= command )*
 			{
-			dbg.location(90,8);
-			pushFollow(FOLLOW_command_in_commands825);
+			pushFollow(FOLLOW_command_in_commands648);
 			c=command();
 			state._fsp--;
 
-			stream_command.add(c.getTree());dbg.location(90,17);
-			// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:90:17: ( ';' c= command )*
-			try { dbg.enterSubRule(7);
-
+			stream_command.add(c.getTree());
+			// while.g:76:17: ( ';' c= command )*
 			loop7:
 			while (true) {
 				int alt7=2;
-				try { dbg.enterDecision(7, decisionCanBacktrack[7]);
-
 				int LA7_0 = input.LA(1);
-				if ( (LA7_0==47) ) {
+				if ( (LA7_0==31) ) {
 					alt7=1;
 				}
 
-				} finally {dbg.exitDecision(7);}
-
 				switch (alt7) {
 				case 1 :
-					dbg.enterAlt(1);
-
-					// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:90:19: ';' c= command
+					// while.g:76:19: ';' c= command
 					{
-					dbg.location(90,19);
-					char_literal13=(Token)match(input,47,FOLLOW_47_in_commands829);  
-					stream_47.add(char_literal13);
-					dbg.location(90,24);
-					pushFollow(FOLLOW_command_in_commands833);
+					char_literal13=(Token)match(input,31,FOLLOW_31_in_commands652);  
+					stream_31.add(char_literal13);
+
+					pushFollow(FOLLOW_command_in_commands656);
 					c=command();
 					state._fsp--;
 
@@ -1228,7 +959,6 @@ public class whileParser extends DebugParser {
 					break loop7;
 				}
 			}
-			} finally {dbg.exitSubRule(7);}
 
 			// AST REWRITE
 			// elements: c
@@ -1242,20 +972,16 @@ public class whileParser extends DebugParser {
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.getTree():null);
 
 			root_0 = (Object)adaptor.nil();
-			// 91:7: -> ^( COMMANDS ( $c)+ )
+			// 77:7: -> ^( COMMANDS ( $c)+ )
 			{
-				dbg.location(91,10);
-				// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:91:10: ^( COMMANDS ( $c)+ )
+				// while.g:77:10: ^( COMMANDS ( $c)+ )
 				{
 				Object root_1 = (Object)adaptor.nil();
-				dbg.location(91,12);
 				root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(COMMANDS, "COMMANDS"), root_1);
-				dbg.location(91,22);
 				if ( !(stream_c.hasNext()) ) {
 					throw new RewriteEarlyExitException();
 				}
 				while ( stream_c.hasNext() ) {
-					dbg.location(91,22);
 					adaptor.addChild(root_1, stream_c.nextTree());
 				}
 				stream_c.reset();
@@ -1284,15 +1010,6 @@ public class whileParser extends DebugParser {
 		finally {
 			// do for sure before leaving
 		}
-		dbg.location(92, 4);
-
-		}
-		finally {
-			dbg.exitRule(getGrammarFileName(), "commands");
-			decRuleLevel();
-			if ( getRuleLevel()==0 ) {dbg.terminate();}
-		}
-
 		return retval;
 	}
 	// $ANTLR end "commands"
@@ -1306,7 +1023,7 @@ public class whileParser extends DebugParser {
 
 
 	// $ANTLR start "command_nop"
-	// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:94:1: command_nop : 'nop' -> ^( NOP ) ;
+	// while.g:80:1: command_nop : 'nop' -> ^( NOP ) ;
 	public final whileParser.command_nop_return command_nop() throws RecognitionException {
 		whileParser.command_nop_return retval = new whileParser.command_nop_return();
 		retval.start = input.LT(1);
@@ -1316,22 +1033,14 @@ public class whileParser extends DebugParser {
 		Token string_literal14=null;
 
 		Object string_literal14_tree=null;
-		RewriteRuleTokenStream stream_NOP=new RewriteRuleTokenStream(adaptor,"token NOP");
-
-		try { dbg.enterRule(getGrammarFileName(), "command_nop");
-		if ( getRuleLevel()==0 ) {dbg.commence();}
-		incRuleLevel();
-		dbg.location(94, 0);
+		RewriteRuleTokenStream stream_45=new RewriteRuleTokenStream(adaptor,"token 45");
 
 		try {
-			// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:94:13: ( 'nop' -> ^( NOP ) )
-			dbg.enterAlt(1);
-
-			// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:95:7: 'nop'
+			// while.g:80:13: ( 'nop' -> ^( NOP ) )
+			// while.g:81:7: 'nop'
 			{
-			dbg.location(95,7);
-			string_literal14=(Token)match(input,NOP,FOLLOW_NOP_in_command_nop871);  
-			stream_NOP.add(string_literal14);
+			string_literal14=(Token)match(input,45,FOLLOW_45_in_command_nop694);  
+			stream_45.add(string_literal14);
 
 			// AST REWRITE
 			// elements: 
@@ -1344,13 +1053,11 @@ public class whileParser extends DebugParser {
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.getTree():null);
 
 			root_0 = (Object)adaptor.nil();
-			// 95:13: -> ^( NOP )
+			// 81:13: -> ^( NOP )
 			{
-				dbg.location(95,16);
-				// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:95:16: ^( NOP )
+				// while.g:81:16: ^( NOP )
 				{
 				Object root_1 = (Object)adaptor.nil();
-				dbg.location(95,18);
 				root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(NOP, "NOP"), root_1);
 				adaptor.addChild(root_0, root_1);
 				}
@@ -1376,15 +1083,6 @@ public class whileParser extends DebugParser {
 		finally {
 			// do for sure before leaving
 		}
-		dbg.location(96, 4);
-
-		}
-		finally {
-			dbg.exitRule(getGrammarFileName(), "command_nop");
-			decRuleLevel();
-			if ( getRuleLevel()==0 ) {dbg.terminate();}
-		}
-
 		return retval;
 	}
 	// $ANTLR end "command_nop"
@@ -1398,7 +1096,7 @@ public class whileParser extends DebugParser {
 
 
 	// $ANTLR start "command_var"
-	// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:98:1: command_var : vars ':=' exprs -> ^( VAR vars exprs ) ;
+	// while.g:84:1: command_var : vars ':=' exprs -> ^( VAR vars exprs ) ;
 	public final whileParser.command_var_return command_var() throws RecognitionException {
 		whileParser.command_var_return retval = new whileParser.command_var_return();
 		retval.start = input.LT(1);
@@ -1410,31 +1108,23 @@ public class whileParser extends DebugParser {
 		ParserRuleReturnScope exprs17 =null;
 
 		Object string_literal16_tree=null;
-		RewriteRuleTokenStream stream_46=new RewriteRuleTokenStream(adaptor,"token 46");
+		RewriteRuleTokenStream stream_30=new RewriteRuleTokenStream(adaptor,"token 30");
 		RewriteRuleSubtreeStream stream_exprs=new RewriteRuleSubtreeStream(adaptor,"rule exprs");
 		RewriteRuleSubtreeStream stream_vars=new RewriteRuleSubtreeStream(adaptor,"rule vars");
 
-		try { dbg.enterRule(getGrammarFileName(), "command_var");
-		if ( getRuleLevel()==0 ) {dbg.commence();}
-		incRuleLevel();
-		dbg.location(98, 0);
-
 		try {
-			// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:98:13: ( vars ':=' exprs -> ^( VAR vars exprs ) )
-			dbg.enterAlt(1);
-
-			// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:99:7: vars ':=' exprs
+			// while.g:84:13: ( vars ':=' exprs -> ^( VAR vars exprs ) )
+			// while.g:85:7: vars ':=' exprs
 			{
-			dbg.location(99,7);
-			pushFollow(FOLLOW_vars_in_command_var896);
+			pushFollow(FOLLOW_vars_in_command_var719);
 			vars15=vars();
 			state._fsp--;
 
-			stream_vars.add(vars15.getTree());dbg.location(99,12);
-			string_literal16=(Token)match(input,46,FOLLOW_46_in_command_var898);  
-			stream_46.add(string_literal16);
-			dbg.location(99,17);
-			pushFollow(FOLLOW_exprs_in_command_var900);
+			stream_vars.add(vars15.getTree());
+			string_literal16=(Token)match(input,30,FOLLOW_30_in_command_var721);  
+			stream_30.add(string_literal16);
+
+			pushFollow(FOLLOW_exprs_in_command_var723);
 			exprs17=exprs();
 			state._fsp--;
 
@@ -1450,16 +1140,13 @@ public class whileParser extends DebugParser {
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.getTree():null);
 
 			root_0 = (Object)adaptor.nil();
-			// 99:23: -> ^( VAR vars exprs )
+			// 85:23: -> ^( VAR vars exprs )
 			{
-				dbg.location(99,26);
-				// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:99:26: ^( VAR vars exprs )
+				// while.g:85:26: ^( VAR vars exprs )
 				{
 				Object root_1 = (Object)adaptor.nil();
-				dbg.location(99,28);
 				root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(VAR, "VAR"), root_1);
-				dbg.location(99,32);
-				adaptor.addChild(root_1, stream_vars.nextTree());dbg.location(99,37);
+				adaptor.addChild(root_1, stream_vars.nextTree());
 				adaptor.addChild(root_1, stream_exprs.nextTree());
 				adaptor.addChild(root_0, root_1);
 				}
@@ -1485,15 +1172,6 @@ public class whileParser extends DebugParser {
 		finally {
 			// do for sure before leaving
 		}
-		dbg.location(100, 4);
-
-		}
-		finally {
-			dbg.exitRule(getGrammarFileName(), "command_var");
-			decRuleLevel();
-			if ( getRuleLevel()==0 ) {dbg.terminate();}
-		}
-
 		return retval;
 	}
 	// $ANTLR end "command_var"
@@ -1507,7 +1185,7 @@ public class whileParser extends DebugParser {
 
 
 	// $ANTLR start "command_if"
-	// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:102:1: command_if : 'if' expression 'then' c1= commands ( 'else' c2= commands )? 'fi' -> ^( COMMAND 'if' expression $c1 ( $c2)? ) ;
+	// while.g:88:1: command_if : 'if' expression 'then' c1= commands ( 'else' c2= commands )? 'fi' -> ^( COMMAND 'if' expression $c1 ( $c2)? ) ;
 	public final whileParser.command_if_return command_if() throws RecognitionException {
 		whileParser.command_if_return retval = new whileParser.command_if_return();
 		retval.start = input.LT(1);
@@ -1526,63 +1204,47 @@ public class whileParser extends DebugParser {
 		Object string_literal20_tree=null;
 		Object string_literal21_tree=null;
 		Object string_literal22_tree=null;
-		RewriteRuleTokenStream stream_FI=new RewriteRuleTokenStream(adaptor,"token FI");
-		RewriteRuleTokenStream stream_ELSE=new RewriteRuleTokenStream(adaptor,"token ELSE");
-		RewriteRuleTokenStream stream_THEN=new RewriteRuleTokenStream(adaptor,"token THEN");
-		RewriteRuleTokenStream stream_IF=new RewriteRuleTokenStream(adaptor,"token IF");
+		RewriteRuleTokenStream stream_35=new RewriteRuleTokenStream(adaptor,"token 35");
+		RewriteRuleTokenStream stream_36=new RewriteRuleTokenStream(adaptor,"token 36");
+		RewriteRuleTokenStream stream_48=new RewriteRuleTokenStream(adaptor,"token 48");
+		RewriteRuleTokenStream stream_41=new RewriteRuleTokenStream(adaptor,"token 41");
 		RewriteRuleSubtreeStream stream_expression=new RewriteRuleSubtreeStream(adaptor,"rule expression");
 		RewriteRuleSubtreeStream stream_commands=new RewriteRuleSubtreeStream(adaptor,"rule commands");
 
-		try { dbg.enterRule(getGrammarFileName(), "command_if");
-		if ( getRuleLevel()==0 ) {dbg.commence();}
-		incRuleLevel();
-		dbg.location(102, 0);
-
 		try {
-			// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:102:12: ( 'if' expression 'then' c1= commands ( 'else' c2= commands )? 'fi' -> ^( COMMAND 'if' expression $c1 ( $c2)? ) )
-			dbg.enterAlt(1);
-
-			// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:103:5: 'if' expression 'then' c1= commands ( 'else' c2= commands )? 'fi'
+			// while.g:88:12: ( 'if' expression 'then' c1= commands ( 'else' c2= commands )? 'fi' -> ^( COMMAND 'if' expression $c1 ( $c2)? ) )
+			// while.g:89:5: 'if' expression 'then' c1= commands ( 'else' c2= commands )? 'fi'
 			{
-			dbg.location(103,5);
-			string_literal18=(Token)match(input,IF,FOLLOW_IF_in_command_if927);  
-			stream_IF.add(string_literal18);
-			dbg.location(103,10);
-			pushFollow(FOLLOW_expression_in_command_if929);
+			string_literal18=(Token)match(input,41,FOLLOW_41_in_command_if750);  
+			stream_41.add(string_literal18);
+
+			pushFollow(FOLLOW_expression_in_command_if752);
 			expression19=expression();
 			state._fsp--;
 
-			stream_expression.add(expression19.getTree());dbg.location(103,21);
-			string_literal20=(Token)match(input,THEN,FOLLOW_THEN_in_command_if931);  
-			stream_THEN.add(string_literal20);
-			dbg.location(103,30);
-			pushFollow(FOLLOW_commands_in_command_if935);
+			stream_expression.add(expression19.getTree());
+			string_literal20=(Token)match(input,48,FOLLOW_48_in_command_if754);  
+			stream_48.add(string_literal20);
+
+			pushFollow(FOLLOW_commands_in_command_if758);
 			c1=commands();
 			state._fsp--;
 
-			stream_commands.add(c1.getTree());dbg.location(103,40);
-			// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:103:40: ( 'else' c2= commands )?
+			stream_commands.add(c1.getTree());
+			// while.g:89:40: ( 'else' c2= commands )?
 			int alt8=2;
-			try { dbg.enterSubRule(8);
-			try { dbg.enterDecision(8, decisionCanBacktrack[8]);
-
 			int LA8_0 = input.LA(1);
-			if ( (LA8_0==ELSE) ) {
+			if ( (LA8_0==35) ) {
 				alt8=1;
 			}
-			} finally {dbg.exitDecision(8);}
-
 			switch (alt8) {
 				case 1 :
-					dbg.enterAlt(1);
-
-					// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:103:41: 'else' c2= commands
+					// while.g:89:41: 'else' c2= commands
 					{
-					dbg.location(103,41);
-					string_literal21=(Token)match(input,ELSE,FOLLOW_ELSE_in_command_if938);  
-					stream_ELSE.add(string_literal21);
-					dbg.location(103,50);
-					pushFollow(FOLLOW_commands_in_command_if942);
+					string_literal21=(Token)match(input,35,FOLLOW_35_in_command_if761);  
+					stream_35.add(string_literal21);
+
+					pushFollow(FOLLOW_commands_in_command_if765);
 					c2=commands();
 					state._fsp--;
 
@@ -1591,13 +1253,12 @@ public class whileParser extends DebugParser {
 					break;
 
 			}
-			} finally {dbg.exitSubRule(8);}
-			dbg.location(103,62);
-			string_literal22=(Token)match(input,FI,FOLLOW_FI_in_command_if946);  
-			stream_FI.add(string_literal22);
+
+			string_literal22=(Token)match(input,36,FOLLOW_36_in_command_if769);  
+			stream_36.add(string_literal22);
 
 			// AST REWRITE
-			// elements: c2, expression, c1, IF
+			// elements: 41, c2, c1, expression
 			// token labels: 
 			// rule labels: c1, retval, c2
 			// token list labels: 
@@ -1609,21 +1270,17 @@ public class whileParser extends DebugParser {
 			RewriteRuleSubtreeStream stream_c2=new RewriteRuleSubtreeStream(adaptor,"rule c2",c2!=null?c2.getTree():null);
 
 			root_0 = (Object)adaptor.nil();
-			// 104:9: -> ^( COMMAND 'if' expression $c1 ( $c2)? )
+			// 90:9: -> ^( COMMAND 'if' expression $c1 ( $c2)? )
 			{
-				dbg.location(104,12);
-				// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:104:12: ^( COMMAND 'if' expression $c1 ( $c2)? )
+				// while.g:90:12: ^( COMMAND 'if' expression $c1 ( $c2)? )
 				{
 				Object root_1 = (Object)adaptor.nil();
-				dbg.location(104,14);
 				root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(COMMAND, "COMMAND"), root_1);
-				dbg.location(104,22);
-				adaptor.addChild(root_1, stream_IF.nextNode());dbg.location(104,27);
-				adaptor.addChild(root_1, stream_expression.nextTree());dbg.location(104,39);
-				adaptor.addChild(root_1, stream_c1.nextTree());dbg.location(104,42);
-				// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:104:42: ( $c2)?
+				adaptor.addChild(root_1, stream_41.nextNode());
+				adaptor.addChild(root_1, stream_expression.nextTree());
+				adaptor.addChild(root_1, stream_c1.nextTree());
+				// while.g:90:42: ( $c2)?
 				if ( stream_c2.hasNext() ) {
-					dbg.location(104,44);
 					adaptor.addChild(root_1, stream_c2.nextTree());
 				}
 				stream_c2.reset();
@@ -1652,15 +1309,6 @@ public class whileParser extends DebugParser {
 		finally {
 			// do for sure before leaving
 		}
-		dbg.location(105, 4);
-
-		}
-		finally {
-			dbg.exitRule(getGrammarFileName(), "command_if");
-			decRuleLevel();
-			if ( getRuleLevel()==0 ) {dbg.terminate();}
-		}
-
 		return retval;
 	}
 	// $ANTLR end "command_if"
@@ -1674,7 +1322,7 @@ public class whileParser extends DebugParser {
 
 
 	// $ANTLR start "command_while"
-	// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:107:1: command_while : 'while' expression 'do' commands 'od' -> ^( COMMAND 'while' expression commands ) ;
+	// while.g:93:1: command_while : 'while' expression 'do' commands 'od' -> ^( COMMAND 'while' expression commands ) ;
 	public final whileParser.command_while_return command_while() throws RecognitionException {
 		whileParser.command_while_return retval = new whileParser.command_while_return();
 		retval.start = input.LT(1);
@@ -1690,45 +1338,37 @@ public class whileParser extends DebugParser {
 		Object string_literal23_tree=null;
 		Object string_literal25_tree=null;
 		Object string_literal27_tree=null;
-		RewriteRuleTokenStream stream_OD=new RewriteRuleTokenStream(adaptor,"token OD");
-		RewriteRuleTokenStream stream_WHILE=new RewriteRuleTokenStream(adaptor,"token WHILE");
-		RewriteRuleTokenStream stream_DO=new RewriteRuleTokenStream(adaptor,"token DO");
+		RewriteRuleTokenStream stream_34=new RewriteRuleTokenStream(adaptor,"token 34");
+		RewriteRuleTokenStream stream_46=new RewriteRuleTokenStream(adaptor,"token 46");
+		RewriteRuleTokenStream stream_50=new RewriteRuleTokenStream(adaptor,"token 50");
 		RewriteRuleSubtreeStream stream_expression=new RewriteRuleSubtreeStream(adaptor,"rule expression");
 		RewriteRuleSubtreeStream stream_commands=new RewriteRuleSubtreeStream(adaptor,"rule commands");
 
-		try { dbg.enterRule(getGrammarFileName(), "command_while");
-		if ( getRuleLevel()==0 ) {dbg.commence();}
-		incRuleLevel();
-		dbg.location(107, 0);
-
 		try {
-			// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:107:15: ( 'while' expression 'do' commands 'od' -> ^( COMMAND 'while' expression commands ) )
-			dbg.enterAlt(1);
-
-			// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:108:7: 'while' expression 'do' commands 'od'
+			// while.g:93:15: ( 'while' expression 'do' commands 'od' -> ^( COMMAND 'while' expression commands ) )
+			// while.g:94:7: 'while' expression 'do' commands 'od'
 			{
-			dbg.location(108,7);
-			string_literal23=(Token)match(input,WHILE,FOLLOW_WHILE_in_command_while992);  
-			stream_WHILE.add(string_literal23);
-			dbg.location(108,15);
-			pushFollow(FOLLOW_expression_in_command_while994);
+			string_literal23=(Token)match(input,50,FOLLOW_50_in_command_while815);  
+			stream_50.add(string_literal23);
+
+			pushFollow(FOLLOW_expression_in_command_while817);
 			expression24=expression();
 			state._fsp--;
 
-			stream_expression.add(expression24.getTree());dbg.location(108,26);
-			string_literal25=(Token)match(input,DO,FOLLOW_DO_in_command_while996);  
-			stream_DO.add(string_literal25);
-			dbg.location(108,31);
-			pushFollow(FOLLOW_commands_in_command_while998);
+			stream_expression.add(expression24.getTree());
+			string_literal25=(Token)match(input,34,FOLLOW_34_in_command_while819);  
+			stream_34.add(string_literal25);
+
+			pushFollow(FOLLOW_commands_in_command_while821);
 			commands26=commands();
 			state._fsp--;
 
-			stream_commands.add(commands26.getTree());dbg.location(108,40);
-			string_literal27=(Token)match(input,OD,FOLLOW_OD_in_command_while1000);  
-			stream_OD.add(string_literal27);
+			stream_commands.add(commands26.getTree());
+			string_literal27=(Token)match(input,46,FOLLOW_46_in_command_while823);  
+			stream_46.add(string_literal27);
 
 			// AST REWRITE
-			// elements: expression, WHILE, commands
+			// elements: expression, 50, commands
 			// token labels: 
 			// rule labels: retval
 			// token list labels: 
@@ -1738,17 +1378,14 @@ public class whileParser extends DebugParser {
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.getTree():null);
 
 			root_0 = (Object)adaptor.nil();
-			// 109:7: -> ^( COMMAND 'while' expression commands )
+			// 95:7: -> ^( COMMAND 'while' expression commands )
 			{
-				dbg.location(109,10);
-				// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:109:10: ^( COMMAND 'while' expression commands )
+				// while.g:95:10: ^( COMMAND 'while' expression commands )
 				{
 				Object root_1 = (Object)adaptor.nil();
-				dbg.location(109,12);
 				root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(COMMAND, "COMMAND"), root_1);
-				dbg.location(109,20);
-				adaptor.addChild(root_1, stream_WHILE.nextNode());dbg.location(109,28);
-				adaptor.addChild(root_1, stream_expression.nextTree());dbg.location(109,39);
+				adaptor.addChild(root_1, stream_50.nextNode());
+				adaptor.addChild(root_1, stream_expression.nextTree());
 				adaptor.addChild(root_1, stream_commands.nextTree());
 				adaptor.addChild(root_0, root_1);
 				}
@@ -1774,15 +1411,6 @@ public class whileParser extends DebugParser {
 		finally {
 			// do for sure before leaving
 		}
-		dbg.location(110, 4);
-
-		}
-		finally {
-			dbg.exitRule(getGrammarFileName(), "command_while");
-			decRuleLevel();
-			if ( getRuleLevel()==0 ) {dbg.terminate();}
-		}
-
 		return retval;
 	}
 	// $ANTLR end "command_while"
@@ -1796,7 +1424,7 @@ public class whileParser extends DebugParser {
 
 
 	// $ANTLR start "command_for"
-	// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:112:1: command_for : 'for' expression 'do' commands 'od' -> ^( COMMAND 'for' expression commands ) ;
+	// while.g:98:1: command_for : 'for' expression 'do' commands 'od' -> ^( COMMAND 'for' expression commands ) ;
 	public final whileParser.command_for_return command_for() throws RecognitionException {
 		whileParser.command_for_return retval = new whileParser.command_for_return();
 		retval.start = input.LT(1);
@@ -1812,45 +1440,37 @@ public class whileParser extends DebugParser {
 		Object string_literal28_tree=null;
 		Object string_literal30_tree=null;
 		Object string_literal32_tree=null;
-		RewriteRuleTokenStream stream_OD=new RewriteRuleTokenStream(adaptor,"token OD");
-		RewriteRuleTokenStream stream_FOR=new RewriteRuleTokenStream(adaptor,"token FOR");
-		RewriteRuleTokenStream stream_DO=new RewriteRuleTokenStream(adaptor,"token DO");
+		RewriteRuleTokenStream stream_34=new RewriteRuleTokenStream(adaptor,"token 34");
+		RewriteRuleTokenStream stream_46=new RewriteRuleTokenStream(adaptor,"token 46");
+		RewriteRuleTokenStream stream_37=new RewriteRuleTokenStream(adaptor,"token 37");
 		RewriteRuleSubtreeStream stream_expression=new RewriteRuleSubtreeStream(adaptor,"rule expression");
 		RewriteRuleSubtreeStream stream_commands=new RewriteRuleSubtreeStream(adaptor,"rule commands");
 
-		try { dbg.enterRule(getGrammarFileName(), "command_for");
-		if ( getRuleLevel()==0 ) {dbg.commence();}
-		incRuleLevel();
-		dbg.location(112, 0);
-
 		try {
-			// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:112:13: ( 'for' expression 'do' commands 'od' -> ^( COMMAND 'for' expression commands ) )
-			dbg.enterAlt(1);
-
-			// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:113:7: 'for' expression 'do' commands 'od'
+			// while.g:98:13: ( 'for' expression 'do' commands 'od' -> ^( COMMAND 'for' expression commands ) )
+			// while.g:99:7: 'for' expression 'do' commands 'od'
 			{
-			dbg.location(113,7);
-			string_literal28=(Token)match(input,FOR,FOLLOW_FOR_in_command_for1037);  
-			stream_FOR.add(string_literal28);
-			dbg.location(113,13);
-			pushFollow(FOLLOW_expression_in_command_for1039);
+			string_literal28=(Token)match(input,37,FOLLOW_37_in_command_for860);  
+			stream_37.add(string_literal28);
+
+			pushFollow(FOLLOW_expression_in_command_for862);
 			expression29=expression();
 			state._fsp--;
 
-			stream_expression.add(expression29.getTree());dbg.location(113,24);
-			string_literal30=(Token)match(input,DO,FOLLOW_DO_in_command_for1041);  
-			stream_DO.add(string_literal30);
-			dbg.location(113,29);
-			pushFollow(FOLLOW_commands_in_command_for1043);
+			stream_expression.add(expression29.getTree());
+			string_literal30=(Token)match(input,34,FOLLOW_34_in_command_for864);  
+			stream_34.add(string_literal30);
+
+			pushFollow(FOLLOW_commands_in_command_for866);
 			commands31=commands();
 			state._fsp--;
 
-			stream_commands.add(commands31.getTree());dbg.location(113,38);
-			string_literal32=(Token)match(input,OD,FOLLOW_OD_in_command_for1045);  
-			stream_OD.add(string_literal32);
+			stream_commands.add(commands31.getTree());
+			string_literal32=(Token)match(input,46,FOLLOW_46_in_command_for868);  
+			stream_46.add(string_literal32);
 
 			// AST REWRITE
-			// elements: commands, FOR, expression
+			// elements: 37, expression, commands
 			// token labels: 
 			// rule labels: retval
 			// token list labels: 
@@ -1860,17 +1480,14 @@ public class whileParser extends DebugParser {
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.getTree():null);
 
 			root_0 = (Object)adaptor.nil();
-			// 114:7: -> ^( COMMAND 'for' expression commands )
+			// 100:7: -> ^( COMMAND 'for' expression commands )
 			{
-				dbg.location(114,10);
-				// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:114:10: ^( COMMAND 'for' expression commands )
+				// while.g:100:10: ^( COMMAND 'for' expression commands )
 				{
 				Object root_1 = (Object)adaptor.nil();
-				dbg.location(114,12);
 				root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(COMMAND, "COMMAND"), root_1);
-				dbg.location(114,20);
-				adaptor.addChild(root_1, stream_FOR.nextNode());dbg.location(114,26);
-				adaptor.addChild(root_1, stream_expression.nextTree());dbg.location(114,37);
+				adaptor.addChild(root_1, stream_37.nextNode());
+				adaptor.addChild(root_1, stream_expression.nextTree());
 				adaptor.addChild(root_1, stream_commands.nextTree());
 				adaptor.addChild(root_0, root_1);
 				}
@@ -1896,15 +1513,6 @@ public class whileParser extends DebugParser {
 		finally {
 			// do for sure before leaving
 		}
-		dbg.location(115, 4);
-
-		}
-		finally {
-			dbg.exitRule(getGrammarFileName(), "command_for");
-			decRuleLevel();
-			if ( getRuleLevel()==0 ) {dbg.terminate();}
-		}
-
 		return retval;
 	}
 	// $ANTLR end "command_for"
@@ -1918,94 +1526,84 @@ public class whileParser extends DebugParser {
 
 
 	// $ANTLR start "command_foreach"
-	// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:117:1: command_foreach : 'foreach' VARIABLE 'in' expression 'do' commands 'od' -> ^( COMMAND 'foreach' VARIABLE expression commands ) ;
+	// while.g:103:1: command_foreach : 'foreach' v= VARIABLE 'in' expression 'do' commands 'od' -> ^( COMMAND 'foreach' $v expression commands ) ;
 	public final whileParser.command_foreach_return command_foreach() throws RecognitionException {
 		whileParser.command_foreach_return retval = new whileParser.command_foreach_return();
 		retval.start = input.LT(1);
 
 		Object root_0 = null;
 
+		Token v=null;
 		Token string_literal33=null;
-		Token VARIABLE34=null;
-		Token string_literal35=null;
-		Token string_literal37=null;
-		Token string_literal39=null;
-		ParserRuleReturnScope expression36 =null;
-		ParserRuleReturnScope commands38 =null;
+		Token string_literal34=null;
+		Token string_literal36=null;
+		Token string_literal38=null;
+		ParserRuleReturnScope expression35 =null;
+		ParserRuleReturnScope commands37 =null;
 
+		Object v_tree=null;
 		Object string_literal33_tree=null;
-		Object VARIABLE34_tree=null;
-		Object string_literal35_tree=null;
-		Object string_literal37_tree=null;
-		Object string_literal39_tree=null;
-		RewriteRuleTokenStream stream_IN=new RewriteRuleTokenStream(adaptor,"token IN");
-		RewriteRuleTokenStream stream_OD=new RewriteRuleTokenStream(adaptor,"token OD");
+		Object string_literal34_tree=null;
+		Object string_literal36_tree=null;
+		Object string_literal38_tree=null;
+		RewriteRuleTokenStream stream_34=new RewriteRuleTokenStream(adaptor,"token 34");
+		RewriteRuleTokenStream stream_46=new RewriteRuleTokenStream(adaptor,"token 46");
+		RewriteRuleTokenStream stream_38=new RewriteRuleTokenStream(adaptor,"token 38");
 		RewriteRuleTokenStream stream_VARIABLE=new RewriteRuleTokenStream(adaptor,"token VARIABLE");
-		RewriteRuleTokenStream stream_DO=new RewriteRuleTokenStream(adaptor,"token DO");
-		RewriteRuleTokenStream stream_FOREACH=new RewriteRuleTokenStream(adaptor,"token FOREACH");
+		RewriteRuleTokenStream stream_42=new RewriteRuleTokenStream(adaptor,"token 42");
 		RewriteRuleSubtreeStream stream_expression=new RewriteRuleSubtreeStream(adaptor,"rule expression");
 		RewriteRuleSubtreeStream stream_commands=new RewriteRuleSubtreeStream(adaptor,"rule commands");
 
-		try { dbg.enterRule(getGrammarFileName(), "command_foreach");
-		if ( getRuleLevel()==0 ) {dbg.commence();}
-		incRuleLevel();
-		dbg.location(117, 0);
-
 		try {
-			// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:117:17: ( 'foreach' VARIABLE 'in' expression 'do' commands 'od' -> ^( COMMAND 'foreach' VARIABLE expression commands ) )
-			dbg.enterAlt(1);
-
-			// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:118:7: 'foreach' VARIABLE 'in' expression 'do' commands 'od'
+			// while.g:103:17: ( 'foreach' v= VARIABLE 'in' expression 'do' commands 'od' -> ^( COMMAND 'foreach' $v expression commands ) )
+			// while.g:104:7: 'foreach' v= VARIABLE 'in' expression 'do' commands 'od'
 			{
-			dbg.location(118,7);
-			string_literal33=(Token)match(input,FOREACH,FOLLOW_FOREACH_in_command_foreach1082);  
-			stream_FOREACH.add(string_literal33);
-			dbg.location(118,17);
-			VARIABLE34=(Token)match(input,VARIABLE,FOLLOW_VARIABLE_in_command_foreach1084);  
-			stream_VARIABLE.add(VARIABLE34);
-			dbg.location(118,26);
-			string_literal35=(Token)match(input,IN,FOLLOW_IN_in_command_foreach1086);  
-			stream_IN.add(string_literal35);
-			dbg.location(118,31);
-			pushFollow(FOLLOW_expression_in_command_foreach1088);
-			expression36=expression();
+			string_literal33=(Token)match(input,38,FOLLOW_38_in_command_foreach905);  
+			stream_38.add(string_literal33);
+
+			v=(Token)match(input,VARIABLE,FOLLOW_VARIABLE_in_command_foreach909);  
+			stream_VARIABLE.add(v);
+
+			string_literal34=(Token)match(input,42,FOLLOW_42_in_command_foreach911);  
+			stream_42.add(string_literal34);
+
+			pushFollow(FOLLOW_expression_in_command_foreach913);
+			expression35=expression();
 			state._fsp--;
 
-			stream_expression.add(expression36.getTree());dbg.location(118,42);
-			string_literal37=(Token)match(input,DO,FOLLOW_DO_in_command_foreach1090);  
-			stream_DO.add(string_literal37);
-			dbg.location(118,47);
-			pushFollow(FOLLOW_commands_in_command_foreach1092);
-			commands38=commands();
+			stream_expression.add(expression35.getTree());
+			string_literal36=(Token)match(input,34,FOLLOW_34_in_command_foreach915);  
+			stream_34.add(string_literal36);
+
+			pushFollow(FOLLOW_commands_in_command_foreach917);
+			commands37=commands();
 			state._fsp--;
 
-			stream_commands.add(commands38.getTree());dbg.location(118,56);
-			string_literal39=(Token)match(input,OD,FOLLOW_OD_in_command_foreach1094);  
-			stream_OD.add(string_literal39);
+			stream_commands.add(commands37.getTree());
+			string_literal38=(Token)match(input,46,FOLLOW_46_in_command_foreach919);  
+			stream_46.add(string_literal38);
 
 			// AST REWRITE
-			// elements: FOREACH, expression, VARIABLE, commands
-			// token labels: 
+			// elements: 38, expression, v, commands
+			// token labels: v
 			// rule labels: retval
 			// token list labels: 
 			// rule list labels: 
 			// wildcard labels: 
 			retval.tree = root_0;
+			RewriteRuleTokenStream stream_v=new RewriteRuleTokenStream(adaptor,"token v",v);
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.getTree():null);
 
 			root_0 = (Object)adaptor.nil();
-			// 119:7: -> ^( COMMAND 'foreach' VARIABLE expression commands )
+			// 105:7: -> ^( COMMAND 'foreach' $v expression commands )
 			{
-				dbg.location(119,10);
-				// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:119:10: ^( COMMAND 'foreach' VARIABLE expression commands )
+				// while.g:105:10: ^( COMMAND 'foreach' $v expression commands )
 				{
 				Object root_1 = (Object)adaptor.nil();
-				dbg.location(119,12);
 				root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(COMMAND, "COMMAND"), root_1);
-				dbg.location(119,20);
-				adaptor.addChild(root_1, stream_FOREACH.nextNode());dbg.location(119,30);
-				adaptor.addChild(root_1, stream_VARIABLE.nextNode());dbg.location(119,39);
-				adaptor.addChild(root_1, stream_expression.nextTree());dbg.location(119,50);
+				adaptor.addChild(root_1, stream_38.nextNode());
+				adaptor.addChild(root_1, stream_v.nextNode());
+				adaptor.addChild(root_1, stream_expression.nextTree());
 				adaptor.addChild(root_1, stream_commands.nextTree());
 				adaptor.addChild(root_0, root_1);
 				}
@@ -2031,15 +1629,6 @@ public class whileParser extends DebugParser {
 		finally {
 			// do for sure before leaving
 		}
-		dbg.location(120, 4);
-
-		}
-		finally {
-			dbg.exitRule(getGrammarFileName(), "command_foreach");
-			decRuleLevel();
-			if ( getRuleLevel()==0 ) {dbg.terminate();}
-		}
-
 		return retval;
 	}
 	// $ANTLR end "command_foreach"
@@ -2053,33 +1642,26 @@ public class whileParser extends DebugParser {
 
 
 	// $ANTLR start "command"
-	// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:122:1: command : ( command_nop | command_var | command_if | command_while | command_for | command_foreach );
+	// while.g:108:1: command : ( command_nop | command_var | command_if | command_while | command_for | command_foreach );
 	public final whileParser.command_return command() throws RecognitionException {
 		whileParser.command_return retval = new whileParser.command_return();
 		retval.start = input.LT(1);
 
 		Object root_0 = null;
 
-		ParserRuleReturnScope command_nop40 =null;
-		ParserRuleReturnScope command_var41 =null;
-		ParserRuleReturnScope command_if42 =null;
-		ParserRuleReturnScope command_while43 =null;
-		ParserRuleReturnScope command_for44 =null;
-		ParserRuleReturnScope command_foreach45 =null;
+		ParserRuleReturnScope command_nop39 =null;
+		ParserRuleReturnScope command_var40 =null;
+		ParserRuleReturnScope command_if41 =null;
+		ParserRuleReturnScope command_while42 =null;
+		ParserRuleReturnScope command_for43 =null;
+		ParserRuleReturnScope command_foreach44 =null;
 
-
-		try { dbg.enterRule(getGrammarFileName(), "command");
-		if ( getRuleLevel()==0 ) {dbg.commence();}
-		incRuleLevel();
-		dbg.location(122, 0);
 
 		try {
-			// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:122:9: ( command_nop | command_var | command_if | command_while | command_for | command_foreach )
+			// while.g:108:9: ( command_nop | command_var | command_if | command_while | command_for | command_foreach )
 			int alt9=6;
-			try { dbg.enterDecision(9, decisionCanBacktrack[9]);
-
 			switch ( input.LA(1) ) {
-			case NOP:
+			case 45:
 				{
 				alt9=1;
 				}
@@ -2089,22 +1671,22 @@ public class whileParser extends DebugParser {
 				alt9=2;
 				}
 				break;
-			case IF:
+			case 41:
 				{
 				alt9=3;
 				}
 				break;
-			case WHILE:
+			case 50:
 				{
 				alt9=4;
 				}
 				break;
-			case FOR:
+			case 37:
 				{
 				alt9=5;
 				}
 				break;
-			case FOREACH:
+			case 38:
 				{
 				alt9=6;
 				}
@@ -2112,111 +1694,90 @@ public class whileParser extends DebugParser {
 			default:
 				NoViableAltException nvae =
 					new NoViableAltException("", 9, 0, input);
-				dbg.recognitionException(nvae);
 				throw nvae;
 			}
-			} finally {dbg.exitDecision(9);}
-
 			switch (alt9) {
 				case 1 :
-					dbg.enterAlt(1);
-
-					// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:123:7: command_nop
+					// while.g:109:7: command_nop
 					{
 					root_0 = (Object)adaptor.nil();
 
 
-					dbg.location(123,7);
-					pushFollow(FOLLOW_command_nop_in_command1133);
-					command_nop40=command_nop();
+					pushFollow(FOLLOW_command_nop_in_command959);
+					command_nop39=command_nop();
 					state._fsp--;
 
-					adaptor.addChild(root_0, command_nop40.getTree());
+					adaptor.addChild(root_0, command_nop39.getTree());
 
 					}
 					break;
 				case 2 :
-					dbg.enterAlt(2);
-
-					// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:124:7: command_var
+					// while.g:110:7: command_var
 					{
 					root_0 = (Object)adaptor.nil();
 
 
-					dbg.location(124,7);
-					pushFollow(FOLLOW_command_var_in_command1141);
-					command_var41=command_var();
+					pushFollow(FOLLOW_command_var_in_command967);
+					command_var40=command_var();
 					state._fsp--;
 
-					adaptor.addChild(root_0, command_var41.getTree());
+					adaptor.addChild(root_0, command_var40.getTree());
 
 					}
 					break;
 				case 3 :
-					dbg.enterAlt(3);
-
-					// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:125:7: command_if
+					// while.g:111:7: command_if
 					{
 					root_0 = (Object)adaptor.nil();
 
 
-					dbg.location(125,7);
-					pushFollow(FOLLOW_command_if_in_command1149);
-					command_if42=command_if();
+					pushFollow(FOLLOW_command_if_in_command975);
+					command_if41=command_if();
 					state._fsp--;
 
-					adaptor.addChild(root_0, command_if42.getTree());
+					adaptor.addChild(root_0, command_if41.getTree());
 
 					}
 					break;
 				case 4 :
-					dbg.enterAlt(4);
-
-					// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:126:7: command_while
+					// while.g:112:7: command_while
 					{
 					root_0 = (Object)adaptor.nil();
 
 
-					dbg.location(126,7);
-					pushFollow(FOLLOW_command_while_in_command1157);
-					command_while43=command_while();
+					pushFollow(FOLLOW_command_while_in_command983);
+					command_while42=command_while();
 					state._fsp--;
 
-					adaptor.addChild(root_0, command_while43.getTree());
+					adaptor.addChild(root_0, command_while42.getTree());
 
 					}
 					break;
 				case 5 :
-					dbg.enterAlt(5);
-
-					// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:127:7: command_for
+					// while.g:113:7: command_for
 					{
 					root_0 = (Object)adaptor.nil();
 
 
-					dbg.location(127,7);
-					pushFollow(FOLLOW_command_for_in_command1165);
-					command_for44=command_for();
+					pushFollow(FOLLOW_command_for_in_command991);
+					command_for43=command_for();
 					state._fsp--;
 
-					adaptor.addChild(root_0, command_for44.getTree());
+					adaptor.addChild(root_0, command_for43.getTree());
 
 					}
 					break;
 				case 6 :
-					dbg.enterAlt(6);
-
-					// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:128:7: command_foreach
+					// while.g:114:7: command_foreach
 					{
 					root_0 = (Object)adaptor.nil();
 
 
-					dbg.location(128,7);
-					pushFollow(FOLLOW_command_foreach_in_command1173);
-					command_foreach45=command_foreach();
+					pushFollow(FOLLOW_command_foreach_in_command999);
+					command_foreach44=command_foreach();
 					state._fsp--;
 
-					adaptor.addChild(root_0, command_foreach45.getTree());
+					adaptor.addChild(root_0, command_foreach44.getTree());
 
 					}
 					break;
@@ -2236,15 +1797,6 @@ public class whileParser extends DebugParser {
 		finally {
 			// do for sure before leaving
 		}
-		dbg.location(129, 4);
-
-		}
-		finally {
-			dbg.exitRule(getGrammarFileName(), "command");
-			decRuleLevel();
-			if ( getRuleLevel()==0 ) {dbg.terminate();}
-		}
-
 		return retval;
 	}
 	// $ANTLR end "command"
@@ -2258,44 +1810,37 @@ public class whileParser extends DebugParser {
 
 
 	// $ANTLR start "exprbase"
-	// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:131:1: exprbase : ( 'nil' -> ^( EXPRBASE 'nil' ) | VARIABLE -> ^( EXPRBASE VARIABLE ) | SYMBOL -> ^( EXPRBASE SYMBOL ) | '(' exprbase_paren ')' -> ^( EXPRBASE exprbase_paren ) );
+	// while.g:117:1: exprbase : ( 'nil' -> ^( EXPRBASE 'nil' ) |v= VARIABLE -> ^( EXPRBASE $v) |s= SYMBOL -> ^( EXPRBASE $s) | '(' exprbase_paren ')' -> ^( EXPRBASE exprbase_paren ) );
 	public final whileParser.exprbase_return exprbase() throws RecognitionException {
 		whileParser.exprbase_return retval = new whileParser.exprbase_return();
 		retval.start = input.LT(1);
 
 		Object root_0 = null;
 
-		Token string_literal46=null;
-		Token VARIABLE47=null;
-		Token SYMBOL48=null;
-		Token char_literal49=null;
-		Token char_literal51=null;
-		ParserRuleReturnScope exprbase_paren50 =null;
+		Token v=null;
+		Token s=null;
+		Token string_literal45=null;
+		Token char_literal46=null;
+		Token char_literal48=null;
+		ParserRuleReturnScope exprbase_paren47 =null;
 
-		Object string_literal46_tree=null;
-		Object VARIABLE47_tree=null;
-		Object SYMBOL48_tree=null;
-		Object char_literal49_tree=null;
-		Object char_literal51_tree=null;
-		RewriteRuleTokenStream stream_NIL=new RewriteRuleTokenStream(adaptor,"token NIL");
+		Object v_tree=null;
+		Object s_tree=null;
+		Object string_literal45_tree=null;
+		Object char_literal46_tree=null;
+		Object char_literal48_tree=null;
 		RewriteRuleTokenStream stream_44=new RewriteRuleTokenStream(adaptor,"token 44");
 		RewriteRuleTokenStream stream_SYMBOL=new RewriteRuleTokenStream(adaptor,"token SYMBOL");
+		RewriteRuleTokenStream stream_27=new RewriteRuleTokenStream(adaptor,"token 27");
 		RewriteRuleTokenStream stream_VARIABLE=new RewriteRuleTokenStream(adaptor,"token VARIABLE");
-		RewriteRuleTokenStream stream_43=new RewriteRuleTokenStream(adaptor,"token 43");
+		RewriteRuleTokenStream stream_28=new RewriteRuleTokenStream(adaptor,"token 28");
 		RewriteRuleSubtreeStream stream_exprbase_paren=new RewriteRuleSubtreeStream(adaptor,"rule exprbase_paren");
 
-		try { dbg.enterRule(getGrammarFileName(), "exprbase");
-		if ( getRuleLevel()==0 ) {dbg.commence();}
-		incRuleLevel();
-		dbg.location(131, 0);
-
 		try {
-			// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:132:5: ( 'nil' -> ^( EXPRBASE 'nil' ) | VARIABLE -> ^( EXPRBASE VARIABLE ) | SYMBOL -> ^( EXPRBASE SYMBOL ) | '(' exprbase_paren ')' -> ^( EXPRBASE exprbase_paren ) )
+			// while.g:118:5: ( 'nil' -> ^( EXPRBASE 'nil' ) |v= VARIABLE -> ^( EXPRBASE $v) |s= SYMBOL -> ^( EXPRBASE $s) | '(' exprbase_paren ')' -> ^( EXPRBASE exprbase_paren ) )
 			int alt10=4;
-			try { dbg.enterDecision(10, decisionCanBacktrack[10]);
-
 			switch ( input.LA(1) ) {
-			case NIL:
+			case 44:
 				{
 				alt10=1;
 				}
@@ -2310,7 +1855,7 @@ public class whileParser extends DebugParser {
 				alt10=3;
 				}
 				break;
-			case 43:
+			case 27:
 				{
 				alt10=4;
 				}
@@ -2318,23 +1863,17 @@ public class whileParser extends DebugParser {
 			default:
 				NoViableAltException nvae =
 					new NoViableAltException("", 10, 0, input);
-				dbg.recognitionException(nvae);
 				throw nvae;
 			}
-			} finally {dbg.exitDecision(10);}
-
 			switch (alt10) {
 				case 1 :
-					dbg.enterAlt(1);
-
-					// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:132:7: 'nil'
+					// while.g:118:7: 'nil'
 					{
-					dbg.location(132,7);
-					string_literal46=(Token)match(input,NIL,FOLLOW_NIL_in_exprbase1190);  
-					stream_NIL.add(string_literal46);
+					string_literal45=(Token)match(input,44,FOLLOW_44_in_exprbase1016);  
+					stream_44.add(string_literal45);
 
 					// AST REWRITE
-					// elements: NIL
+					// elements: 44
 					// token labels: 
 					// rule labels: retval
 					// token list labels: 
@@ -2344,16 +1883,13 @@ public class whileParser extends DebugParser {
 					RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.getTree():null);
 
 					root_0 = (Object)adaptor.nil();
-					// 132:29: -> ^( EXPRBASE 'nil' )
+					// 118:29: -> ^( EXPRBASE 'nil' )
 					{
-						dbg.location(132,32);
-						// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:132:32: ^( EXPRBASE 'nil' )
+						// while.g:118:32: ^( EXPRBASE 'nil' )
 						{
 						Object root_1 = (Object)adaptor.nil();
-						dbg.location(132,34);
 						root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(EXPRBASE, "EXPRBASE"), root_1);
-						dbg.location(132,43);
-						adaptor.addChild(root_1, stream_NIL.nextNode());
+						adaptor.addChild(root_1, stream_44.nextNode());
 						adaptor.addChild(root_0, root_1);
 						}
 
@@ -2365,35 +1901,30 @@ public class whileParser extends DebugParser {
 					}
 					break;
 				case 2 :
-					dbg.enterAlt(2);
-
-					// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:133:7: VARIABLE
+					// while.g:119:7: v= VARIABLE
 					{
-					dbg.location(133,7);
-					VARIABLE47=(Token)match(input,VARIABLE,FOLLOW_VARIABLE_in_exprbase1222);  
-					stream_VARIABLE.add(VARIABLE47);
+					v=(Token)match(input,VARIABLE,FOLLOW_VARIABLE_in_exprbase1050);  
+					stream_VARIABLE.add(v);
 
 					// AST REWRITE
-					// elements: VARIABLE
-					// token labels: 
+					// elements: v
+					// token labels: v
 					// rule labels: retval
 					// token list labels: 
 					// rule list labels: 
 					// wildcard labels: 
 					retval.tree = root_0;
+					RewriteRuleTokenStream stream_v=new RewriteRuleTokenStream(adaptor,"token v",v);
 					RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.getTree():null);
 
 					root_0 = (Object)adaptor.nil();
-					// 133:29: -> ^( EXPRBASE VARIABLE )
+					// 119:31: -> ^( EXPRBASE $v)
 					{
-						dbg.location(133,32);
-						// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:133:32: ^( EXPRBASE VARIABLE )
+						// while.g:119:34: ^( EXPRBASE $v)
 						{
 						Object root_1 = (Object)adaptor.nil();
-						dbg.location(133,34);
 						root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(EXPRBASE, "EXPRBASE"), root_1);
-						dbg.location(133,43);
-						adaptor.addChild(root_1, stream_VARIABLE.nextNode());
+						adaptor.addChild(root_1, stream_v.nextNode());
 						adaptor.addChild(root_0, root_1);
 						}
 
@@ -2405,35 +1936,30 @@ public class whileParser extends DebugParser {
 					}
 					break;
 				case 3 :
-					dbg.enterAlt(3);
-
-					// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:134:7: SYMBOL
+					// while.g:120:7: s= SYMBOL
 					{
-					dbg.location(134,7);
-					SYMBOL48=(Token)match(input,SYMBOL,FOLLOW_SYMBOL_in_exprbase1251);  
-					stream_SYMBOL.add(SYMBOL48);
+					s=(Token)match(input,SYMBOL,FOLLOW_SYMBOL_in_exprbase1082);  
+					stream_SYMBOL.add(s);
 
 					// AST REWRITE
-					// elements: SYMBOL
-					// token labels: 
+					// elements: s
+					// token labels: s
 					// rule labels: retval
 					// token list labels: 
 					// rule list labels: 
 					// wildcard labels: 
 					retval.tree = root_0;
+					RewriteRuleTokenStream stream_s=new RewriteRuleTokenStream(adaptor,"token s",s);
 					RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.getTree():null);
 
 					root_0 = (Object)adaptor.nil();
-					// 134:29: -> ^( EXPRBASE SYMBOL )
+					// 120:31: -> ^( EXPRBASE $s)
 					{
-						dbg.location(134,32);
-						// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:134:32: ^( EXPRBASE SYMBOL )
+						// while.g:120:34: ^( EXPRBASE $s)
 						{
 						Object root_1 = (Object)adaptor.nil();
-						dbg.location(134,34);
 						root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(EXPRBASE, "EXPRBASE"), root_1);
-						dbg.location(134,43);
-						adaptor.addChild(root_1, stream_SYMBOL.nextNode());
+						adaptor.addChild(root_1, stream_s.nextNode());
 						adaptor.addChild(root_0, root_1);
 						}
 
@@ -2445,21 +1971,18 @@ public class whileParser extends DebugParser {
 					}
 					break;
 				case 4 :
-					dbg.enterAlt(4);
-
-					// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:135:7: '(' exprbase_paren ')'
+					// while.g:121:7: '(' exprbase_paren ')'
 					{
-					dbg.location(135,7);
-					char_literal49=(Token)match(input,43,FOLLOW_43_in_exprbase1282);  
-					stream_43.add(char_literal49);
-					dbg.location(135,11);
-					pushFollow(FOLLOW_exprbase_paren_in_exprbase1284);
-					exprbase_paren50=exprbase_paren();
+					char_literal46=(Token)match(input,27,FOLLOW_27_in_exprbase1114);  
+					stream_27.add(char_literal46);
+
+					pushFollow(FOLLOW_exprbase_paren_in_exprbase1116);
+					exprbase_paren47=exprbase_paren();
 					state._fsp--;
 
-					stream_exprbase_paren.add(exprbase_paren50.getTree());dbg.location(135,26);
-					char_literal51=(Token)match(input,44,FOLLOW_44_in_exprbase1286);  
-					stream_44.add(char_literal51);
+					stream_exprbase_paren.add(exprbase_paren47.getTree());
+					char_literal48=(Token)match(input,28,FOLLOW_28_in_exprbase1118);  
+					stream_28.add(char_literal48);
 
 					// AST REWRITE
 					// elements: exprbase_paren
@@ -2472,15 +1995,12 @@ public class whileParser extends DebugParser {
 					RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.getTree():null);
 
 					root_0 = (Object)adaptor.nil();
-					// 135:30: -> ^( EXPRBASE exprbase_paren )
+					// 121:30: -> ^( EXPRBASE exprbase_paren )
 					{
-						dbg.location(135,33);
-						// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:135:33: ^( EXPRBASE exprbase_paren )
+						// while.g:121:33: ^( EXPRBASE exprbase_paren )
 						{
 						Object root_1 = (Object)adaptor.nil();
-						dbg.location(135,35);
 						root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(EXPRBASE, "EXPRBASE"), root_1);
-						dbg.location(135,44);
 						adaptor.addChild(root_1, stream_exprbase_paren.nextTree());
 						adaptor.addChild(root_0, root_1);
 						}
@@ -2508,15 +2028,6 @@ public class whileParser extends DebugParser {
 		finally {
 			// do for sure before leaving
 		}
-		dbg.location(136, 4);
-
-		}
-		finally {
-			dbg.exitRule(getGrammarFileName(), "exprbase");
-			decRuleLevel();
-			if ( getRuleLevel()==0 ) {dbg.terminate();}
-		}
-
 		return retval;
 	}
 	// $ANTLR end "exprbase"
@@ -2530,64 +2041,57 @@ public class whileParser extends DebugParser {
 
 
 	// $ANTLR start "exprbase_paren"
-	// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:138:1: exprbase_paren : ( 'list' lexpr -> ^( EXPRBASE 'list' lexpr ) | 'cons' lexpr -> ^( EXPRBASE 'cons' lexpr ) | 'hd' exprbase -> ^( EXPRBASE 'hd' exprbase ) | 'tl' exprbase -> ^( EXPRBASE 'tl' exprbase ) | SYMBOL lexpr -> ^( EXPRBASE SYMBOL lexpr ) );
+	// while.g:124:1: exprbase_paren : ( 'list' lexpr -> ^( EXPRBASE 'list' lexpr ) | 'cons' lexpr -> ^( EXPRBASE 'cons' lexpr ) | 'hd' exprbase -> ^( EXPRBASE 'hd' exprbase ) | 'tl' exprbase -> ^( EXPRBASE 'tl' exprbase ) |s= SYMBOL lexpr -> ^( EXPRBASE $s lexpr ) );
 	public final whileParser.exprbase_paren_return exprbase_paren() throws RecognitionException {
 		whileParser.exprbase_paren_return retval = new whileParser.exprbase_paren_return();
 		retval.start = input.LT(1);
 
 		Object root_0 = null;
 
-		Token string_literal52=null;
-		Token string_literal54=null;
-		Token string_literal56=null;
-		Token string_literal58=null;
-		Token SYMBOL60=null;
-		ParserRuleReturnScope lexpr53 =null;
-		ParserRuleReturnScope lexpr55 =null;
-		ParserRuleReturnScope exprbase57 =null;
-		ParserRuleReturnScope exprbase59 =null;
-		ParserRuleReturnScope lexpr61 =null;
+		Token s=null;
+		Token string_literal49=null;
+		Token string_literal51=null;
+		Token string_literal53=null;
+		Token string_literal55=null;
+		ParserRuleReturnScope lexpr50 =null;
+		ParserRuleReturnScope lexpr52 =null;
+		ParserRuleReturnScope exprbase54 =null;
+		ParserRuleReturnScope exprbase56 =null;
+		ParserRuleReturnScope lexpr57 =null;
 
-		Object string_literal52_tree=null;
-		Object string_literal54_tree=null;
-		Object string_literal56_tree=null;
-		Object string_literal58_tree=null;
-		Object SYMBOL60_tree=null;
+		Object s_tree=null;
+		Object string_literal49_tree=null;
+		Object string_literal51_tree=null;
+		Object string_literal53_tree=null;
+		Object string_literal55_tree=null;
+		RewriteRuleTokenStream stream_33=new RewriteRuleTokenStream(adaptor,"token 33");
 		RewriteRuleTokenStream stream_SYMBOL=new RewriteRuleTokenStream(adaptor,"token SYMBOL");
-		RewriteRuleTokenStream stream_TL=new RewriteRuleTokenStream(adaptor,"token TL");
-		RewriteRuleTokenStream stream_HD=new RewriteRuleTokenStream(adaptor,"token HD");
-		RewriteRuleTokenStream stream_LIST=new RewriteRuleTokenStream(adaptor,"token LIST");
-		RewriteRuleTokenStream stream_CONS=new RewriteRuleTokenStream(adaptor,"token CONS");
+		RewriteRuleTokenStream stream_49=new RewriteRuleTokenStream(adaptor,"token 49");
+		RewriteRuleTokenStream stream_40=new RewriteRuleTokenStream(adaptor,"token 40");
+		RewriteRuleTokenStream stream_43=new RewriteRuleTokenStream(adaptor,"token 43");
 		RewriteRuleSubtreeStream stream_lexpr=new RewriteRuleSubtreeStream(adaptor,"rule lexpr");
 		RewriteRuleSubtreeStream stream_exprbase=new RewriteRuleSubtreeStream(adaptor,"rule exprbase");
 
-		try { dbg.enterRule(getGrammarFileName(), "exprbase_paren");
-		if ( getRuleLevel()==0 ) {dbg.commence();}
-		incRuleLevel();
-		dbg.location(138, 0);
-
 		try {
-			// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:139:5: ( 'list' lexpr -> ^( EXPRBASE 'list' lexpr ) | 'cons' lexpr -> ^( EXPRBASE 'cons' lexpr ) | 'hd' exprbase -> ^( EXPRBASE 'hd' exprbase ) | 'tl' exprbase -> ^( EXPRBASE 'tl' exprbase ) | SYMBOL lexpr -> ^( EXPRBASE SYMBOL lexpr ) )
+			// while.g:125:5: ( 'list' lexpr -> ^( EXPRBASE 'list' lexpr ) | 'cons' lexpr -> ^( EXPRBASE 'cons' lexpr ) | 'hd' exprbase -> ^( EXPRBASE 'hd' exprbase ) | 'tl' exprbase -> ^( EXPRBASE 'tl' exprbase ) |s= SYMBOL lexpr -> ^( EXPRBASE $s lexpr ) )
 			int alt11=5;
-			try { dbg.enterDecision(11, decisionCanBacktrack[11]);
-
 			switch ( input.LA(1) ) {
-			case LIST:
+			case 43:
 				{
 				alt11=1;
 				}
 				break;
-			case CONS:
+			case 33:
 				{
 				alt11=2;
 				}
 				break;
-			case HD:
+			case 40:
 				{
 				alt11=3;
 				}
 				break;
-			case TL:
+			case 49:
 				{
 				alt11=4;
 				}
@@ -2600,28 +2104,22 @@ public class whileParser extends DebugParser {
 			default:
 				NoViableAltException nvae =
 					new NoViableAltException("", 11, 0, input);
-				dbg.recognitionException(nvae);
 				throw nvae;
 			}
-			} finally {dbg.exitDecision(11);}
-
 			switch (alt11) {
 				case 1 :
-					dbg.enterAlt(1);
-
-					// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:139:7: 'list' lexpr
+					// while.g:125:7: 'list' lexpr
 					{
-					dbg.location(139,7);
-					string_literal52=(Token)match(input,LIST,FOLLOW_LIST_in_exprbase_paren1311);  
-					stream_LIST.add(string_literal52);
-					dbg.location(139,14);
-					pushFollow(FOLLOW_lexpr_in_exprbase_paren1313);
-					lexpr53=lexpr();
+					string_literal49=(Token)match(input,43,FOLLOW_43_in_exprbase_paren1143);  
+					stream_43.add(string_literal49);
+
+					pushFollow(FOLLOW_lexpr_in_exprbase_paren1145);
+					lexpr50=lexpr();
 					state._fsp--;
 
-					stream_lexpr.add(lexpr53.getTree());
+					stream_lexpr.add(lexpr50.getTree());
 					// AST REWRITE
-					// elements: lexpr, LIST
+					// elements: 43, lexpr
 					// token labels: 
 					// rule labels: retval
 					// token list labels: 
@@ -2631,16 +2129,13 @@ public class whileParser extends DebugParser {
 					RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.getTree():null);
 
 					root_0 = (Object)adaptor.nil();
-					// 139:29: -> ^( EXPRBASE 'list' lexpr )
+					// 125:29: -> ^( EXPRBASE 'list' lexpr )
 					{
-						dbg.location(139,32);
-						// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:139:32: ^( EXPRBASE 'list' lexpr )
+						// while.g:125:32: ^( EXPRBASE 'list' lexpr )
 						{
 						Object root_1 = (Object)adaptor.nil();
-						dbg.location(139,34);
 						root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(EXPRBASE, "EXPRBASE"), root_1);
-						dbg.location(139,43);
-						adaptor.addChild(root_1, stream_LIST.nextNode());dbg.location(139,50);
+						adaptor.addChild(root_1, stream_43.nextNode());
 						adaptor.addChild(root_1, stream_lexpr.nextTree());
 						adaptor.addChild(root_0, root_1);
 						}
@@ -2653,21 +2148,18 @@ public class whileParser extends DebugParser {
 					}
 					break;
 				case 2 :
-					dbg.enterAlt(2);
-
-					// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:140:7: 'cons' lexpr
+					// while.g:126:7: 'cons' lexpr
 					{
-					dbg.location(140,7);
-					string_literal54=(Token)match(input,CONS,FOLLOW_CONS_in_exprbase_paren1340);  
-					stream_CONS.add(string_literal54);
-					dbg.location(140,14);
-					pushFollow(FOLLOW_lexpr_in_exprbase_paren1342);
-					lexpr55=lexpr();
+					string_literal51=(Token)match(input,33,FOLLOW_33_in_exprbase_paren1172);  
+					stream_33.add(string_literal51);
+
+					pushFollow(FOLLOW_lexpr_in_exprbase_paren1174);
+					lexpr52=lexpr();
 					state._fsp--;
 
-					stream_lexpr.add(lexpr55.getTree());
+					stream_lexpr.add(lexpr52.getTree());
 					// AST REWRITE
-					// elements: lexpr, CONS
+					// elements: 33, lexpr
 					// token labels: 
 					// rule labels: retval
 					// token list labels: 
@@ -2677,16 +2169,13 @@ public class whileParser extends DebugParser {
 					RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.getTree():null);
 
 					root_0 = (Object)adaptor.nil();
-					// 140:29: -> ^( EXPRBASE 'cons' lexpr )
+					// 126:29: -> ^( EXPRBASE 'cons' lexpr )
 					{
-						dbg.location(140,32);
-						// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:140:32: ^( EXPRBASE 'cons' lexpr )
+						// while.g:126:32: ^( EXPRBASE 'cons' lexpr )
 						{
 						Object root_1 = (Object)adaptor.nil();
-						dbg.location(140,34);
 						root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(EXPRBASE, "EXPRBASE"), root_1);
-						dbg.location(140,43);
-						adaptor.addChild(root_1, stream_CONS.nextNode());dbg.location(140,50);
+						adaptor.addChild(root_1, stream_33.nextNode());
 						adaptor.addChild(root_1, stream_lexpr.nextTree());
 						adaptor.addChild(root_0, root_1);
 						}
@@ -2699,21 +2188,18 @@ public class whileParser extends DebugParser {
 					}
 					break;
 				case 3 :
-					dbg.enterAlt(3);
-
-					// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:141:7: 'hd' exprbase
+					// while.g:127:7: 'hd' exprbase
 					{
-					dbg.location(141,7);
-					string_literal56=(Token)match(input,HD,FOLLOW_HD_in_exprbase_paren1369);  
-					stream_HD.add(string_literal56);
-					dbg.location(141,12);
-					pushFollow(FOLLOW_exprbase_in_exprbase_paren1371);
-					exprbase57=exprbase();
+					string_literal53=(Token)match(input,40,FOLLOW_40_in_exprbase_paren1201);  
+					stream_40.add(string_literal53);
+
+					pushFollow(FOLLOW_exprbase_in_exprbase_paren1203);
+					exprbase54=exprbase();
 					state._fsp--;
 
-					stream_exprbase.add(exprbase57.getTree());
+					stream_exprbase.add(exprbase54.getTree());
 					// AST REWRITE
-					// elements: HD, exprbase
+					// elements: 40, exprbase
 					// token labels: 
 					// rule labels: retval
 					// token list labels: 
@@ -2723,16 +2209,13 @@ public class whileParser extends DebugParser {
 					RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.getTree():null);
 
 					root_0 = (Object)adaptor.nil();
-					// 141:29: -> ^( EXPRBASE 'hd' exprbase )
+					// 127:29: -> ^( EXPRBASE 'hd' exprbase )
 					{
-						dbg.location(141,32);
-						// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:141:32: ^( EXPRBASE 'hd' exprbase )
+						// while.g:127:32: ^( EXPRBASE 'hd' exprbase )
 						{
 						Object root_1 = (Object)adaptor.nil();
-						dbg.location(141,34);
 						root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(EXPRBASE, "EXPRBASE"), root_1);
-						dbg.location(141,43);
-						adaptor.addChild(root_1, stream_HD.nextNode());dbg.location(141,48);
+						adaptor.addChild(root_1, stream_40.nextNode());
 						adaptor.addChild(root_1, stream_exprbase.nextTree());
 						adaptor.addChild(root_0, root_1);
 						}
@@ -2745,21 +2228,18 @@ public class whileParser extends DebugParser {
 					}
 					break;
 				case 4 :
-					dbg.enterAlt(4);
-
-					// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:142:7: 'tl' exprbase
+					// while.g:128:7: 'tl' exprbase
 					{
-					dbg.location(142,7);
-					string_literal58=(Token)match(input,TL,FOLLOW_TL_in_exprbase_paren1397);  
-					stream_TL.add(string_literal58);
-					dbg.location(142,12);
-					pushFollow(FOLLOW_exprbase_in_exprbase_paren1399);
-					exprbase59=exprbase();
+					string_literal55=(Token)match(input,49,FOLLOW_49_in_exprbase_paren1229);  
+					stream_49.add(string_literal55);
+
+					pushFollow(FOLLOW_exprbase_in_exprbase_paren1231);
+					exprbase56=exprbase();
 					state._fsp--;
 
-					stream_exprbase.add(exprbase59.getTree());
+					stream_exprbase.add(exprbase56.getTree());
 					// AST REWRITE
-					// elements: TL, exprbase
+					// elements: 49, exprbase
 					// token labels: 
 					// rule labels: retval
 					// token list labels: 
@@ -2769,16 +2249,13 @@ public class whileParser extends DebugParser {
 					RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.getTree():null);
 
 					root_0 = (Object)adaptor.nil();
-					// 142:29: -> ^( EXPRBASE 'tl' exprbase )
+					// 128:29: -> ^( EXPRBASE 'tl' exprbase )
 					{
-						dbg.location(142,32);
-						// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:142:32: ^( EXPRBASE 'tl' exprbase )
+						// while.g:128:32: ^( EXPRBASE 'tl' exprbase )
 						{
 						Object root_1 = (Object)adaptor.nil();
-						dbg.location(142,34);
 						root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(EXPRBASE, "EXPRBASE"), root_1);
-						dbg.location(142,43);
-						adaptor.addChild(root_1, stream_TL.nextNode());dbg.location(142,48);
+						adaptor.addChild(root_1, stream_49.nextNode());
 						adaptor.addChild(root_1, stream_exprbase.nextTree());
 						adaptor.addChild(root_0, root_1);
 						}
@@ -2791,40 +2268,35 @@ public class whileParser extends DebugParser {
 					}
 					break;
 				case 5 :
-					dbg.enterAlt(5);
-
-					// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:143:7: SYMBOL lexpr
+					// while.g:129:7: s= SYMBOL lexpr
 					{
-					dbg.location(143,7);
-					SYMBOL60=(Token)match(input,SYMBOL,FOLLOW_SYMBOL_in_exprbase_paren1425);  
-					stream_SYMBOL.add(SYMBOL60);
-					dbg.location(143,14);
-					pushFollow(FOLLOW_lexpr_in_exprbase_paren1427);
-					lexpr61=lexpr();
+					s=(Token)match(input,SYMBOL,FOLLOW_SYMBOL_in_exprbase_paren1259);  
+					stream_SYMBOL.add(s);
+
+					pushFollow(FOLLOW_lexpr_in_exprbase_paren1261);
+					lexpr57=lexpr();
 					state._fsp--;
 
-					stream_lexpr.add(lexpr61.getTree());
+					stream_lexpr.add(lexpr57.getTree());
 					// AST REWRITE
-					// elements: lexpr, SYMBOL
-					// token labels: 
+					// elements: s, lexpr
+					// token labels: s
 					// rule labels: retval
 					// token list labels: 
 					// rule list labels: 
 					// wildcard labels: 
 					retval.tree = root_0;
+					RewriteRuleTokenStream stream_s=new RewriteRuleTokenStream(adaptor,"token s",s);
 					RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.getTree():null);
 
 					root_0 = (Object)adaptor.nil();
-					// 143:29: -> ^( EXPRBASE SYMBOL lexpr )
+					// 129:31: -> ^( EXPRBASE $s lexpr )
 					{
-						dbg.location(143,32);
-						// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:143:32: ^( EXPRBASE SYMBOL lexpr )
+						// while.g:129:34: ^( EXPRBASE $s lexpr )
 						{
 						Object root_1 = (Object)adaptor.nil();
-						dbg.location(143,34);
 						root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(EXPRBASE, "EXPRBASE"), root_1);
-						dbg.location(143,43);
-						adaptor.addChild(root_1, stream_SYMBOL.nextNode());dbg.location(143,50);
+						adaptor.addChild(root_1, stream_s.nextNode());
 						adaptor.addChild(root_1, stream_lexpr.nextTree());
 						adaptor.addChild(root_0, root_1);
 						}
@@ -2852,15 +2324,6 @@ public class whileParser extends DebugParser {
 		finally {
 			// do for sure before leaving
 		}
-		dbg.location(144, 4);
-
-		}
-		finally {
-			dbg.exitRule(getGrammarFileName(), "exprbase_paren");
-			decRuleLevel();
-			if ( getRuleLevel()==0 ) {dbg.terminate();}
-		}
-
 		return retval;
 	}
 	// $ANTLR end "exprbase_paren"
@@ -2874,60 +2337,44 @@ public class whileParser extends DebugParser {
 
 
 	// $ANTLR start "expression"
-	// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:146:1: expression : a= exprbase ( '=?' b= exprbase )? -> ^( EXPRESSION $a ( $b)? ) ;
+	// while.g:132:1: expression : a= exprbase ( '=?' b= exprbase )? -> ^( EXPRESSION $a ( $b)? ) ;
 	public final whileParser.expression_return expression() throws RecognitionException {
 		whileParser.expression_return retval = new whileParser.expression_return();
 		retval.start = input.LT(1);
 
 		Object root_0 = null;
 
-		Token string_literal62=null;
+		Token string_literal58=null;
 		ParserRuleReturnScope a =null;
 		ParserRuleReturnScope b =null;
 
-		Object string_literal62_tree=null;
-		RewriteRuleTokenStream stream_48=new RewriteRuleTokenStream(adaptor,"token 48");
+		Object string_literal58_tree=null;
+		RewriteRuleTokenStream stream_32=new RewriteRuleTokenStream(adaptor,"token 32");
 		RewriteRuleSubtreeStream stream_exprbase=new RewriteRuleSubtreeStream(adaptor,"rule exprbase");
 
-		try { dbg.enterRule(getGrammarFileName(), "expression");
-		if ( getRuleLevel()==0 ) {dbg.commence();}
-		incRuleLevel();
-		dbg.location(146, 0);
-
 		try {
-			// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:146:12: (a= exprbase ( '=?' b= exprbase )? -> ^( EXPRESSION $a ( $b)? ) )
-			dbg.enterAlt(1);
-
-			// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:147:7: a= exprbase ( '=?' b= exprbase )?
+			// while.g:132:12: (a= exprbase ( '=?' b= exprbase )? -> ^( EXPRESSION $a ( $b)? ) )
+			// while.g:133:7: a= exprbase ( '=?' b= exprbase )?
 			{
-			dbg.location(147,8);
-			pushFollow(FOLLOW_exprbase_in_expression1467);
+			pushFollow(FOLLOW_exprbase_in_expression1302);
 			a=exprbase();
 			state._fsp--;
 
-			stream_exprbase.add(a.getTree());dbg.location(147,18);
-			// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:147:18: ( '=?' b= exprbase )?
+			stream_exprbase.add(a.getTree());
+			// while.g:133:18: ( '=?' b= exprbase )?
 			int alt12=2;
-			try { dbg.enterSubRule(12);
-			try { dbg.enterDecision(12, decisionCanBacktrack[12]);
-
 			int LA12_0 = input.LA(1);
-			if ( (LA12_0==48) ) {
+			if ( (LA12_0==32) ) {
 				alt12=1;
 			}
-			} finally {dbg.exitDecision(12);}
-
 			switch (alt12) {
 				case 1 :
-					dbg.enterAlt(1);
-
-					// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:147:19: '=?' b= exprbase
+					// while.g:133:19: '=?' b= exprbase
 					{
-					dbg.location(147,19);
-					string_literal62=(Token)match(input,48,FOLLOW_48_in_expression1470);  
-					stream_48.add(string_literal62);
-					dbg.location(147,25);
-					pushFollow(FOLLOW_exprbase_in_expression1474);
+					string_literal58=(Token)match(input,32,FOLLOW_32_in_expression1305);  
+					stream_32.add(string_literal58);
+
+					pushFollow(FOLLOW_exprbase_in_expression1309);
 					b=exprbase();
 					state._fsp--;
 
@@ -2936,7 +2383,6 @@ public class whileParser extends DebugParser {
 					break;
 
 			}
-			} finally {dbg.exitSubRule(12);}
 
 			// AST REWRITE
 			// elements: a, b
@@ -2951,19 +2397,15 @@ public class whileParser extends DebugParser {
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.getTree():null);
 
 			root_0 = (Object)adaptor.nil();
-			// 148:7: -> ^( EXPRESSION $a ( $b)? )
+			// 134:7: -> ^( EXPRESSION $a ( $b)? )
 			{
-				dbg.location(148,10);
-				// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:148:10: ^( EXPRESSION $a ( $b)? )
+				// while.g:134:10: ^( EXPRESSION $a ( $b)? )
 				{
 				Object root_1 = (Object)adaptor.nil();
-				dbg.location(148,12);
 				root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(EXPRESSION, "EXPRESSION"), root_1);
-				dbg.location(148,24);
-				adaptor.addChild(root_1, stream_a.nextTree());dbg.location(148,26);
-				// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:148:26: ( $b)?
+				adaptor.addChild(root_1, stream_a.nextTree());
+				// while.g:134:26: ( $b)?
 				if ( stream_b.hasNext() ) {
-					dbg.location(148,28);
 					adaptor.addChild(root_1, stream_b.nextTree());
 				}
 				stream_b.reset();
@@ -2992,15 +2434,6 @@ public class whileParser extends DebugParser {
 		finally {
 			// do for sure before leaving
 		}
-		dbg.location(149, 4);
-
-		}
-		finally {
-			dbg.exitRule(getGrammarFileName(), "expression");
-			decRuleLevel();
-			if ( getRuleLevel()==0 ) {dbg.terminate();}
-		}
-
 		return retval;
 	}
 	// $ANTLR end "expression"
@@ -3014,7 +2447,7 @@ public class whileParser extends DebugParser {
 
 
 	// $ANTLR start "lexpr"
-	// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:151:1: lexpr : (e= exprbase )* -> ^( LEXPR ( $e)* ) ;
+	// while.g:137:1: lexpr : (e= exprbase )* -> ^( LEXPR ( $e)* ) ;
 	public final whileParser.lexpr_return lexpr() throws RecognitionException {
 		whileParser.lexpr_return retval = new whileParser.lexpr_return();
 		retval.start = input.LT(1);
@@ -3025,41 +2458,24 @@ public class whileParser extends DebugParser {
 
 		RewriteRuleSubtreeStream stream_exprbase=new RewriteRuleSubtreeStream(adaptor,"rule exprbase");
 
-		try { dbg.enterRule(getGrammarFileName(), "lexpr");
-		if ( getRuleLevel()==0 ) {dbg.commence();}
-		incRuleLevel();
-		dbg.location(151, 0);
-
 		try {
-			// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:151:7: ( (e= exprbase )* -> ^( LEXPR ( $e)* ) )
-			dbg.enterAlt(1);
-
-			// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:152:7: (e= exprbase )*
+			// while.g:137:7: ( (e= exprbase )* -> ^( LEXPR ( $e)* ) )
+			// while.g:138:7: (e= exprbase )*
 			{
-			dbg.location(152,8);
-			// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:152:8: (e= exprbase )*
-			try { dbg.enterSubRule(13);
-
+			// while.g:138:8: (e= exprbase )*
 			loop13:
 			while (true) {
 				int alt13=2;
-				try { dbg.enterDecision(13, decisionCanBacktrack[13]);
-
 				int LA13_0 = input.LA(1);
-				if ( (LA13_0==NIL||LA13_0==SYMBOL||LA13_0==VARIABLE||LA13_0==43) ) {
+				if ( (LA13_0==SYMBOL||LA13_0==VARIABLE||LA13_0==27||LA13_0==44) ) {
 					alt13=1;
 				}
 
-				} finally {dbg.exitDecision(13);}
-
 				switch (alt13) {
 				case 1 :
-					dbg.enterAlt(1);
-
-					// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:152:8: e= exprbase
+					// while.g:138:8: e= exprbase
 					{
-					dbg.location(152,8);
-					pushFollow(FOLLOW_exprbase_in_lexpr1518);
+					pushFollow(FOLLOW_exprbase_in_lexpr1353);
 					e=exprbase();
 					state._fsp--;
 
@@ -3071,7 +2487,6 @@ public class whileParser extends DebugParser {
 					break loop13;
 				}
 			}
-			} finally {dbg.exitSubRule(13);}
 
 			// AST REWRITE
 			// elements: e
@@ -3085,18 +2500,14 @@ public class whileParser extends DebugParser {
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.getTree():null);
 
 			root_0 = (Object)adaptor.nil();
-			// 152:19: -> ^( LEXPR ( $e)* )
+			// 138:19: -> ^( LEXPR ( $e)* )
 			{
-				dbg.location(152,22);
-				// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:152:22: ^( LEXPR ( $e)* )
+				// while.g:138:22: ^( LEXPR ( $e)* )
 				{
 				Object root_1 = (Object)adaptor.nil();
-				dbg.location(152,24);
 				root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(LEXPR, "LEXPR"), root_1);
-				dbg.location(152,31);
-				// C:\\Users\\tmami\\github-classroom\\Projet_TLC\\while.g:152:31: ( $e)*
+				// while.g:138:31: ( $e)*
 				while ( stream_e.hasNext() ) {
-					dbg.location(152,31);
 					adaptor.addChild(root_1, stream_e.nextTree());
 				}
 				stream_e.reset();
@@ -3125,15 +2536,6 @@ public class whileParser extends DebugParser {
 		finally {
 			// do for sure before leaving
 		}
-		dbg.location(153, 4);
-
-		}
-		finally {
-			dbg.exitRule(getGrammarFileName(), "lexpr");
-			decRuleLevel();
-			if ( getRuleLevel()==0 ) {dbg.terminate();}
-		}
-
 		return retval;
 	}
 	// $ANTLR end "lexpr"
@@ -3142,85 +2544,85 @@ public class whileParser extends DebugParser {
 
 
 
-	public static final BitSet FOLLOW_function_in_program498 = new BitSet(new long[]{0x0000000000040002L});
-	public static final BitSet FOLLOW_FUNCTION_in_function525 = new BitSet(new long[]{0x0000000200000000L});
-	public static final BitSet FOLLOW_SYMBOL_in_function529 = new BitSet(new long[]{0x0000200000000000L});
-	public static final BitSet FOLLOW_45_in_function531 = new BitSet(new long[]{0x0000000100000000L});
-	public static final BitSet FOLLOW_definition_in_function533 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_READ_in_definition571 = new BitSet(new long[]{0x0000002040000000L});
-	public static final BitSet FOLLOW_input_in_definition575 = new BitSet(new long[]{0x0000000040000000L});
-	public static final BitSet FOLLOW_PERCENT_in_definition578 = new BitSet(new long[]{0x0000012008130000L});
-	public static final BitSet FOLLOW_commands_in_definition582 = new BitSet(new long[]{0x0000000040000000L});
-	public static final BitSet FOLLOW_PERCENT_in_definition584 = new BitSet(new long[]{0x0000020000000000L});
-	public static final BitSet FOLLOW_WRITE_in_definition586 = new BitSet(new long[]{0x0000002000000000L});
-	public static final BitSet FOLLOW_output_in_definition590 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_VARIABLE_in_input641 = new BitSet(new long[]{0x0000000000000012L});
-	public static final BitSet FOLLOW_COMMA_in_input644 = new BitSet(new long[]{0x0000002000000000L});
-	public static final BitSet FOLLOW_VARIABLE_in_input648 = new BitSet(new long[]{0x0000000000000012L});
-	public static final BitSet FOLLOW_VARIABLE_in_output687 = new BitSet(new long[]{0x0000000000000012L});
-	public static final BitSet FOLLOW_COMMA_in_output690 = new BitSet(new long[]{0x0000002000000000L});
-	public static final BitSet FOLLOW_VARIABLE_in_output694 = new BitSet(new long[]{0x0000000000000012L});
-	public static final BitSet FOLLOW_VARIABLE_in_vars733 = new BitSet(new long[]{0x0000000000000012L});
-	public static final BitSet FOLLOW_COMMA_in_vars736 = new BitSet(new long[]{0x0000002000000000L});
-	public static final BitSet FOLLOW_VARIABLE_in_vars740 = new BitSet(new long[]{0x0000000000000012L});
-	public static final BitSet FOLLOW_expression_in_exprs779 = new BitSet(new long[]{0x0000000000000012L});
-	public static final BitSet FOLLOW_COMMA_in_exprs782 = new BitSet(new long[]{0x0000082204000000L});
-	public static final BitSet FOLLOW_expression_in_exprs786 = new BitSet(new long[]{0x0000000000000012L});
-	public static final BitSet FOLLOW_command_in_commands825 = new BitSet(new long[]{0x0000800000000002L});
-	public static final BitSet FOLLOW_47_in_commands829 = new BitSet(new long[]{0x0000012008130000L});
-	public static final BitSet FOLLOW_command_in_commands833 = new BitSet(new long[]{0x0000800000000002L});
-	public static final BitSet FOLLOW_NOP_in_command_nop871 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_vars_in_command_var896 = new BitSet(new long[]{0x0000400000000000L});
-	public static final BitSet FOLLOW_46_in_command_var898 = new BitSet(new long[]{0x0000082204000000L});
-	public static final BitSet FOLLOW_exprs_in_command_var900 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_IF_in_command_if927 = new BitSet(new long[]{0x0000082204000000L});
-	public static final BitSet FOLLOW_expression_in_command_if929 = new BitSet(new long[]{0x0000000400000000L});
-	public static final BitSet FOLLOW_THEN_in_command_if931 = new BitSet(new long[]{0x0000012008130000L});
-	public static final BitSet FOLLOW_commands_in_command_if935 = new BitSet(new long[]{0x0000000000008400L});
-	public static final BitSet FOLLOW_ELSE_in_command_if938 = new BitSet(new long[]{0x0000012008130000L});
-	public static final BitSet FOLLOW_commands_in_command_if942 = new BitSet(new long[]{0x0000000000008000L});
-	public static final BitSet FOLLOW_FI_in_command_if946 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_WHILE_in_command_while992 = new BitSet(new long[]{0x0000082204000000L});
-	public static final BitSet FOLLOW_expression_in_command_while994 = new BitSet(new long[]{0x0000000000000200L});
-	public static final BitSet FOLLOW_DO_in_command_while996 = new BitSet(new long[]{0x0000012008130000L});
-	public static final BitSet FOLLOW_commands_in_command_while998 = new BitSet(new long[]{0x0000000010000000L});
-	public static final BitSet FOLLOW_OD_in_command_while1000 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_FOR_in_command_for1037 = new BitSet(new long[]{0x0000082204000000L});
-	public static final BitSet FOLLOW_expression_in_command_for1039 = new BitSet(new long[]{0x0000000000000200L});
-	public static final BitSet FOLLOW_DO_in_command_for1041 = new BitSet(new long[]{0x0000012008130000L});
-	public static final BitSet FOLLOW_commands_in_command_for1043 = new BitSet(new long[]{0x0000000010000000L});
-	public static final BitSet FOLLOW_OD_in_command_for1045 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_FOREACH_in_command_foreach1082 = new BitSet(new long[]{0x0000002000000000L});
-	public static final BitSet FOLLOW_VARIABLE_in_command_foreach1084 = new BitSet(new long[]{0x0000000000200000L});
-	public static final BitSet FOLLOW_IN_in_command_foreach1086 = new BitSet(new long[]{0x0000082204000000L});
-	public static final BitSet FOLLOW_expression_in_command_foreach1088 = new BitSet(new long[]{0x0000000000000200L});
-	public static final BitSet FOLLOW_DO_in_command_foreach1090 = new BitSet(new long[]{0x0000012008130000L});
-	public static final BitSet FOLLOW_commands_in_command_foreach1092 = new BitSet(new long[]{0x0000000010000000L});
-	public static final BitSet FOLLOW_OD_in_command_foreach1094 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_command_nop_in_command1133 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_command_var_in_command1141 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_command_if_in_command1149 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_command_while_in_command1157 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_command_for_in_command1165 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_command_foreach_in_command1173 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_NIL_in_exprbase1190 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_VARIABLE_in_exprbase1222 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_SYMBOL_in_exprbase1251 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_43_in_exprbase1282 = new BitSet(new long[]{0x0000000A02080080L});
-	public static final BitSet FOLLOW_exprbase_paren_in_exprbase1284 = new BitSet(new long[]{0x0000100000000000L});
-	public static final BitSet FOLLOW_44_in_exprbase1286 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_LIST_in_exprbase_paren1311 = new BitSet(new long[]{0x0000082204000000L});
-	public static final BitSet FOLLOW_lexpr_in_exprbase_paren1313 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_CONS_in_exprbase_paren1340 = new BitSet(new long[]{0x0000082204000000L});
-	public static final BitSet FOLLOW_lexpr_in_exprbase_paren1342 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_HD_in_exprbase_paren1369 = new BitSet(new long[]{0x0000082204000000L});
-	public static final BitSet FOLLOW_exprbase_in_exprbase_paren1371 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_TL_in_exprbase_paren1397 = new BitSet(new long[]{0x0000082204000000L});
-	public static final BitSet FOLLOW_exprbase_in_exprbase_paren1399 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_SYMBOL_in_exprbase_paren1425 = new BitSet(new long[]{0x0000082204000000L});
-	public static final BitSet FOLLOW_lexpr_in_exprbase_paren1427 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_exprbase_in_expression1467 = new BitSet(new long[]{0x0001000000000002L});
-	public static final BitSet FOLLOW_48_in_expression1470 = new BitSet(new long[]{0x0000082204000000L});
-	public static final BitSet FOLLOW_exprbase_in_expression1474 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_exprbase_in_lexpr1518 = new BitSet(new long[]{0x0000082204000002L});
+	public static final BitSet FOLLOW_function_in_program321 = new BitSet(new long[]{0x0000008000000002L});
+	public static final BitSet FOLLOW_39_in_function348 = new BitSet(new long[]{0x0000000000200000L});
+	public static final BitSet FOLLOW_SYMBOL_in_function352 = new BitSet(new long[]{0x0000000020000000L});
+	public static final BitSet FOLLOW_29_in_function354 = new BitSet(new long[]{0x0000800000000000L});
+	public static final BitSet FOLLOW_definition_in_function356 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_47_in_definition394 = new BitSet(new long[]{0x0000000000880000L});
+	public static final BitSet FOLLOW_input_in_definition398 = new BitSet(new long[]{0x0000000000080000L});
+	public static final BitSet FOLLOW_PERCENT_in_definition401 = new BitSet(new long[]{0x0004226000800000L});
+	public static final BitSet FOLLOW_commands_in_definition405 = new BitSet(new long[]{0x0000000000080000L});
+	public static final BitSet FOLLOW_PERCENT_in_definition407 = new BitSet(new long[]{0x0008000000000000L});
+	public static final BitSet FOLLOW_51_in_definition409 = new BitSet(new long[]{0x0000000000800000L});
+	public static final BitSet FOLLOW_output_in_definition413 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_VARIABLE_in_input464 = new BitSet(new long[]{0x0000000000000012L});
+	public static final BitSet FOLLOW_COMMA_in_input467 = new BitSet(new long[]{0x0000000000800000L});
+	public static final BitSet FOLLOW_VARIABLE_in_input471 = new BitSet(new long[]{0x0000000000000012L});
+	public static final BitSet FOLLOW_VARIABLE_in_output510 = new BitSet(new long[]{0x0000000000000012L});
+	public static final BitSet FOLLOW_COMMA_in_output513 = new BitSet(new long[]{0x0000000000800000L});
+	public static final BitSet FOLLOW_VARIABLE_in_output517 = new BitSet(new long[]{0x0000000000000012L});
+	public static final BitSet FOLLOW_VARIABLE_in_vars556 = new BitSet(new long[]{0x0000000000000012L});
+	public static final BitSet FOLLOW_COMMA_in_vars559 = new BitSet(new long[]{0x0000000000800000L});
+	public static final BitSet FOLLOW_VARIABLE_in_vars563 = new BitSet(new long[]{0x0000000000000012L});
+	public static final BitSet FOLLOW_expression_in_exprs602 = new BitSet(new long[]{0x0000000000000012L});
+	public static final BitSet FOLLOW_COMMA_in_exprs605 = new BitSet(new long[]{0x0000100008A00000L});
+	public static final BitSet FOLLOW_expression_in_exprs609 = new BitSet(new long[]{0x0000000000000012L});
+	public static final BitSet FOLLOW_command_in_commands648 = new BitSet(new long[]{0x0000000080000002L});
+	public static final BitSet FOLLOW_31_in_commands652 = new BitSet(new long[]{0x0004226000800000L});
+	public static final BitSet FOLLOW_command_in_commands656 = new BitSet(new long[]{0x0000000080000002L});
+	public static final BitSet FOLLOW_45_in_command_nop694 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_vars_in_command_var719 = new BitSet(new long[]{0x0000000040000000L});
+	public static final BitSet FOLLOW_30_in_command_var721 = new BitSet(new long[]{0x0000100008A00000L});
+	public static final BitSet FOLLOW_exprs_in_command_var723 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_41_in_command_if750 = new BitSet(new long[]{0x0000100008A00000L});
+	public static final BitSet FOLLOW_expression_in_command_if752 = new BitSet(new long[]{0x0001000000000000L});
+	public static final BitSet FOLLOW_48_in_command_if754 = new BitSet(new long[]{0x0004226000800000L});
+	public static final BitSet FOLLOW_commands_in_command_if758 = new BitSet(new long[]{0x0000001800000000L});
+	public static final BitSet FOLLOW_35_in_command_if761 = new BitSet(new long[]{0x0004226000800000L});
+	public static final BitSet FOLLOW_commands_in_command_if765 = new BitSet(new long[]{0x0000001000000000L});
+	public static final BitSet FOLLOW_36_in_command_if769 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_50_in_command_while815 = new BitSet(new long[]{0x0000100008A00000L});
+	public static final BitSet FOLLOW_expression_in_command_while817 = new BitSet(new long[]{0x0000000400000000L});
+	public static final BitSet FOLLOW_34_in_command_while819 = new BitSet(new long[]{0x0004226000800000L});
+	public static final BitSet FOLLOW_commands_in_command_while821 = new BitSet(new long[]{0x0000400000000000L});
+	public static final BitSet FOLLOW_46_in_command_while823 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_37_in_command_for860 = new BitSet(new long[]{0x0000100008A00000L});
+	public static final BitSet FOLLOW_expression_in_command_for862 = new BitSet(new long[]{0x0000000400000000L});
+	public static final BitSet FOLLOW_34_in_command_for864 = new BitSet(new long[]{0x0004226000800000L});
+	public static final BitSet FOLLOW_commands_in_command_for866 = new BitSet(new long[]{0x0000400000000000L});
+	public static final BitSet FOLLOW_46_in_command_for868 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_38_in_command_foreach905 = new BitSet(new long[]{0x0000000000800000L});
+	public static final BitSet FOLLOW_VARIABLE_in_command_foreach909 = new BitSet(new long[]{0x0000040000000000L});
+	public static final BitSet FOLLOW_42_in_command_foreach911 = new BitSet(new long[]{0x0000100008A00000L});
+	public static final BitSet FOLLOW_expression_in_command_foreach913 = new BitSet(new long[]{0x0000000400000000L});
+	public static final BitSet FOLLOW_34_in_command_foreach915 = new BitSet(new long[]{0x0004226000800000L});
+	public static final BitSet FOLLOW_commands_in_command_foreach917 = new BitSet(new long[]{0x0000400000000000L});
+	public static final BitSet FOLLOW_46_in_command_foreach919 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_command_nop_in_command959 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_command_var_in_command967 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_command_if_in_command975 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_command_while_in_command983 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_command_for_in_command991 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_command_foreach_in_command999 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_44_in_exprbase1016 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_VARIABLE_in_exprbase1050 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_SYMBOL_in_exprbase1082 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_27_in_exprbase1114 = new BitSet(new long[]{0x0002090200200000L});
+	public static final BitSet FOLLOW_exprbase_paren_in_exprbase1116 = new BitSet(new long[]{0x0000000010000000L});
+	public static final BitSet FOLLOW_28_in_exprbase1118 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_43_in_exprbase_paren1143 = new BitSet(new long[]{0x0000100008A00000L});
+	public static final BitSet FOLLOW_lexpr_in_exprbase_paren1145 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_33_in_exprbase_paren1172 = new BitSet(new long[]{0x0000100008A00000L});
+	public static final BitSet FOLLOW_lexpr_in_exprbase_paren1174 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_40_in_exprbase_paren1201 = new BitSet(new long[]{0x0000100008A00000L});
+	public static final BitSet FOLLOW_exprbase_in_exprbase_paren1203 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_49_in_exprbase_paren1229 = new BitSet(new long[]{0x0000100008A00000L});
+	public static final BitSet FOLLOW_exprbase_in_exprbase_paren1231 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_SYMBOL_in_exprbase_paren1259 = new BitSet(new long[]{0x0000100008A00000L});
+	public static final BitSet FOLLOW_lexpr_in_exprbase_paren1261 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_exprbase_in_expression1302 = new BitSet(new long[]{0x0000000100000002L});
+	public static final BitSet FOLLOW_32_in_expression1305 = new BitSet(new long[]{0x0000100008A00000L});
+	public static final BitSet FOLLOW_exprbase_in_expression1309 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_exprbase_in_lexpr1353 = new BitSet(new long[]{0x0000100008A00002L});
 }

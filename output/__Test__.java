@@ -1,6 +1,7 @@
 import java.io.*;
 import org.antlr.runtime.*;
 import org.antlr.runtime.debug.DebugEventSocketProxy;
+import org.antlr.runtime.tree.*;
 
 
 public class __Test__ {
@@ -8,10 +9,12 @@ public class __Test__ {
     public static void main(String args[]) throws Exception {
         whileLexer lex = new whileLexer(new ANTLRFileStream("C:\\Users\\tmami\\github-classroom\\Projet_TLC\\output\\__Test___input.txt", "UTF8"));
         CommonTokenStream tokens = new CommonTokenStream(lex);
-
-        whileParser g = new whileParser(tokens, 49100, null);
+        whileParser g = new whileParser(tokens);
         try {
-            g.program();
+            whileParser.program_return  r = g.program();
+
+            CommonTree tree = (CommonTree) r.getTree();
+            System.out.println(tree);
         } catch (RecognitionException e) {
             e.printStackTrace();
         }
