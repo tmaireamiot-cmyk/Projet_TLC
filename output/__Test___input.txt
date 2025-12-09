@@ -12,3 +12,9 @@ fi
 fi
 %
 write Result
+function f1 :
+read
+%
+nop
+%
+write X
