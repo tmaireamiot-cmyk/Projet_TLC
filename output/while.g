@@ -58,23 +58,23 @@ input :
     ;
 
 output :
-      v=VARIABLE (COMMA v2=VARIABLE)*
-      -> ^(OUTPUT $v $v2*)
+      v=VARIABLE (COMMA v=VARIABLE)*
+      -> ^(OUTPUT $v+)
     ;
 
 vars :
-      v=VARIABLE (COMMA v2=VARIABLE)*
-      -> ^(VARIABLES $v $v2*)
+      v=VARIABLE (COMMA v=VARIABLE)*
+      -> ^(VARIABLES $v+)
     ;
 
 exprs :
-      e=expression (COMMA e2=expression)*
-      -> ^(EXPRESSIONS $e $e2*)
+      e=expression (COMMA e=expression)*
+      -> ^(EXPRESSIONS $e+)
     ;
 
 commands :
-      c=command ( ';' c2=command )*
-      -> ^(COMMANDS $c $c2*)
+      c=command ( ';' c=command )*
+      -> ^(COMMANDS $c+)
     ;
 
 command_nop :
