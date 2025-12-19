@@ -49,7 +49,7 @@ function :
 
 definition :
       'read' i=input? PERCENT c=commands PERCENT 'write' o=output
-      -> ^(DEFINITION ^(INPUT $i?) ^(OUTPUT $o) $c)
+      -> ^(DEFINITION $i? $o $c)
     ;
 
 input :

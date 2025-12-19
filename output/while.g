@@ -23,6 +23,15 @@ tokens{
     EXPRESSIONS;
     VAR;
     IF;
+    LIST;
+    NIL;
+    FUNC;
+    CONS;
+    HD;
+    TL;
+    SYM;
+    ASSIGN;
+    EXPR_PARENT;
 }
 
 VARIABLE: ('A'..'Z') (('A'..'Z')|('a'..'z')|('0'..'9'))* ('!'|'?')?;
@@ -49,7 +58,7 @@ function :
 
 definition :
       'read' i=input? PERCENT c=commands PERCENT 'write' o=output
-      -> ^(DEFINITION ^(INPUT $i?) ^(OUTPUT $o) $c)
+      -> ^(DEFINITION $i? $o $c)
     ;
 
 input :
@@ -58,23 +67,23 @@ input :
     ;
 
 output :
-      v=VARIABLE (COMMA v=VARIABLE)*
-      -> ^(OUTPUT $v+)
+      v=VARIABLE (COMMA v2=VARIABLE)*
+      -> ^(OUTPUT $v $v2*)
     ;
 
 vars :
-      v=VARIABLE (COMMA v=VARIABLE)*
-      -> ^(VARIABLES $v+)
+      v=VARIABLE (COMMA v2=VARIABLE)*
+      -> ^(VARIABLES $v $v2*)
     ;
 
 exprs :
-      e=expression (COMMA e=expression)*
-      -> ^(EXPRESSIONS $e+)
+      e=expression (COMMA e2=expression)*
+      -> ^(EXPRESSIONS $e $e2*)
     ;
 
 commands :
-      c=command ( ';' c=command )*
-      -> ^(COMMANDS $c+)
+      c=command ( ';' c2=command )*
+      -> ^(COMMANDS $c $c2*)
     ;
 
 command_nop :
@@ -82,7 +91,7 @@ command_nop :
     ;
 
 command_var :
-      vars ':=' exprs -> ^(VAR vars exprs)
+      v=vars ':=' e=exprs -> ^(ASSIGN $v $e)
     ;
 
 command_if :
@@ -115,27 +124,27 @@ command :
     ;
 
 exprbase
-    : 'nil'                 -> ^(EXPRBASE 'nil')
-    | v=VARIABLE              -> ^(EXPRBASE $v)
-    | s=SYMBOL                -> ^(EXPRBASE $s)
-    | '(' exprbase_paren ')' -> ^(EXPRBASE exprbase_paren)
+    : 'nil'                 -> NIL
+    | v=VARIABLE              -> ^(VAR $v)
+    | s=SYMBOL                -> ^(SYM $s)
+    | '(' exprbase_paren ')' -> ^(EXPR_PARENT exprbase_paren)
     ;
 
 exprbase_paren
-    : 'list' lexpr          -> ^(EXPRBASE 'list' lexpr)
-    | 'cons' lexpr          -> ^(EXPRBASE 'cons' lexpr)
-    | 'hd' exprbase         -> ^(EXPRBASE 'hd' exprbase)
-    | 'tl' exprbase         -> ^(EXPRBASE 'tl' exprbase)
-    | s=SYMBOL lexpr          -> ^(EXPRBASE $s lexpr)
+    : 'list' lexpr          -> ^(LIST lexpr)
+    | 'cons' lexpr          -> ^(CONS lexpr)
+    | 'hd' exprbase         -> ^(HD exprbase)
+    | 'tl' exprbase         -> ^(TL exprbase)
+    | s=SYMBOL lexpr          -> ^(FUNC $s lexpr)
     ;
 
 expression :
       a=exprbase ('=?' b=exprbase)?
-      -> ^(EXPRESSION $a ($b)?)
+      -> $a ($b)?
     ;
 
 lexpr :
-      e=exprbase* -> ^(LEXPR $e*)
+      exprbase* -> exprbase*
     ;
 
 

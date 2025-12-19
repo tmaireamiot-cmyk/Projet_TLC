@@ -9,7 +9,7 @@ read X, Y
 %
 Result := X;
 for Y do
-Result := (cons nil Y Z T)
+Result := (cons nil Y)
 od
 %
 write Result
