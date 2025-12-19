@@ -1,4 +1,44 @@
 function main :
+read X,Y
+%
+    Z:= ( add X Y )
+%
+write Z,X
+
+
+
+function add :
+read X,Y
+%
+    Result := X;
+    for Y do
+        Result := ( cons nil Y )
+    od
+%
+write Result
+
+
+function mul :
+read Op1, Op2
+%
+for Op1 do
+Result := (add Result Op2)
+od
+%
+write Result
+
+
+function sub :
+read Op1, Op2
+%
+Result := Op1;
+for Op2 do
+Result := (tl Result)
+od
+%
+write Result
+
+function and :
 read Op1, Op2
 %
 if (not Op1) then
@@ -12,9 +52,26 @@ fi
 fi
 %
 write Result
-function f1 :
+
+function not :
+read Op1
+%
+if Op1 then Result := (false) else Result := (true) fi
+%
+write Result
+
+
+function false :
 read
 %
-nop
+Result := nil
 %
-write X
+write Result
+
+
+function true :
+read
+%
+Result := (cons nil nil)
+%
+write Result
