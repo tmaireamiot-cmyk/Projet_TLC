@@ -9,86 +9,73 @@ public class AST_decore implements MonVisiteur {
     public void visit(CommonTree node,ArrayList<String> tab) {
         
 
-        NouvelArbre decoratedNode = (NouvelArbre) node;
-        System.out.println("noeud  "+node.getType()+node.getText());
+        NouvelArbre noeud_decore = (NouvelArbre) node;
 
-        if (node.getType() == 12) {
-            if (decoratedNode.getChild(0).getType() == 21) {
-                NouvelArbre noeuf_enfant=(NouvelArbre) decoratedNode.getChild(0);
+        if (node.getType() == 16) {
+            if (noeud_decore.getChild(0).getType() == 29) {
+                NouvelArbre noeuf_enfant=(NouvelArbre) noeud_decore.getChild(0);
                 noeuf_enfant.setInformation("nom de fonction" );
              
             }
         }
 
-        if (node.getType() == 14) {
+        if (node.getType() == 19) {
             if (node.getChildren() != null) {
-                if (decoratedNode.getChild(0).getType() == 23) {
-                    NouvelArbre noeuf_enfant=(NouvelArbre) decoratedNode.getChild(0);
+                if (noeud_decore.getChild(0).getType() == 32) {
+                    NouvelArbre noeuf_enfant=(NouvelArbre) noeud_decore.getChild(0);
                     noeuf_enfant.setInformation("parametre" );
 
                 }
             }
         }
 
-        if (node.getType() == 22 && node.getParent().getType() == 6) {
+        if (node.getType() == 4 && node.getParent().getType() == 7) {
             if (node.getChildren() != null) {
-                if (decoratedNode.getChild(0).getType() == 24) {
+                if (noeud_decore.getChild(0).getType() == 33) {
                     if (node.getChildren() != null) {
-                        System.out.println(decoratedNode.getChild(0).getChild(0));
-                        if (decoratedNode.getChild(0).getChild(0).getType() == 23) {
-                            NouvelArbre noeuf_enfant=(NouvelArbre) decoratedNode.getChild(0).getChild(0);
+                        if (noeud_decore.getChild(0).getChild(0).getType() == 32) {
+                            NouvelArbre noeuf_enfant=(NouvelArbre) noeud_decore.getChild(0).getChild(0);
                             noeuf_enfant.setInformation("assignationVariable" );
-                            NouvelArbre noeuf_parent=(NouvelArbre) decoratedNode.getChild(0);
+                            NouvelArbre noeuf_parent=(NouvelArbre) noeud_decore.getChild(0);
                             noeuf_parent.setInformation("assignationVariableParent");
                         }
-                        if (decoratedNode.getChild(0).getChild(1)!=null && decoratedNode.getChild(0).getChild(1).getType() == 23) {
-                            NouvelArbre noeuf_enfant=(NouvelArbre) decoratedNode.getChild(0).getChild(0);
+                        if (noeud_decore.getChild(0).getChild(1)!=null && noeud_decore.getChild(0).getChild(1).getType() == 32) {
+                            NouvelArbre noeuf_enfant=(NouvelArbre) noeud_decore.getChild(0).getChild(1);
                             noeuf_enfant.setInformation("assignationVariable");
-                            NouvelArbre noeuf_parent=(NouvelArbre) decoratedNode.getChild(0);
+                            NouvelArbre noeuf_parent=(NouvelArbre) noeud_decore.getChild(0);
                             noeuf_parent.setInformation("assignationVariableParent");
                         }
                     }
                 }
             }
         }
-        if (node.getType() == 18) {
+        if (node.getType() == 25) {
             if (node.getChildren() != null) {
-                if (decoratedNode.getChild(0).getType() == 18) {
-                    if (node.getChildren() != null) {
-                        System.out.println(decoratedNode.getChild(0).getChild(0));
-                        if (decoratedNode.getChild(0).getChild(0).getType() == 23) {
-                            NouvelArbre noeuf_enfant=(NouvelArbre) decoratedNode.getChild(0).getChild(0);
-                            noeuf_enfant.setInformation("ValeurSortie");
-                            NouvelArbre noeuf_parent=(NouvelArbre) decoratedNode.getChild(0);
-                            noeuf_parent.setInformation("Sortie");
-                        }
-                        if (decoratedNode.getChild(0).getChild(1)!=null && decoratedNode.getChild(0).getChild(1).getType() == 23) {
-                            NouvelArbre noeuf_enfant=(NouvelArbre) decoratedNode.getChild(0).getChild(1);
-                            noeuf_enfant.setInformation("ValeurSortie");
-                            NouvelArbre noeuf_parent=(NouvelArbre) decoratedNode.getChild(0);
-                            noeuf_parent.setInformation("Sortie");
-                        }
-                    }
+                if (noeud_decore.getChild(0).getType() == 32) {
+                    NouvelArbre noeuf_enfant=(NouvelArbre) noeud_decore.getChild(0);
+                    noeuf_enfant.setInformation("ValeurSortie");
+                    NouvelArbre noeuf_parent=(NouvelArbre) noeud_decore;
+                    noeuf_parent.setInformation("Sortie");
+                }
+                if (noeud_decore.getChild(1)!=null && noeud_decore.getChild(1).getType() == 32) {
+                    NouvelArbre noeuf_enfant=(NouvelArbre) noeud_decore.getChild(1);
+                    noeuf_enfant.setInformation("ValeurSortie");
+                    NouvelArbre noeuf_parent=(NouvelArbre) noeud_decore;
+                    noeuf_parent.setInformation("Sortie");
                 }
             }
+                
         }
 
-        if (node.getType() == 10) {
+        if (node.getType() == 12) {
             if (node.getChildren() != null) {
-                if (decoratedNode.getChild(0).getType() == 9) {
+                if (noeud_decore.getChild(0).getType()==14) {
                     if (node.getChildren() != null) {
-                        System.out.println("ca rentre bien ici"+decoratedNode.getChild(0).getChild(0));
-                        if (decoratedNode.getChild(0).getChild(0).getType() == 8) {
-                            System.out.println("ca rentre bien ici  2"+decoratedNode.getChild(0).getChild(0));
+                        if (noeud_decore.getChild(0).getChild(0).getType() == 15) {
                             if (node.getChildren() != null) {
-                                if (decoratedNode.getChild(0).getChild(0).getChild(0).getType() == 8) {
-                                    if (node.getChildren() != null) {
-                                        if (decoratedNode.getChild(0).getChild(0).getChild(0).getChild(0).getType() == 21) {
-                                            System.out.println("c une expr      :    "+decoratedNode.getChild(0).getChild(0).getChild(0).getChild(0));
-                                            NouvelArbre noeuf_enfant=(NouvelArbre) decoratedNode.getChild(0).getChild(0).getChild(0).getChild(0);
-                                            noeuf_enfant.setInformation("AppelFonctionDansFonction");
-                                        }
-                                    }
+                                if (noeud_decore.getChild(0).getChild(0).getChild(0).getType() == 29) {
+                                    NouvelArbre noeuf_enfant=(NouvelArbre) noeud_decore.getChild(0).getChild(0).getChild(0);
+                                    noeuf_enfant.setInformation("AppelFonctionDansFonction");
                                 }
                             }
                         }

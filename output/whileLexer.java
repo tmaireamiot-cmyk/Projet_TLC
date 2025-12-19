@@ -1,4 +1,4 @@
-// $ANTLR 3.5.2 while.g 2025-12-14 16:12:01
+// $ANTLR 3.5.2 while.g 2025-12-19 11:01:39
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -8,15 +8,6 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class whileLexer extends Lexer {
 	public static final int EOF=-1;
-	public static final int T__27=27;
-	public static final int T__28=28;
-	public static final int T__29=29;
-	public static final int T__30=30;
-	public static final int T__31=31;
-	public static final int T__32=32;
-	public static final int T__33=33;
-	public static final int T__34=34;
-	public static final int T__35=35;
 	public static final int T__36=36;
 	public static final int T__37=37;
 	public static final int T__38=38;
@@ -33,29 +24,47 @@ public class whileLexer extends Lexer {
 	public static final int T__49=49;
 	public static final int T__50=50;
 	public static final int T__51=51;
-	public static final int COMMA=4;
-	public static final int COMMAND=5;
-	public static final int COMMANDS=6;
-	public static final int DEFINITION=7;
-	public static final int EXPRBASE=8;
-	public static final int EXPRESSION=9;
-	public static final int EXPRESSIONS=10;
-	public static final int EXPRS=11;
-	public static final int FUNCTION=12;
-	public static final int IF=13;
-	public static final int INPUT=14;
-	public static final int INPUTSUB=15;
-	public static final int LEXPR=16;
-	public static final int NOP=17;
-	public static final int OUTPUT=18;
-	public static final int PERCENT=19;
-	public static final int PROGRAM=20;
-	public static final int SYMBOL=21;
-	public static final int VAR=22;
-	public static final int VARIABLE=23;
-	public static final int VARIABLES=24;
-	public static final int VARS=25;
-	public static final int WS=26;
+	public static final int T__52=52;
+	public static final int T__53=53;
+	public static final int T__54=54;
+	public static final int T__55=55;
+	public static final int T__56=56;
+	public static final int T__57=57;
+	public static final int T__58=58;
+	public static final int T__59=59;
+	public static final int T__60=60;
+	public static final int ASSIGN=4;
+	public static final int COMMA=5;
+	public static final int COMMAND=6;
+	public static final int COMMANDS=7;
+	public static final int CONS=8;
+	public static final int DEFINITION=9;
+	public static final int EXPRBASE=10;
+	public static final int EXPRESSION=11;
+	public static final int EXPRESSIONS=12;
+	public static final int EXPRS=13;
+	public static final int EXPR_PARENT=14;
+	public static final int FUNC=15;
+	public static final int FUNCTION=16;
+	public static final int HD=17;
+	public static final int IF=18;
+	public static final int INPUT=19;
+	public static final int INPUTSUB=20;
+	public static final int LEXPR=21;
+	public static final int LIST=22;
+	public static final int NIL=23;
+	public static final int NOP=24;
+	public static final int OUTPUT=25;
+	public static final int PERCENT=26;
+	public static final int PROGRAM=27;
+	public static final int SYM=28;
+	public static final int SYMBOL=29;
+	public static final int TL=30;
+	public static final int VAR=31;
+	public static final int VARIABLE=32;
+	public static final int VARIABLES=33;
+	public static final int VARS=34;
+	public static final int WS=35;
 
 	// delegates
 	// delegators
@@ -72,201 +81,15 @@ public class whileLexer extends Lexer {
 	}
 	@Override public String getGrammarFileName() { return "while.g"; }
 
-	// $ANTLR start "T__27"
-	public final void mT__27() throws RecognitionException {
-		try {
-			int _type = T__27;
-			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// while.g:2:7: ( '(' )
-			// while.g:2:9: '('
-			{
-			match('('); 
-			}
-
-			state.type = _type;
-			state.channel = _channel;
-		}
-		finally {
-			// do for sure before leaving
-		}
-	}
-	// $ANTLR end "T__27"
-
-	// $ANTLR start "T__28"
-	public final void mT__28() throws RecognitionException {
-		try {
-			int _type = T__28;
-			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// while.g:3:7: ( ')' )
-			// while.g:3:9: ')'
-			{
-			match(')'); 
-			}
-
-			state.type = _type;
-			state.channel = _channel;
-		}
-		finally {
-			// do for sure before leaving
-		}
-	}
-	// $ANTLR end "T__28"
-
-	// $ANTLR start "T__29"
-	public final void mT__29() throws RecognitionException {
-		try {
-			int _type = T__29;
-			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// while.g:4:7: ( ':' )
-			// while.g:4:9: ':'
-			{
-			match(':'); 
-			}
-
-			state.type = _type;
-			state.channel = _channel;
-		}
-		finally {
-			// do for sure before leaving
-		}
-	}
-	// $ANTLR end "T__29"
-
-	// $ANTLR start "T__30"
-	public final void mT__30() throws RecognitionException {
-		try {
-			int _type = T__30;
-			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// while.g:5:7: ( ':=' )
-			// while.g:5:9: ':='
-			{
-			match(":="); 
-
-			}
-
-			state.type = _type;
-			state.channel = _channel;
-		}
-		finally {
-			// do for sure before leaving
-		}
-	}
-	// $ANTLR end "T__30"
-
-	// $ANTLR start "T__31"
-	public final void mT__31() throws RecognitionException {
-		try {
-			int _type = T__31;
-			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// while.g:6:7: ( ';' )
-			// while.g:6:9: ';'
-			{
-			match(';'); 
-			}
-
-			state.type = _type;
-			state.channel = _channel;
-		}
-		finally {
-			// do for sure before leaving
-		}
-	}
-	// $ANTLR end "T__31"
-
-	// $ANTLR start "T__32"
-	public final void mT__32() throws RecognitionException {
-		try {
-			int _type = T__32;
-			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// while.g:7:7: ( '=?' )
-			// while.g:7:9: '=?'
-			{
-			match("=?"); 
-
-			}
-
-			state.type = _type;
-			state.channel = _channel;
-		}
-		finally {
-			// do for sure before leaving
-		}
-	}
-	// $ANTLR end "T__32"
-
-	// $ANTLR start "T__33"
-	public final void mT__33() throws RecognitionException {
-		try {
-			int _type = T__33;
-			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// while.g:8:7: ( 'cons' )
-			// while.g:8:9: 'cons'
-			{
-			match("cons"); 
-
-			}
-
-			state.type = _type;
-			state.channel = _channel;
-		}
-		finally {
-			// do for sure before leaving
-		}
-	}
-	// $ANTLR end "T__33"
-
-	// $ANTLR start "T__34"
-	public final void mT__34() throws RecognitionException {
-		try {
-			int _type = T__34;
-			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// while.g:9:7: ( 'do' )
-			// while.g:9:9: 'do'
-			{
-			match("do"); 
-
-			}
-
-			state.type = _type;
-			state.channel = _channel;
-		}
-		finally {
-			// do for sure before leaving
-		}
-	}
-	// $ANTLR end "T__34"
-
-	// $ANTLR start "T__35"
-	public final void mT__35() throws RecognitionException {
-		try {
-			int _type = T__35;
-			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// while.g:10:7: ( 'else' )
-			// while.g:10:9: 'else'
-			{
-			match("else"); 
-
-			}
-
-			state.type = _type;
-			state.channel = _channel;
-		}
-		finally {
-			// do for sure before leaving
-		}
-	}
-	// $ANTLR end "T__35"
-
 	// $ANTLR start "T__36"
 	public final void mT__36() throws RecognitionException {
 		try {
 			int _type = T__36;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// while.g:11:7: ( 'fi' )
-			// while.g:11:9: 'fi'
+			// while.g:2:7: ( '(' )
+			// while.g:2:9: '('
 			{
-			match("fi"); 
-
+			match('('); 
 			}
 
 			state.type = _type;
@@ -283,11 +106,10 @@ public class whileLexer extends Lexer {
 		try {
 			int _type = T__37;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// while.g:12:7: ( 'for' )
-			// while.g:12:9: 'for'
+			// while.g:3:7: ( ')' )
+			// while.g:3:9: ')'
 			{
-			match("for"); 
-
+			match(')'); 
 			}
 
 			state.type = _type;
@@ -304,11 +126,10 @@ public class whileLexer extends Lexer {
 		try {
 			int _type = T__38;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// while.g:13:7: ( 'foreach' )
-			// while.g:13:9: 'foreach'
+			// while.g:4:7: ( ':' )
+			// while.g:4:9: ':'
 			{
-			match("foreach"); 
-
+			match(':'); 
 			}
 
 			state.type = _type;
@@ -325,10 +146,10 @@ public class whileLexer extends Lexer {
 		try {
 			int _type = T__39;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// while.g:14:7: ( 'function' )
-			// while.g:14:9: 'function'
+			// while.g:5:7: ( ':=' )
+			// while.g:5:9: ':='
 			{
-			match("function"); 
+			match(":="); 
 
 			}
 
@@ -346,11 +167,10 @@ public class whileLexer extends Lexer {
 		try {
 			int _type = T__40;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// while.g:15:7: ( 'hd' )
-			// while.g:15:9: 'hd'
+			// while.g:6:7: ( ';' )
+			// while.g:6:9: ';'
 			{
-			match("hd"); 
-
+			match(';'); 
 			}
 
 			state.type = _type;
@@ -367,10 +187,10 @@ public class whileLexer extends Lexer {
 		try {
 			int _type = T__41;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// while.g:16:7: ( 'if' )
-			// while.g:16:9: 'if'
+			// while.g:7:7: ( '=?' )
+			// while.g:7:9: '=?'
 			{
-			match("if"); 
+			match("=?"); 
 
 			}
 
@@ -388,10 +208,10 @@ public class whileLexer extends Lexer {
 		try {
 			int _type = T__42;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// while.g:17:7: ( 'in' )
-			// while.g:17:9: 'in'
+			// while.g:8:7: ( 'cons' )
+			// while.g:8:9: 'cons'
 			{
-			match("in"); 
+			match("cons"); 
 
 			}
 
@@ -409,10 +229,10 @@ public class whileLexer extends Lexer {
 		try {
 			int _type = T__43;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// while.g:18:7: ( 'list' )
-			// while.g:18:9: 'list'
+			// while.g:9:7: ( 'do' )
+			// while.g:9:9: 'do'
 			{
-			match("list"); 
+			match("do"); 
 
 			}
 
@@ -430,10 +250,10 @@ public class whileLexer extends Lexer {
 		try {
 			int _type = T__44;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// while.g:19:7: ( 'nil' )
-			// while.g:19:9: 'nil'
+			// while.g:10:7: ( 'else' )
+			// while.g:10:9: 'else'
 			{
-			match("nil"); 
+			match("else"); 
 
 			}
 
@@ -451,10 +271,10 @@ public class whileLexer extends Lexer {
 		try {
 			int _type = T__45;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// while.g:20:7: ( 'nop' )
-			// while.g:20:9: 'nop'
+			// while.g:11:7: ( 'fi' )
+			// while.g:11:9: 'fi'
 			{
-			match("nop"); 
+			match("fi"); 
 
 			}
 
@@ -472,10 +292,10 @@ public class whileLexer extends Lexer {
 		try {
 			int _type = T__46;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// while.g:21:7: ( 'od' )
-			// while.g:21:9: 'od'
+			// while.g:12:7: ( 'for' )
+			// while.g:12:9: 'for'
 			{
-			match("od"); 
+			match("for"); 
 
 			}
 
@@ -493,10 +313,10 @@ public class whileLexer extends Lexer {
 		try {
 			int _type = T__47;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// while.g:22:7: ( 'read' )
-			// while.g:22:9: 'read'
+			// while.g:13:7: ( 'foreach' )
+			// while.g:13:9: 'foreach'
 			{
-			match("read"); 
+			match("foreach"); 
 
 			}
 
@@ -514,10 +334,10 @@ public class whileLexer extends Lexer {
 		try {
 			int _type = T__48;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// while.g:23:7: ( 'then' )
-			// while.g:23:9: 'then'
+			// while.g:14:7: ( 'function' )
+			// while.g:14:9: 'function'
 			{
-			match("then"); 
+			match("function"); 
 
 			}
 
@@ -535,10 +355,10 @@ public class whileLexer extends Lexer {
 		try {
 			int _type = T__49;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// while.g:24:7: ( 'tl' )
-			// while.g:24:9: 'tl'
+			// while.g:15:7: ( 'hd' )
+			// while.g:15:9: 'hd'
 			{
-			match("tl"); 
+			match("hd"); 
 
 			}
 
@@ -556,10 +376,10 @@ public class whileLexer extends Lexer {
 		try {
 			int _type = T__50;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// while.g:25:7: ( 'while' )
-			// while.g:25:9: 'while'
+			// while.g:16:7: ( 'if' )
+			// while.g:16:9: 'if'
 			{
-			match("while"); 
+			match("if"); 
 
 			}
 
@@ -577,6 +397,195 @@ public class whileLexer extends Lexer {
 		try {
 			int _type = T__51;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// while.g:17:7: ( 'in' )
+			// while.g:17:9: 'in'
+			{
+			match("in"); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "T__51"
+
+	// $ANTLR start "T__52"
+	public final void mT__52() throws RecognitionException {
+		try {
+			int _type = T__52;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// while.g:18:7: ( 'list' )
+			// while.g:18:9: 'list'
+			{
+			match("list"); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "T__52"
+
+	// $ANTLR start "T__53"
+	public final void mT__53() throws RecognitionException {
+		try {
+			int _type = T__53;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// while.g:19:7: ( 'nil' )
+			// while.g:19:9: 'nil'
+			{
+			match("nil"); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "T__53"
+
+	// $ANTLR start "T__54"
+	public final void mT__54() throws RecognitionException {
+		try {
+			int _type = T__54;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// while.g:20:7: ( 'nop' )
+			// while.g:20:9: 'nop'
+			{
+			match("nop"); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "T__54"
+
+	// $ANTLR start "T__55"
+	public final void mT__55() throws RecognitionException {
+		try {
+			int _type = T__55;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// while.g:21:7: ( 'od' )
+			// while.g:21:9: 'od'
+			{
+			match("od"); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "T__55"
+
+	// $ANTLR start "T__56"
+	public final void mT__56() throws RecognitionException {
+		try {
+			int _type = T__56;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// while.g:22:7: ( 'read' )
+			// while.g:22:9: 'read'
+			{
+			match("read"); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "T__56"
+
+	// $ANTLR start "T__57"
+	public final void mT__57() throws RecognitionException {
+		try {
+			int _type = T__57;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// while.g:23:7: ( 'then' )
+			// while.g:23:9: 'then'
+			{
+			match("then"); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "T__57"
+
+	// $ANTLR start "T__58"
+	public final void mT__58() throws RecognitionException {
+		try {
+			int _type = T__58;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// while.g:24:7: ( 'tl' )
+			// while.g:24:9: 'tl'
+			{
+			match("tl"); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "T__58"
+
+	// $ANTLR start "T__59"
+	public final void mT__59() throws RecognitionException {
+		try {
+			int _type = T__59;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// while.g:25:7: ( 'while' )
+			// while.g:25:9: 'while'
+			{
+			match("while"); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "T__59"
+
+	// $ANTLR start "T__60"
+	public final void mT__60() throws RecognitionException {
+		try {
+			int _type = T__60;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
 			// while.g:26:7: ( 'write' )
 			// while.g:26:9: 'write'
 			{
@@ -591,15 +600,15 @@ public class whileLexer extends Lexer {
 			// do for sure before leaving
 		}
 	}
-	// $ANTLR end "T__51"
+	// $ANTLR end "T__60"
 
 	// $ANTLR start "VARIABLE"
 	public final void mVARIABLE() throws RecognitionException {
 		try {
 			int _type = VARIABLE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// while.g:28:9: ( ( 'A' .. 'Z' ) ( ( 'A' .. 'Z' ) | ( 'a' .. 'z' ) | ( '0' .. '9' ) )* ( '!' | '?' )? )
-			// while.g:28:11: ( 'A' .. 'Z' ) ( ( 'A' .. 'Z' ) | ( 'a' .. 'z' ) | ( '0' .. '9' ) )* ( '!' | '?' )?
+			// while.g:37:9: ( ( 'A' .. 'Z' ) ( ( 'A' .. 'Z' ) | ( 'a' .. 'z' ) | ( '0' .. '9' ) )* ( '!' | '?' )? )
+			// while.g:37:11: ( 'A' .. 'Z' ) ( ( 'A' .. 'Z' ) | ( 'a' .. 'z' ) | ( '0' .. '9' ) )* ( '!' | '?' )?
 			{
 			if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z') ) {
 				input.consume();
@@ -609,7 +618,7 @@ public class whileLexer extends Lexer {
 				recover(mse);
 				throw mse;
 			}
-			// while.g:28:22: ( ( 'A' .. 'Z' ) | ( 'a' .. 'z' ) | ( '0' .. '9' ) )*
+			// while.g:37:22: ( ( 'A' .. 'Z' ) | ( 'a' .. 'z' ) | ( '0' .. '9' ) )*
 			loop1:
 			while (true) {
 				int alt1=2;
@@ -638,7 +647,7 @@ public class whileLexer extends Lexer {
 				}
 			}
 
-			// while.g:28:58: ( '!' | '?' )?
+			// while.g:37:58: ( '!' | '?' )?
 			int alt2=2;
 			int LA2_0 = input.LA(1);
 			if ( (LA2_0=='!'||LA2_0=='?') ) {
@@ -677,8 +686,8 @@ public class whileLexer extends Lexer {
 		try {
 			int _type = SYMBOL;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// while.g:29:7: ( ( 'a' .. 'z' ) ( ( 'A' .. 'Z' ) | ( 'a' .. 'z' ) | ( '0' .. '9' ) )* ( '!' | '?' )? )
-			// while.g:29:11: ( 'a' .. 'z' ) ( ( 'A' .. 'Z' ) | ( 'a' .. 'z' ) | ( '0' .. '9' ) )* ( '!' | '?' )?
+			// while.g:38:7: ( ( 'a' .. 'z' ) ( ( 'A' .. 'Z' ) | ( 'a' .. 'z' ) | ( '0' .. '9' ) )* ( '!' | '?' )? )
+			// while.g:38:11: ( 'a' .. 'z' ) ( ( 'A' .. 'Z' ) | ( 'a' .. 'z' ) | ( '0' .. '9' ) )* ( '!' | '?' )?
 			{
 			if ( (input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
 				input.consume();
@@ -688,7 +697,7 @@ public class whileLexer extends Lexer {
 				recover(mse);
 				throw mse;
 			}
-			// while.g:29:22: ( ( 'A' .. 'Z' ) | ( 'a' .. 'z' ) | ( '0' .. '9' ) )*
+			// while.g:38:22: ( ( 'A' .. 'Z' ) | ( 'a' .. 'z' ) | ( '0' .. '9' ) )*
 			loop3:
 			while (true) {
 				int alt3=2;
@@ -717,7 +726,7 @@ public class whileLexer extends Lexer {
 				}
 			}
 
-			// while.g:29:58: ( '!' | '?' )?
+			// while.g:38:58: ( '!' | '?' )?
 			int alt4=2;
 			int LA4_0 = input.LA(1);
 			if ( (LA4_0=='!'||LA4_0=='?') ) {
@@ -756,8 +765,8 @@ public class whileLexer extends Lexer {
 		try {
 			int _type = COMMA;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// while.g:31:7: ( ',' )
-			// while.g:31:9: ','
+			// while.g:40:7: ( ',' )
+			// while.g:40:9: ','
 			{
 			match(','); 
 			}
@@ -776,8 +785,8 @@ public class whileLexer extends Lexer {
 		try {
 			int _type = PERCENT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// while.g:32:9: ( '%' )
-			// while.g:32:11: '%'
+			// while.g:41:9: ( '%' )
+			// while.g:41:11: '%'
 			{
 			match('%'); 
 			}
@@ -796,8 +805,8 @@ public class whileLexer extends Lexer {
 		try {
 			int _type = WS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// while.g:33:5: ( ( ' ' | '\\t' | '\\r' | '\\n' ) )
-			// while.g:33:9: ( ' ' | '\\t' | '\\r' | '\\n' )
+			// while.g:42:5: ( ( ' ' | '\\t' | '\\r' | '\\n' ) )
+			// while.g:42:9: ( ' ' | '\\t' | '\\r' | '\\n' )
 			{
 			if ( (input.LA(1) >= '\t' && input.LA(1) <= '\n')||input.LA(1)=='\r'||input.LA(1)==' ' ) {
 				input.consume();
@@ -821,182 +830,182 @@ public class whileLexer extends Lexer {
 
 	@Override
 	public void mTokens() throws RecognitionException {
-		// while.g:1:8: ( T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | VARIABLE | SYMBOL | COMMA | PERCENT | WS )
+		// while.g:1:8: ( T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | VARIABLE | SYMBOL | COMMA | PERCENT | WS )
 		int alt5=30;
 		alt5 = dfa5.predict(input);
 		switch (alt5) {
 			case 1 :
-				// while.g:1:10: T__27
-				{
-				mT__27(); 
-
-				}
-				break;
-			case 2 :
-				// while.g:1:16: T__28
-				{
-				mT__28(); 
-
-				}
-				break;
-			case 3 :
-				// while.g:1:22: T__29
-				{
-				mT__29(); 
-
-				}
-				break;
-			case 4 :
-				// while.g:1:28: T__30
-				{
-				mT__30(); 
-
-				}
-				break;
-			case 5 :
-				// while.g:1:34: T__31
-				{
-				mT__31(); 
-
-				}
-				break;
-			case 6 :
-				// while.g:1:40: T__32
-				{
-				mT__32(); 
-
-				}
-				break;
-			case 7 :
-				// while.g:1:46: T__33
-				{
-				mT__33(); 
-
-				}
-				break;
-			case 8 :
-				// while.g:1:52: T__34
-				{
-				mT__34(); 
-
-				}
-				break;
-			case 9 :
-				// while.g:1:58: T__35
-				{
-				mT__35(); 
-
-				}
-				break;
-			case 10 :
-				// while.g:1:64: T__36
+				// while.g:1:10: T__36
 				{
 				mT__36(); 
 
 				}
 				break;
-			case 11 :
-				// while.g:1:70: T__37
+			case 2 :
+				// while.g:1:16: T__37
 				{
 				mT__37(); 
 
 				}
 				break;
-			case 12 :
-				// while.g:1:76: T__38
+			case 3 :
+				// while.g:1:22: T__38
 				{
 				mT__38(); 
 
 				}
 				break;
-			case 13 :
-				// while.g:1:82: T__39
+			case 4 :
+				// while.g:1:28: T__39
 				{
 				mT__39(); 
 
 				}
 				break;
-			case 14 :
-				// while.g:1:88: T__40
+			case 5 :
+				// while.g:1:34: T__40
 				{
 				mT__40(); 
 
 				}
 				break;
-			case 15 :
-				// while.g:1:94: T__41
+			case 6 :
+				// while.g:1:40: T__41
 				{
 				mT__41(); 
 
 				}
 				break;
-			case 16 :
-				// while.g:1:100: T__42
+			case 7 :
+				// while.g:1:46: T__42
 				{
 				mT__42(); 
 
 				}
 				break;
-			case 17 :
-				// while.g:1:106: T__43
+			case 8 :
+				// while.g:1:52: T__43
 				{
 				mT__43(); 
 
 				}
 				break;
-			case 18 :
-				// while.g:1:112: T__44
+			case 9 :
+				// while.g:1:58: T__44
 				{
 				mT__44(); 
 
 				}
 				break;
-			case 19 :
-				// while.g:1:118: T__45
+			case 10 :
+				// while.g:1:64: T__45
 				{
 				mT__45(); 
 
 				}
 				break;
-			case 20 :
-				// while.g:1:124: T__46
+			case 11 :
+				// while.g:1:70: T__46
 				{
 				mT__46(); 
 
 				}
 				break;
-			case 21 :
-				// while.g:1:130: T__47
+			case 12 :
+				// while.g:1:76: T__47
 				{
 				mT__47(); 
 
 				}
 				break;
-			case 22 :
-				// while.g:1:136: T__48
+			case 13 :
+				// while.g:1:82: T__48
 				{
 				mT__48(); 
 
 				}
 				break;
-			case 23 :
-				// while.g:1:142: T__49
+			case 14 :
+				// while.g:1:88: T__49
 				{
 				mT__49(); 
 
 				}
 				break;
-			case 24 :
-				// while.g:1:148: T__50
+			case 15 :
+				// while.g:1:94: T__50
 				{
 				mT__50(); 
 
 				}
 				break;
-			case 25 :
-				// while.g:1:154: T__51
+			case 16 :
+				// while.g:1:100: T__51
 				{
 				mT__51(); 
+
+				}
+				break;
+			case 17 :
+				// while.g:1:106: T__52
+				{
+				mT__52(); 
+
+				}
+				break;
+			case 18 :
+				// while.g:1:112: T__53
+				{
+				mT__53(); 
+
+				}
+				break;
+			case 19 :
+				// while.g:1:118: T__54
+				{
+				mT__54(); 
+
+				}
+				break;
+			case 20 :
+				// while.g:1:124: T__55
+				{
+				mT__55(); 
+
+				}
+				break;
+			case 21 :
+				// while.g:1:130: T__56
+				{
+				mT__56(); 
+
+				}
+				break;
+			case 22 :
+				// while.g:1:136: T__57
+				{
+				mT__57(); 
+
+				}
+				break;
+			case 23 :
+				// while.g:1:142: T__58
+				{
+				mT__58(); 
+
+				}
+				break;
+			case 24 :
+				// while.g:1:148: T__59
+				{
+				mT__59(); 
+
+				}
+				break;
+			case 25 :
+				// while.g:1:154: T__60
+				{
+				mT__60(); 
 
 				}
 				break;
@@ -1200,7 +1209,7 @@ public class whileLexer extends Lexer {
 		}
 		@Override
 		public String getDescription() {
-			return "1:1: Tokens : ( T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | VARIABLE | SYMBOL | COMMA | PERCENT | WS );";
+			return "1:1: Tokens : ( T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | VARIABLE | SYMBOL | COMMA | PERCENT | WS );";
 		}
 	}
 
