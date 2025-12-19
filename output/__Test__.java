@@ -8,7 +8,7 @@ import java.util.List;
 
 public class __Test__ {
     public static void main(String args[]) throws Exception {
-        whileLexer lex = new whileLexer(new ANTLRFileStream("/home/luna/Bureau/ESIR2/Visitor (Copie)/Projet_TLC/output/__Test___input.txt", "UTF8"));
+        whileLexer lex = new whileLexer(new ANTLRFileStream("/home/luna/github-classroom/test/Projet_TLC/output/__Test___input.txt", "UTF8"));
         CommonTokenStream tokens = new CommonTokenStream(lex);
         System.out.println("avant de definir whileparser");
         whileParser g = new whileParser(tokens);
