@@ -1,4 +1,4 @@
-// $ANTLR 3.5.2 while.g 2025-12-14 16:12:01
+// $ANTLR 3.5.2 .\\while.g 2025-12-15 15:58:17
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -70,15 +70,15 @@ public class whileLexer extends Lexer {
 	public whileLexer(CharStream input, RecognizerSharedState state) {
 		super(input,state);
 	}
-	@Override public String getGrammarFileName() { return "while.g"; }
+	@Override public String getGrammarFileName() { return ".\\while.g"; }
 
 	// $ANTLR start "T__27"
 	public final void mT__27() throws RecognitionException {
 		try {
 			int _type = T__27;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// while.g:2:7: ( '(' )
-			// while.g:2:9: '('
+			// .\\while.g:2:7: ( '(' )
+			// .\\while.g:2:9: '('
 			{
 			match('('); 
 			}
@@ -97,8 +97,8 @@ public class whileLexer extends Lexer {
 		try {
 			int _type = T__28;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// while.g:3:7: ( ')' )
-			// while.g:3:9: ')'
+			// .\\while.g:3:7: ( ')' )
+			// .\\while.g:3:9: ')'
 			{
 			match(')'); 
 			}
@@ -117,8 +117,8 @@ public class whileLexer extends Lexer {
 		try {
 			int _type = T__29;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// while.g:4:7: ( ':' )
-			// while.g:4:9: ':'
+			// .\\while.g:4:7: ( ':' )
+			// .\\while.g:4:9: ':'
 			{
 			match(':'); 
 			}
@@ -137,8 +137,8 @@ public class whileLexer extends Lexer {
 		try {
 			int _type = T__30;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// while.g:5:7: ( ':=' )
-			// while.g:5:9: ':='
+			// .\\while.g:5:7: ( ':=' )
+			// .\\while.g:5:9: ':='
 			{
 			match(":="); 
 
@@ -158,8 +158,8 @@ public class whileLexer extends Lexer {
 		try {
 			int _type = T__31;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// while.g:6:7: ( ';' )
-			// while.g:6:9: ';'
+			// .\\while.g:6:7: ( ';' )
+			// .\\while.g:6:9: ';'
 			{
 			match(';'); 
 			}
@@ -178,8 +178,8 @@ public class whileLexer extends Lexer {
 		try {
 			int _type = T__32;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// while.g:7:7: ( '=?' )
-			// while.g:7:9: '=?'
+			// .\\while.g:7:7: ( '=?' )
+			// .\\while.g:7:9: '=?'
 			{
 			match("=?"); 
 
@@ -199,8 +199,8 @@ public class whileLexer extends Lexer {
 		try {
 			int _type = T__33;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// while.g:8:7: ( 'cons' )
-			// while.g:8:9: 'cons'
+			// .\\while.g:8:7: ( 'cons' )
+			// .\\while.g:8:9: 'cons'
 			{
 			match("cons"); 
 
@@ -220,8 +220,8 @@ public class whileLexer extends Lexer {
 		try {
 			int _type = T__34;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// while.g:9:7: ( 'do' )
-			// while.g:9:9: 'do'
+			// .\\while.g:9:7: ( 'do' )
+			// .\\while.g:9:9: 'do'
 			{
 			match("do"); 
 
@@ -241,8 +241,8 @@ public class whileLexer extends Lexer {
 		try {
 			int _type = T__35;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// while.g:10:7: ( 'else' )
-			// while.g:10:9: 'else'
+			// .\\while.g:10:7: ( 'else' )
+			// .\\while.g:10:9: 'else'
 			{
 			match("else"); 
 
@@ -262,8 +262,8 @@ public class whileLexer extends Lexer {
 		try {
 			int _type = T__36;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// while.g:11:7: ( 'fi' )
-			// while.g:11:9: 'fi'
+			// .\\while.g:11:7: ( 'fi' )
+			// .\\while.g:11:9: 'fi'
 			{
 			match("fi"); 
 
@@ -283,8 +283,8 @@ public class whileLexer extends Lexer {
 		try {
 			int _type = T__37;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// while.g:12:7: ( 'for' )
-			// while.g:12:9: 'for'
+			// .\\while.g:12:7: ( 'for' )
+			// .\\while.g:12:9: 'for'
 			{
 			match("for"); 
 
@@ -304,8 +304,8 @@ public class whileLexer extends Lexer {
 		try {
 			int _type = T__38;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// while.g:13:7: ( 'foreach' )
-			// while.g:13:9: 'foreach'
+			// .\\while.g:13:7: ( 'foreach' )
+			// .\\while.g:13:9: 'foreach'
 			{
 			match("foreach"); 
 
@@ -325,8 +325,8 @@ public class whileLexer extends Lexer {
 		try {
 			int _type = T__39;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// while.g:14:7: ( 'function' )
-			// while.g:14:9: 'function'
+			// .\\while.g:14:7: ( 'function' )
+			// .\\while.g:14:9: 'function'
 			{
 			match("function"); 
 
@@ -346,8 +346,8 @@ public class whileLexer extends Lexer {
 		try {
 			int _type = T__40;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// while.g:15:7: ( 'hd' )
-			// while.g:15:9: 'hd'
+			// .\\while.g:15:7: ( 'hd' )
+			// .\\while.g:15:9: 'hd'
 			{
 			match("hd"); 
 
@@ -367,8 +367,8 @@ public class whileLexer extends Lexer {
 		try {
 			int _type = T__41;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// while.g:16:7: ( 'if' )
-			// while.g:16:9: 'if'
+			// .\\while.g:16:7: ( 'if' )
+			// .\\while.g:16:9: 'if'
 			{
 			match("if"); 
 
@@ -388,8 +388,8 @@ public class whileLexer extends Lexer {
 		try {
 			int _type = T__42;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// while.g:17:7: ( 'in' )
-			// while.g:17:9: 'in'
+			// .\\while.g:17:7: ( 'in' )
+			// .\\while.g:17:9: 'in'
 			{
 			match("in"); 
 
@@ -409,8 +409,8 @@ public class whileLexer extends Lexer {
 		try {
 			int _type = T__43;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// while.g:18:7: ( 'list' )
-			// while.g:18:9: 'list'
+			// .\\while.g:18:7: ( 'list' )
+			// .\\while.g:18:9: 'list'
 			{
 			match("list"); 
 
@@ -430,8 +430,8 @@ public class whileLexer extends Lexer {
 		try {
 			int _type = T__44;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// while.g:19:7: ( 'nil' )
-			// while.g:19:9: 'nil'
+			// .\\while.g:19:7: ( 'nil' )
+			// .\\while.g:19:9: 'nil'
 			{
 			match("nil"); 
 
@@ -451,8 +451,8 @@ public class whileLexer extends Lexer {
 		try {
 			int _type = T__45;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// while.g:20:7: ( 'nop' )
-			// while.g:20:9: 'nop'
+			// .\\while.g:20:7: ( 'nop' )
+			// .\\while.g:20:9: 'nop'
 			{
 			match("nop"); 
 
@@ -472,8 +472,8 @@ public class whileLexer extends Lexer {
 		try {
 			int _type = T__46;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// while.g:21:7: ( 'od' )
-			// while.g:21:9: 'od'
+			// .\\while.g:21:7: ( 'od' )
+			// .\\while.g:21:9: 'od'
 			{
 			match("od"); 
 
@@ -493,8 +493,8 @@ public class whileLexer extends Lexer {
 		try {
 			int _type = T__47;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// while.g:22:7: ( 'read' )
-			// while.g:22:9: 'read'
+			// .\\while.g:22:7: ( 'read' )
+			// .\\while.g:22:9: 'read'
 			{
 			match("read"); 
 
@@ -514,8 +514,8 @@ public class whileLexer extends Lexer {
 		try {
 			int _type = T__48;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// while.g:23:7: ( 'then' )
-			// while.g:23:9: 'then'
+			// .\\while.g:23:7: ( 'then' )
+			// .\\while.g:23:9: 'then'
 			{
 			match("then"); 
 
@@ -535,8 +535,8 @@ public class whileLexer extends Lexer {
 		try {
 			int _type = T__49;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// while.g:24:7: ( 'tl' )
-			// while.g:24:9: 'tl'
+			// .\\while.g:24:7: ( 'tl' )
+			// .\\while.g:24:9: 'tl'
 			{
 			match("tl"); 
 
@@ -556,8 +556,8 @@ public class whileLexer extends Lexer {
 		try {
 			int _type = T__50;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// while.g:25:7: ( 'while' )
-			// while.g:25:9: 'while'
+			// .\\while.g:25:7: ( 'while' )
+			// .\\while.g:25:9: 'while'
 			{
 			match("while"); 
 
@@ -577,8 +577,8 @@ public class whileLexer extends Lexer {
 		try {
 			int _type = T__51;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// while.g:26:7: ( 'write' )
-			// while.g:26:9: 'write'
+			// .\\while.g:26:7: ( 'write' )
+			// .\\while.g:26:9: 'write'
 			{
 			match("write"); 
 
@@ -598,8 +598,8 @@ public class whileLexer extends Lexer {
 		try {
 			int _type = VARIABLE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// while.g:28:9: ( ( 'A' .. 'Z' ) ( ( 'A' .. 'Z' ) | ( 'a' .. 'z' ) | ( '0' .. '9' ) )* ( '!' | '?' )? )
-			// while.g:28:11: ( 'A' .. 'Z' ) ( ( 'A' .. 'Z' ) | ( 'a' .. 'z' ) | ( '0' .. '9' ) )* ( '!' | '?' )?
+			// .\\while.g:28:9: ( ( 'A' .. 'Z' ) ( ( 'A' .. 'Z' ) | ( 'a' .. 'z' ) | ( '0' .. '9' ) )* ( '!' | '?' )? )
+			// .\\while.g:28:11: ( 'A' .. 'Z' ) ( ( 'A' .. 'Z' ) | ( 'a' .. 'z' ) | ( '0' .. '9' ) )* ( '!' | '?' )?
 			{
 			if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z') ) {
 				input.consume();
@@ -609,7 +609,7 @@ public class whileLexer extends Lexer {
 				recover(mse);
 				throw mse;
 			}
-			// while.g:28:22: ( ( 'A' .. 'Z' ) | ( 'a' .. 'z' ) | ( '0' .. '9' ) )*
+			// .\\while.g:28:22: ( ( 'A' .. 'Z' ) | ( 'a' .. 'z' ) | ( '0' .. '9' ) )*
 			loop1:
 			while (true) {
 				int alt1=2;
@@ -620,7 +620,7 @@ public class whileLexer extends Lexer {
 
 				switch (alt1) {
 				case 1 :
-					// while.g:
+					// .\\while.g:
 					{
 					if ( (input.LA(1) >= '0' && input.LA(1) <= '9')||(input.LA(1) >= 'A' && input.LA(1) <= 'Z')||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
 						input.consume();
@@ -638,7 +638,7 @@ public class whileLexer extends Lexer {
 				}
 			}
 
-			// while.g:28:58: ( '!' | '?' )?
+			// .\\while.g:28:58: ( '!' | '?' )?
 			int alt2=2;
 			int LA2_0 = input.LA(1);
 			if ( (LA2_0=='!'||LA2_0=='?') ) {
@@ -646,7 +646,7 @@ public class whileLexer extends Lexer {
 			}
 			switch (alt2) {
 				case 1 :
-					// while.g:
+					// .\\while.g:
 					{
 					if ( input.LA(1)=='!'||input.LA(1)=='?' ) {
 						input.consume();
@@ -677,8 +677,8 @@ public class whileLexer extends Lexer {
 		try {
 			int _type = SYMBOL;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// while.g:29:7: ( ( 'a' .. 'z' ) ( ( 'A' .. 'Z' ) | ( 'a' .. 'z' ) | ( '0' .. '9' ) )* ( '!' | '?' )? )
-			// while.g:29:11: ( 'a' .. 'z' ) ( ( 'A' .. 'Z' ) | ( 'a' .. 'z' ) | ( '0' .. '9' ) )* ( '!' | '?' )?
+			// .\\while.g:29:7: ( ( 'a' .. 'z' ) ( ( 'A' .. 'Z' ) | ( 'a' .. 'z' ) | ( '0' .. '9' ) )* ( '!' | '?' )? )
+			// .\\while.g:29:11: ( 'a' .. 'z' ) ( ( 'A' .. 'Z' ) | ( 'a' .. 'z' ) | ( '0' .. '9' ) )* ( '!' | '?' )?
 			{
 			if ( (input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
 				input.consume();
@@ -688,7 +688,7 @@ public class whileLexer extends Lexer {
 				recover(mse);
 				throw mse;
 			}
-			// while.g:29:22: ( ( 'A' .. 'Z' ) | ( 'a' .. 'z' ) | ( '0' .. '9' ) )*
+			// .\\while.g:29:22: ( ( 'A' .. 'Z' ) | ( 'a' .. 'z' ) | ( '0' .. '9' ) )*
 			loop3:
 			while (true) {
 				int alt3=2;
@@ -699,7 +699,7 @@ public class whileLexer extends Lexer {
 
 				switch (alt3) {
 				case 1 :
-					// while.g:
+					// .\\while.g:
 					{
 					if ( (input.LA(1) >= '0' && input.LA(1) <= '9')||(input.LA(1) >= 'A' && input.LA(1) <= 'Z')||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
 						input.consume();
@@ -717,7 +717,7 @@ public class whileLexer extends Lexer {
 				}
 			}
 
-			// while.g:29:58: ( '!' | '?' )?
+			// .\\while.g:29:58: ( '!' | '?' )?
 			int alt4=2;
 			int LA4_0 = input.LA(1);
 			if ( (LA4_0=='!'||LA4_0=='?') ) {
@@ -725,7 +725,7 @@ public class whileLexer extends Lexer {
 			}
 			switch (alt4) {
 				case 1 :
-					// while.g:
+					// .\\while.g:
 					{
 					if ( input.LA(1)=='!'||input.LA(1)=='?' ) {
 						input.consume();
@@ -756,8 +756,8 @@ public class whileLexer extends Lexer {
 		try {
 			int _type = COMMA;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// while.g:31:7: ( ',' )
-			// while.g:31:9: ','
+			// .\\while.g:31:7: ( ',' )
+			// .\\while.g:31:9: ','
 			{
 			match(','); 
 			}
@@ -776,8 +776,8 @@ public class whileLexer extends Lexer {
 		try {
 			int _type = PERCENT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// while.g:32:9: ( '%' )
-			// while.g:32:11: '%'
+			// .\\while.g:32:9: ( '%' )
+			// .\\while.g:32:11: '%'
 			{
 			match('%'); 
 			}
@@ -796,8 +796,8 @@ public class whileLexer extends Lexer {
 		try {
 			int _type = WS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// while.g:33:5: ( ( ' ' | '\\t' | '\\r' | '\\n' ) )
-			// while.g:33:9: ( ' ' | '\\t' | '\\r' | '\\n' )
+			// .\\while.g:33:5: ( ( ' ' | '\\t' | '\\r' | '\\n' ) )
+			// .\\while.g:33:9: ( ' ' | '\\t' | '\\r' | '\\n' )
 			{
 			if ( (input.LA(1) >= '\t' && input.LA(1) <= '\n')||input.LA(1)=='\r'||input.LA(1)==' ' ) {
 				input.consume();
@@ -821,215 +821,215 @@ public class whileLexer extends Lexer {
 
 	@Override
 	public void mTokens() throws RecognitionException {
-		// while.g:1:8: ( T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | VARIABLE | SYMBOL | COMMA | PERCENT | WS )
+		// .\\while.g:1:8: ( T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | VARIABLE | SYMBOL | COMMA | PERCENT | WS )
 		int alt5=30;
 		alt5 = dfa5.predict(input);
 		switch (alt5) {
 			case 1 :
-				// while.g:1:10: T__27
+				// .\\while.g:1:10: T__27
 				{
 				mT__27(); 
 
 				}
 				break;
 			case 2 :
-				// while.g:1:16: T__28
+				// .\\while.g:1:16: T__28
 				{
 				mT__28(); 
 
 				}
 				break;
 			case 3 :
-				// while.g:1:22: T__29
+				// .\\while.g:1:22: T__29
 				{
 				mT__29(); 
 
 				}
 				break;
 			case 4 :
-				// while.g:1:28: T__30
+				// .\\while.g:1:28: T__30
 				{
 				mT__30(); 
 
 				}
 				break;
 			case 5 :
-				// while.g:1:34: T__31
+				// .\\while.g:1:34: T__31
 				{
 				mT__31(); 
 
 				}
 				break;
 			case 6 :
-				// while.g:1:40: T__32
+				// .\\while.g:1:40: T__32
 				{
 				mT__32(); 
 
 				}
 				break;
 			case 7 :
-				// while.g:1:46: T__33
+				// .\\while.g:1:46: T__33
 				{
 				mT__33(); 
 
 				}
 				break;
 			case 8 :
-				// while.g:1:52: T__34
+				// .\\while.g:1:52: T__34
 				{
 				mT__34(); 
 
 				}
 				break;
 			case 9 :
-				// while.g:1:58: T__35
+				// .\\while.g:1:58: T__35
 				{
 				mT__35(); 
 
 				}
 				break;
 			case 10 :
-				// while.g:1:64: T__36
+				// .\\while.g:1:64: T__36
 				{
 				mT__36(); 
 
 				}
 				break;
 			case 11 :
-				// while.g:1:70: T__37
+				// .\\while.g:1:70: T__37
 				{
 				mT__37(); 
 
 				}
 				break;
 			case 12 :
-				// while.g:1:76: T__38
+				// .\\while.g:1:76: T__38
 				{
 				mT__38(); 
 
 				}
 				break;
 			case 13 :
-				// while.g:1:82: T__39
+				// .\\while.g:1:82: T__39
 				{
 				mT__39(); 
 
 				}
 				break;
 			case 14 :
-				// while.g:1:88: T__40
+				// .\\while.g:1:88: T__40
 				{
 				mT__40(); 
 
 				}
 				break;
 			case 15 :
-				// while.g:1:94: T__41
+				// .\\while.g:1:94: T__41
 				{
 				mT__41(); 
 
 				}
 				break;
 			case 16 :
-				// while.g:1:100: T__42
+				// .\\while.g:1:100: T__42
 				{
 				mT__42(); 
 
 				}
 				break;
 			case 17 :
-				// while.g:1:106: T__43
+				// .\\while.g:1:106: T__43
 				{
 				mT__43(); 
 
 				}
 				break;
 			case 18 :
-				// while.g:1:112: T__44
+				// .\\while.g:1:112: T__44
 				{
 				mT__44(); 
 
 				}
 				break;
 			case 19 :
-				// while.g:1:118: T__45
+				// .\\while.g:1:118: T__45
 				{
 				mT__45(); 
 
 				}
 				break;
 			case 20 :
-				// while.g:1:124: T__46
+				// .\\while.g:1:124: T__46
 				{
 				mT__46(); 
 
 				}
 				break;
 			case 21 :
-				// while.g:1:130: T__47
+				// .\\while.g:1:130: T__47
 				{
 				mT__47(); 
 
 				}
 				break;
 			case 22 :
-				// while.g:1:136: T__48
+				// .\\while.g:1:136: T__48
 				{
 				mT__48(); 
 
 				}
 				break;
 			case 23 :
-				// while.g:1:142: T__49
+				// .\\while.g:1:142: T__49
 				{
 				mT__49(); 
 
 				}
 				break;
 			case 24 :
-				// while.g:1:148: T__50
+				// .\\while.g:1:148: T__50
 				{
 				mT__50(); 
 
 				}
 				break;
 			case 25 :
-				// while.g:1:154: T__51
+				// .\\while.g:1:154: T__51
 				{
 				mT__51(); 
 
 				}
 				break;
 			case 26 :
-				// while.g:1:160: VARIABLE
+				// .\\while.g:1:160: VARIABLE
 				{
 				mVARIABLE(); 
 
 				}
 				break;
 			case 27 :
-				// while.g:1:169: SYMBOL
+				// .\\while.g:1:169: SYMBOL
 				{
 				mSYMBOL(); 
 
 				}
 				break;
 			case 28 :
-				// while.g:1:176: COMMA
+				// .\\while.g:1:176: COMMA
 				{
 				mCOMMA(); 
 
 				}
 				break;
 			case 29 :
-				// while.g:1:182: PERCENT
+				// .\\while.g:1:182: PERCENT
 				{
 				mPERCENT(); 
 
 				}
 				break;
 			case 30 :
-				// while.g:1:190: WS
+				// .\\while.g:1:190: WS
 				{
 				mWS(); 
 

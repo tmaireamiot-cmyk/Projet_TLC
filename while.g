@@ -82,7 +82,7 @@ command_nop :
     ;
 
 command_var :
-      vars ':=' exprs -> ^(VAR vars exprs)
+      v=vars ':=' e=exprs -> ^(VAR $v $e)
     ;
 
 command_if :

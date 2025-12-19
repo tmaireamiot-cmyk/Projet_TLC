@@ -1,4 +1,4 @@
-// $ANTLR 3.5.2 while.g 2025-12-14 16:12:01
+// $ANTLR 3.5.2 .\\while.g 2025-12-15 15:58:16
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -93,7 +93,7 @@ public class whileParser extends Parser {
 		return adaptor;
 	}
 	@Override public String[] getTokenNames() { return whileParser.tokenNames; }
-	@Override public String getGrammarFileName() { return "while.g"; }
+	@Override public String getGrammarFileName() { return ".\\while.g"; }
 
 
 	public static class program_return extends ParserRuleReturnScope {
@@ -104,7 +104,7 @@ public class whileParser extends Parser {
 
 
 	// $ANTLR start "program"
-	// while.g:41:1: program : ( function )+ -> ^( PROGRAM ( function )+ ) ;
+	// .\\while.g:41:1: program : ( function )+ -> ^( PROGRAM ( function )+ ) ;
 	public final whileParser.program_return program() throws RecognitionException {
 		whileParser.program_return retval = new whileParser.program_return();
 		retval.start = input.LT(1);
@@ -116,10 +116,10 @@ public class whileParser extends Parser {
 		RewriteRuleSubtreeStream stream_function=new RewriteRuleSubtreeStream(adaptor,"rule function");
 
 		try {
-			// while.g:41:9: ( ( function )+ -> ^( PROGRAM ( function )+ ) )
-			// while.g:42:5: ( function )+
+			// .\\while.g:41:9: ( ( function )+ -> ^( PROGRAM ( function )+ ) )
+			// .\\while.g:42:5: ( function )+
 			{
-			// while.g:42:5: ( function )+
+			// .\\while.g:42:5: ( function )+
 			int cnt1=0;
 			loop1:
 			while (true) {
@@ -131,7 +131,7 @@ public class whileParser extends Parser {
 
 				switch (alt1) {
 				case 1 :
-					// while.g:42:5: function
+					// .\\while.g:42:5: function
 					{
 					pushFollow(FOLLOW_function_in_program321);
 					function1=function();
@@ -162,7 +162,7 @@ public class whileParser extends Parser {
 			root_0 = (Object)adaptor.nil();
 			// 42:15: -> ^( PROGRAM ( function )+ )
 			{
-				// while.g:42:18: ^( PROGRAM ( function )+ )
+				// .\\while.g:42:18: ^( PROGRAM ( function )+ )
 				{
 				Object root_1 = (Object)adaptor.nil();
 				root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(PROGRAM, "PROGRAM"), root_1);
@@ -211,7 +211,7 @@ public class whileParser extends Parser {
 
 
 	// $ANTLR start "function"
-	// while.g:45:1: function : 'function' s= SYMBOL ':' definition -> ^( FUNCTION $s definition ) ;
+	// .\\while.g:45:1: function : 'function' s= SYMBOL ':' definition -> ^( FUNCTION $s definition ) ;
 	public final whileParser.function_return function() throws RecognitionException {
 		whileParser.function_return retval = new whileParser.function_return();
 		retval.start = input.LT(1);
@@ -232,8 +232,8 @@ public class whileParser extends Parser {
 		RewriteRuleSubtreeStream stream_definition=new RewriteRuleSubtreeStream(adaptor,"rule definition");
 
 		try {
-			// while.g:45:10: ( 'function' s= SYMBOL ':' definition -> ^( FUNCTION $s definition ) )
-			// while.g:46:5: 'function' s= SYMBOL ':' definition
+			// .\\while.g:45:10: ( 'function' s= SYMBOL ':' definition -> ^( FUNCTION $s definition ) )
+			// .\\while.g:46:5: 'function' s= SYMBOL ':' definition
 			{
 			string_literal2=(Token)match(input,39,FOLLOW_39_in_function348);  
 			stream_39.add(string_literal2);
@@ -263,7 +263,7 @@ public class whileParser extends Parser {
 			root_0 = (Object)adaptor.nil();
 			// 47:9: -> ^( FUNCTION $s definition )
 			{
-				// while.g:47:12: ^( FUNCTION $s definition )
+				// .\\while.g:47:12: ^( FUNCTION $s definition )
 				{
 				Object root_1 = (Object)adaptor.nil();
 				root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(FUNCTION, "FUNCTION"), root_1);
@@ -306,7 +306,7 @@ public class whileParser extends Parser {
 
 
 	// $ANTLR start "definition"
-	// while.g:50:1: definition : 'read' (i= input )? PERCENT c= commands PERCENT 'write' o= output -> ^( DEFINITION ^( INPUT ( $i)? ) ^( OUTPUT $o) $c) ;
+	// .\\while.g:50:1: definition : 'read' (i= input )? PERCENT c= commands PERCENT 'write' o= output -> ^( DEFINITION ^( INPUT ( $i)? ) ^( OUTPUT $o) $c) ;
 	public final whileParser.definition_return definition() throws RecognitionException {
 		whileParser.definition_return retval = new whileParser.definition_return();
 		retval.start = input.LT(1);
@@ -333,13 +333,13 @@ public class whileParser extends Parser {
 		RewriteRuleSubtreeStream stream_commands=new RewriteRuleSubtreeStream(adaptor,"rule commands");
 
 		try {
-			// while.g:50:12: ( 'read' (i= input )? PERCENT c= commands PERCENT 'write' o= output -> ^( DEFINITION ^( INPUT ( $i)? ) ^( OUTPUT $o) $c) )
-			// while.g:51:7: 'read' (i= input )? PERCENT c= commands PERCENT 'write' o= output
+			// .\\while.g:50:12: ( 'read' (i= input )? PERCENT c= commands PERCENT 'write' o= output -> ^( DEFINITION ^( INPUT ( $i)? ) ^( OUTPUT $o) $c) )
+			// .\\while.g:51:7: 'read' (i= input )? PERCENT c= commands PERCENT 'write' o= output
 			{
 			string_literal5=(Token)match(input,47,FOLLOW_47_in_definition394);  
 			stream_47.add(string_literal5);
 
-			// while.g:51:15: (i= input )?
+			// .\\while.g:51:15: (i= input )?
 			int alt2=2;
 			int LA2_0 = input.LA(1);
 			if ( (LA2_0==VARIABLE) ) {
@@ -347,7 +347,7 @@ public class whileParser extends Parser {
 			}
 			switch (alt2) {
 				case 1 :
-					// while.g:51:15: i= input
+					// .\\while.g:51:15: i= input
 					{
 					pushFollow(FOLLOW_input_in_definition398);
 					i=input();
@@ -379,7 +379,7 @@ public class whileParser extends Parser {
 
 			stream_output.add(o.getTree());
 			// AST REWRITE
-			// elements: i, c, o
+			// elements: o, c, i
 			// token labels: 
 			// rule labels: c, i, retval, o
 			// token list labels: 
@@ -394,15 +394,15 @@ public class whileParser extends Parser {
 			root_0 = (Object)adaptor.nil();
 			// 52:7: -> ^( DEFINITION ^( INPUT ( $i)? ) ^( OUTPUT $o) $c)
 			{
-				// while.g:52:10: ^( DEFINITION ^( INPUT ( $i)? ) ^( OUTPUT $o) $c)
+				// .\\while.g:52:10: ^( DEFINITION ^( INPUT ( $i)? ) ^( OUTPUT $o) $c)
 				{
 				Object root_1 = (Object)adaptor.nil();
 				root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(DEFINITION, "DEFINITION"), root_1);
-				// while.g:52:23: ^( INPUT ( $i)? )
+				// .\\while.g:52:23: ^( INPUT ( $i)? )
 				{
 				Object root_2 = (Object)adaptor.nil();
 				root_2 = (Object)adaptor.becomeRoot((Object)adaptor.create(INPUT, "INPUT"), root_2);
-				// while.g:52:32: ( $i)?
+				// .\\while.g:52:32: ( $i)?
 				if ( stream_i.hasNext() ) {
 					adaptor.addChild(root_2, stream_i.nextTree());
 				}
@@ -411,7 +411,7 @@ public class whileParser extends Parser {
 				adaptor.addChild(root_1, root_2);
 				}
 
-				// while.g:52:36: ^( OUTPUT $o)
+				// .\\while.g:52:36: ^( OUTPUT $o)
 				{
 				Object root_2 = (Object)adaptor.nil();
 				root_2 = (Object)adaptor.becomeRoot((Object)adaptor.create(OUTPUT, "OUTPUT"), root_2);
@@ -457,7 +457,7 @@ public class whileParser extends Parser {
 
 
 	// $ANTLR start "input"
-	// while.g:55:1: input : v= VARIABLE ( COMMA v2= VARIABLE )* -> ^( INPUT $v ( $v2)* ) ;
+	// .\\while.g:55:1: input : v= VARIABLE ( COMMA v2= VARIABLE )* -> ^( INPUT $v ( $v2)* ) ;
 	public final whileParser.input_return input() throws RecognitionException {
 		whileParser.input_return retval = new whileParser.input_return();
 		retval.start = input.LT(1);
@@ -475,13 +475,13 @@ public class whileParser extends Parser {
 		RewriteRuleTokenStream stream_VARIABLE=new RewriteRuleTokenStream(adaptor,"token VARIABLE");
 
 		try {
-			// while.g:55:7: (v= VARIABLE ( COMMA v2= VARIABLE )* -> ^( INPUT $v ( $v2)* ) )
-			// while.g:56:7: v= VARIABLE ( COMMA v2= VARIABLE )*
+			// .\\while.g:55:7: (v= VARIABLE ( COMMA v2= VARIABLE )* -> ^( INPUT $v ( $v2)* ) )
+			// .\\while.g:56:7: v= VARIABLE ( COMMA v2= VARIABLE )*
 			{
 			v=(Token)match(input,VARIABLE,FOLLOW_VARIABLE_in_input464);  
 			stream_VARIABLE.add(v);
 
-			// while.g:56:18: ( COMMA v2= VARIABLE )*
+			// .\\while.g:56:18: ( COMMA v2= VARIABLE )*
 			loop3:
 			while (true) {
 				int alt3=2;
@@ -492,7 +492,7 @@ public class whileParser extends Parser {
 
 				switch (alt3) {
 				case 1 :
-					// while.g:56:19: COMMA v2= VARIABLE
+					// .\\while.g:56:19: COMMA v2= VARIABLE
 					{
 					COMMA9=(Token)match(input,COMMA,FOLLOW_COMMA_in_input467);  
 					stream_COMMA.add(COMMA9);
@@ -523,12 +523,12 @@ public class whileParser extends Parser {
 			root_0 = (Object)adaptor.nil();
 			// 57:7: -> ^( INPUT $v ( $v2)* )
 			{
-				// while.g:57:10: ^( INPUT $v ( $v2)* )
+				// .\\while.g:57:10: ^( INPUT $v ( $v2)* )
 				{
 				Object root_1 = (Object)adaptor.nil();
 				root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(INPUT, "INPUT"), root_1);
 				adaptor.addChild(root_1, stream_v.nextNode());
-				// while.g:57:22: ( $v2)*
+				// .\\while.g:57:22: ( $v2)*
 				while ( stream_v2.hasNext() ) {
 					adaptor.addChild(root_1, stream_v2.nextNode());
 				}
@@ -571,7 +571,7 @@ public class whileParser extends Parser {
 
 
 	// $ANTLR start "output"
-	// while.g:60:1: output : v= VARIABLE ( COMMA v= VARIABLE )* -> ^( OUTPUT ( $v)+ ) ;
+	// .\\while.g:60:1: output : v= VARIABLE ( COMMA v= VARIABLE )* -> ^( OUTPUT ( $v)+ ) ;
 	public final whileParser.output_return output() throws RecognitionException {
 		whileParser.output_return retval = new whileParser.output_return();
 		retval.start = input.LT(1);
@@ -587,13 +587,13 @@ public class whileParser extends Parser {
 		RewriteRuleTokenStream stream_VARIABLE=new RewriteRuleTokenStream(adaptor,"token VARIABLE");
 
 		try {
-			// while.g:60:8: (v= VARIABLE ( COMMA v= VARIABLE )* -> ^( OUTPUT ( $v)+ ) )
-			// while.g:61:7: v= VARIABLE ( COMMA v= VARIABLE )*
+			// .\\while.g:60:8: (v= VARIABLE ( COMMA v= VARIABLE )* -> ^( OUTPUT ( $v)+ ) )
+			// .\\while.g:61:7: v= VARIABLE ( COMMA v= VARIABLE )*
 			{
 			v=(Token)match(input,VARIABLE,FOLLOW_VARIABLE_in_output513);  
 			stream_VARIABLE.add(v);
 
-			// while.g:61:18: ( COMMA v= VARIABLE )*
+			// .\\while.g:61:18: ( COMMA v= VARIABLE )*
 			loop4:
 			while (true) {
 				int alt4=2;
@@ -604,7 +604,7 @@ public class whileParser extends Parser {
 
 				switch (alt4) {
 				case 1 :
-					// while.g:61:19: COMMA v= VARIABLE
+					// .\\while.g:61:19: COMMA v= VARIABLE
 					{
 					COMMA10=(Token)match(input,COMMA,FOLLOW_COMMA_in_output516);  
 					stream_COMMA.add(COMMA10);
@@ -634,7 +634,7 @@ public class whileParser extends Parser {
 			root_0 = (Object)adaptor.nil();
 			// 62:7: -> ^( OUTPUT ( $v)+ )
 			{
-				// while.g:62:10: ^( OUTPUT ( $v)+ )
+				// .\\while.g:62:10: ^( OUTPUT ( $v)+ )
 				{
 				Object root_1 = (Object)adaptor.nil();
 				root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(OUTPUT, "OUTPUT"), root_1);
@@ -683,7 +683,7 @@ public class whileParser extends Parser {
 
 
 	// $ANTLR start "vars"
-	// while.g:65:1: vars : v= VARIABLE ( COMMA v= VARIABLE )* -> ^( VARIABLES ( $v)+ ) ;
+	// .\\while.g:65:1: vars : v= VARIABLE ( COMMA v= VARIABLE )* -> ^( VARIABLES ( $v)+ ) ;
 	public final whileParser.vars_return vars() throws RecognitionException {
 		whileParser.vars_return retval = new whileParser.vars_return();
 		retval.start = input.LT(1);
@@ -699,13 +699,13 @@ public class whileParser extends Parser {
 		RewriteRuleTokenStream stream_VARIABLE=new RewriteRuleTokenStream(adaptor,"token VARIABLE");
 
 		try {
-			// while.g:65:6: (v= VARIABLE ( COMMA v= VARIABLE )* -> ^( VARIABLES ( $v)+ ) )
-			// while.g:66:7: v= VARIABLE ( COMMA v= VARIABLE )*
+			// .\\while.g:65:6: (v= VARIABLE ( COMMA v= VARIABLE )* -> ^( VARIABLES ( $v)+ ) )
+			// .\\while.g:66:7: v= VARIABLE ( COMMA v= VARIABLE )*
 			{
 			v=(Token)match(input,VARIABLE,FOLLOW_VARIABLE_in_vars559);  
 			stream_VARIABLE.add(v);
 
-			// while.g:66:18: ( COMMA v= VARIABLE )*
+			// .\\while.g:66:18: ( COMMA v= VARIABLE )*
 			loop5:
 			while (true) {
 				int alt5=2;
@@ -716,7 +716,7 @@ public class whileParser extends Parser {
 
 				switch (alt5) {
 				case 1 :
-					// while.g:66:19: COMMA v= VARIABLE
+					// .\\while.g:66:19: COMMA v= VARIABLE
 					{
 					COMMA11=(Token)match(input,COMMA,FOLLOW_COMMA_in_vars562);  
 					stream_COMMA.add(COMMA11);
@@ -746,7 +746,7 @@ public class whileParser extends Parser {
 			root_0 = (Object)adaptor.nil();
 			// 67:7: -> ^( VARIABLES ( $v)+ )
 			{
-				// while.g:67:10: ^( VARIABLES ( $v)+ )
+				// .\\while.g:67:10: ^( VARIABLES ( $v)+ )
 				{
 				Object root_1 = (Object)adaptor.nil();
 				root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(VARIABLES, "VARIABLES"), root_1);
@@ -795,7 +795,7 @@ public class whileParser extends Parser {
 
 
 	// $ANTLR start "exprs"
-	// while.g:70:1: exprs : e= expression ( COMMA e= expression )* -> ^( EXPRESSIONS ( $e)+ ) ;
+	// .\\while.g:70:1: exprs : e= expression ( COMMA e= expression )* -> ^( EXPRESSIONS ( $e)+ ) ;
 	public final whileParser.exprs_return exprs() throws RecognitionException {
 		whileParser.exprs_return retval = new whileParser.exprs_return();
 		retval.start = input.LT(1);
@@ -810,15 +810,15 @@ public class whileParser extends Parser {
 		RewriteRuleSubtreeStream stream_expression=new RewriteRuleSubtreeStream(adaptor,"rule expression");
 
 		try {
-			// while.g:70:7: (e= expression ( COMMA e= expression )* -> ^( EXPRESSIONS ( $e)+ ) )
-			// while.g:71:7: e= expression ( COMMA e= expression )*
+			// .\\while.g:70:7: (e= expression ( COMMA e= expression )* -> ^( EXPRESSIONS ( $e)+ ) )
+			// .\\while.g:71:7: e= expression ( COMMA e= expression )*
 			{
 			pushFollow(FOLLOW_expression_in_exprs605);
 			e=expression();
 			state._fsp--;
 
 			stream_expression.add(e.getTree());
-			// while.g:71:20: ( COMMA e= expression )*
+			// .\\while.g:71:20: ( COMMA e= expression )*
 			loop6:
 			while (true) {
 				int alt6=2;
@@ -829,7 +829,7 @@ public class whileParser extends Parser {
 
 				switch (alt6) {
 				case 1 :
-					// while.g:71:21: COMMA e= expression
+					// .\\while.g:71:21: COMMA e= expression
 					{
 					COMMA12=(Token)match(input,COMMA,FOLLOW_COMMA_in_exprs608);  
 					stream_COMMA.add(COMMA12);
@@ -861,7 +861,7 @@ public class whileParser extends Parser {
 			root_0 = (Object)adaptor.nil();
 			// 72:7: -> ^( EXPRESSIONS ( $e)+ )
 			{
-				// while.g:72:10: ^( EXPRESSIONS ( $e)+ )
+				// .\\while.g:72:10: ^( EXPRESSIONS ( $e)+ )
 				{
 				Object root_1 = (Object)adaptor.nil();
 				root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(EXPRESSIONS, "EXPRESSIONS"), root_1);
@@ -910,7 +910,7 @@ public class whileParser extends Parser {
 
 
 	// $ANTLR start "commands"
-	// while.g:75:1: commands : c= command ( ';' c= command )* -> ^( COMMANDS ( $c)+ ) ;
+	// .\\while.g:75:1: commands : c= command ( ';' c= command )* -> ^( COMMANDS ( $c)+ ) ;
 	public final whileParser.commands_return commands() throws RecognitionException {
 		whileParser.commands_return retval = new whileParser.commands_return();
 		retval.start = input.LT(1);
@@ -925,15 +925,15 @@ public class whileParser extends Parser {
 		RewriteRuleSubtreeStream stream_command=new RewriteRuleSubtreeStream(adaptor,"rule command");
 
 		try {
-			// while.g:75:10: (c= command ( ';' c= command )* -> ^( COMMANDS ( $c)+ ) )
-			// while.g:76:7: c= command ( ';' c= command )*
+			// .\\while.g:75:10: (c= command ( ';' c= command )* -> ^( COMMANDS ( $c)+ ) )
+			// .\\while.g:76:7: c= command ( ';' c= command )*
 			{
 			pushFollow(FOLLOW_command_in_commands651);
 			c=command();
 			state._fsp--;
 
 			stream_command.add(c.getTree());
-			// while.g:76:17: ( ';' c= command )*
+			// .\\while.g:76:17: ( ';' c= command )*
 			loop7:
 			while (true) {
 				int alt7=2;
@@ -944,7 +944,7 @@ public class whileParser extends Parser {
 
 				switch (alt7) {
 				case 1 :
-					// while.g:76:19: ';' c= command
+					// .\\while.g:76:19: ';' c= command
 					{
 					char_literal13=(Token)match(input,31,FOLLOW_31_in_commands655);  
 					stream_31.add(char_literal13);
@@ -976,7 +976,7 @@ public class whileParser extends Parser {
 			root_0 = (Object)adaptor.nil();
 			// 77:7: -> ^( COMMANDS ( $c)+ )
 			{
-				// while.g:77:10: ^( COMMANDS ( $c)+ )
+				// .\\while.g:77:10: ^( COMMANDS ( $c)+ )
 				{
 				Object root_1 = (Object)adaptor.nil();
 				root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(COMMANDS, "COMMANDS"), root_1);
@@ -1025,7 +1025,7 @@ public class whileParser extends Parser {
 
 
 	// $ANTLR start "command_nop"
-	// while.g:80:1: command_nop : 'nop' -> ^( NOP ) ;
+	// .\\while.g:80:1: command_nop : 'nop' -> ^( NOP ) ;
 	public final whileParser.command_nop_return command_nop() throws RecognitionException {
 		whileParser.command_nop_return retval = new whileParser.command_nop_return();
 		retval.start = input.LT(1);
@@ -1038,8 +1038,8 @@ public class whileParser extends Parser {
 		RewriteRuleTokenStream stream_45=new RewriteRuleTokenStream(adaptor,"token 45");
 
 		try {
-			// while.g:80:13: ( 'nop' -> ^( NOP ) )
-			// while.g:81:7: 'nop'
+			// .\\while.g:80:13: ( 'nop' -> ^( NOP ) )
+			// .\\while.g:81:7: 'nop'
 			{
 			string_literal14=(Token)match(input,45,FOLLOW_45_in_command_nop697);  
 			stream_45.add(string_literal14);
@@ -1057,7 +1057,7 @@ public class whileParser extends Parser {
 			root_0 = (Object)adaptor.nil();
 			// 81:13: -> ^( NOP )
 			{
-				// while.g:81:16: ^( NOP )
+				// .\\while.g:81:16: ^( NOP )
 				{
 				Object root_1 = (Object)adaptor.nil();
 				root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(NOP, "NOP"), root_1);
@@ -1098,7 +1098,7 @@ public class whileParser extends Parser {
 
 
 	// $ANTLR start "command_var"
-	// while.g:84:1: command_var : vars ':=' exprs -> ^( VAR vars exprs ) ;
+	// .\\while.g:84:1: command_var : vars ':=' exprs -> ^( VAR vars exprs ) ;
 	public final whileParser.command_var_return command_var() throws RecognitionException {
 		whileParser.command_var_return retval = new whileParser.command_var_return();
 		retval.start = input.LT(1);
@@ -1115,8 +1115,8 @@ public class whileParser extends Parser {
 		RewriteRuleSubtreeStream stream_vars=new RewriteRuleSubtreeStream(adaptor,"rule vars");
 
 		try {
-			// while.g:84:13: ( vars ':=' exprs -> ^( VAR vars exprs ) )
-			// while.g:85:7: vars ':=' exprs
+			// .\\while.g:84:13: ( vars ':=' exprs -> ^( VAR vars exprs ) )
+			// .\\while.g:85:7: vars ':=' exprs
 			{
 			pushFollow(FOLLOW_vars_in_command_var722);
 			vars15=vars();
@@ -1132,7 +1132,7 @@ public class whileParser extends Parser {
 
 			stream_exprs.add(exprs17.getTree());
 			// AST REWRITE
-			// elements: exprs, vars
+			// elements: vars, exprs
 			// token labels: 
 			// rule labels: retval
 			// token list labels: 
@@ -1144,7 +1144,7 @@ public class whileParser extends Parser {
 			root_0 = (Object)adaptor.nil();
 			// 85:23: -> ^( VAR vars exprs )
 			{
-				// while.g:85:26: ^( VAR vars exprs )
+				// .\\while.g:85:26: ^( VAR vars exprs )
 				{
 				Object root_1 = (Object)adaptor.nil();
 				root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(VAR, "VAR"), root_1);
@@ -1187,7 +1187,7 @@ public class whileParser extends Parser {
 
 
 	// $ANTLR start "command_if"
-	// while.g:88:1: command_if : 'if' expression 'then' c1= commands ( 'else' c2= commands )? 'fi' -> ^( COMMAND 'if' expression $c1 ( $c2)? ) ;
+	// .\\while.g:88:1: command_if : 'if' expression 'then' c1= commands ( 'else' c2= commands )? 'fi' -> ^( COMMAND 'if' expression $c1 ( $c2)? ) ;
 	public final whileParser.command_if_return command_if() throws RecognitionException {
 		whileParser.command_if_return retval = new whileParser.command_if_return();
 		retval.start = input.LT(1);
@@ -1214,8 +1214,8 @@ public class whileParser extends Parser {
 		RewriteRuleSubtreeStream stream_commands=new RewriteRuleSubtreeStream(adaptor,"rule commands");
 
 		try {
-			// while.g:88:12: ( 'if' expression 'then' c1= commands ( 'else' c2= commands )? 'fi' -> ^( COMMAND 'if' expression $c1 ( $c2)? ) )
-			// while.g:89:5: 'if' expression 'then' c1= commands ( 'else' c2= commands )? 'fi'
+			// .\\while.g:88:12: ( 'if' expression 'then' c1= commands ( 'else' c2= commands )? 'fi' -> ^( COMMAND 'if' expression $c1 ( $c2)? ) )
+			// .\\while.g:89:5: 'if' expression 'then' c1= commands ( 'else' c2= commands )? 'fi'
 			{
 			string_literal18=(Token)match(input,41,FOLLOW_41_in_command_if753);  
 			stream_41.add(string_literal18);
@@ -1233,7 +1233,7 @@ public class whileParser extends Parser {
 			state._fsp--;
 
 			stream_commands.add(c1.getTree());
-			// while.g:89:40: ( 'else' c2= commands )?
+			// .\\while.g:89:40: ( 'else' c2= commands )?
 			int alt8=2;
 			int LA8_0 = input.LA(1);
 			if ( (LA8_0==35) ) {
@@ -1241,7 +1241,7 @@ public class whileParser extends Parser {
 			}
 			switch (alt8) {
 				case 1 :
-					// while.g:89:41: 'else' c2= commands
+					// .\\while.g:89:41: 'else' c2= commands
 					{
 					string_literal21=(Token)match(input,35,FOLLOW_35_in_command_if764);  
 					stream_35.add(string_literal21);
@@ -1260,7 +1260,7 @@ public class whileParser extends Parser {
 			stream_36.add(string_literal22);
 
 			// AST REWRITE
-			// elements: c1, expression, c2, 41
+			// elements: expression, c2, 41, c1
 			// token labels: 
 			// rule labels: c1, retval, c2
 			// token list labels: 
@@ -1274,14 +1274,14 @@ public class whileParser extends Parser {
 			root_0 = (Object)adaptor.nil();
 			// 90:9: -> ^( COMMAND 'if' expression $c1 ( $c2)? )
 			{
-				// while.g:90:12: ^( COMMAND 'if' expression $c1 ( $c2)? )
+				// .\\while.g:90:12: ^( COMMAND 'if' expression $c1 ( $c2)? )
 				{
 				Object root_1 = (Object)adaptor.nil();
 				root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(COMMAND, "COMMAND"), root_1);
 				adaptor.addChild(root_1, stream_41.nextNode());
 				adaptor.addChild(root_1, stream_expression.nextTree());
 				adaptor.addChild(root_1, stream_c1.nextTree());
-				// while.g:90:42: ( $c2)?
+				// .\\while.g:90:42: ( $c2)?
 				if ( stream_c2.hasNext() ) {
 					adaptor.addChild(root_1, stream_c2.nextTree());
 				}
@@ -1324,7 +1324,7 @@ public class whileParser extends Parser {
 
 
 	// $ANTLR start "command_while"
-	// while.g:93:1: command_while : 'while' expression 'do' commands 'od' -> ^( COMMAND 'while' expression commands ) ;
+	// .\\while.g:93:1: command_while : 'while' expression 'do' commands 'od' -> ^( COMMAND 'while' expression commands ) ;
 	public final whileParser.command_while_return command_while() throws RecognitionException {
 		whileParser.command_while_return retval = new whileParser.command_while_return();
 		retval.start = input.LT(1);
@@ -1347,8 +1347,8 @@ public class whileParser extends Parser {
 		RewriteRuleSubtreeStream stream_commands=new RewriteRuleSubtreeStream(adaptor,"rule commands");
 
 		try {
-			// while.g:93:15: ( 'while' expression 'do' commands 'od' -> ^( COMMAND 'while' expression commands ) )
-			// while.g:94:7: 'while' expression 'do' commands 'od'
+			// .\\while.g:93:15: ( 'while' expression 'do' commands 'od' -> ^( COMMAND 'while' expression commands ) )
+			// .\\while.g:94:7: 'while' expression 'do' commands 'od'
 			{
 			string_literal23=(Token)match(input,50,FOLLOW_50_in_command_while818);  
 			stream_50.add(string_literal23);
@@ -1370,7 +1370,7 @@ public class whileParser extends Parser {
 			stream_46.add(string_literal27);
 
 			// AST REWRITE
-			// elements: 50, expression, commands
+			// elements: commands, expression, 50
 			// token labels: 
 			// rule labels: retval
 			// token list labels: 
@@ -1382,7 +1382,7 @@ public class whileParser extends Parser {
 			root_0 = (Object)adaptor.nil();
 			// 95:7: -> ^( COMMAND 'while' expression commands )
 			{
-				// while.g:95:10: ^( COMMAND 'while' expression commands )
+				// .\\while.g:95:10: ^( COMMAND 'while' expression commands )
 				{
 				Object root_1 = (Object)adaptor.nil();
 				root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(COMMAND, "COMMAND"), root_1);
@@ -1426,7 +1426,7 @@ public class whileParser extends Parser {
 
 
 	// $ANTLR start "command_for"
-	// while.g:98:1: command_for : 'for' expression 'do' commands 'od' -> ^( COMMAND 'for' expression commands ) ;
+	// .\\while.g:98:1: command_for : 'for' expression 'do' commands 'od' -> ^( COMMAND 'for' expression commands ) ;
 	public final whileParser.command_for_return command_for() throws RecognitionException {
 		whileParser.command_for_return retval = new whileParser.command_for_return();
 		retval.start = input.LT(1);
@@ -1449,8 +1449,8 @@ public class whileParser extends Parser {
 		RewriteRuleSubtreeStream stream_commands=new RewriteRuleSubtreeStream(adaptor,"rule commands");
 
 		try {
-			// while.g:98:13: ( 'for' expression 'do' commands 'od' -> ^( COMMAND 'for' expression commands ) )
-			// while.g:99:7: 'for' expression 'do' commands 'od'
+			// .\\while.g:98:13: ( 'for' expression 'do' commands 'od' -> ^( COMMAND 'for' expression commands ) )
+			// .\\while.g:99:7: 'for' expression 'do' commands 'od'
 			{
 			string_literal28=(Token)match(input,37,FOLLOW_37_in_command_for863);  
 			stream_37.add(string_literal28);
@@ -1472,7 +1472,7 @@ public class whileParser extends Parser {
 			stream_46.add(string_literal32);
 
 			// AST REWRITE
-			// elements: 37, expression, commands
+			// elements: expression, commands, 37
 			// token labels: 
 			// rule labels: retval
 			// token list labels: 
@@ -1484,7 +1484,7 @@ public class whileParser extends Parser {
 			root_0 = (Object)adaptor.nil();
 			// 100:7: -> ^( COMMAND 'for' expression commands )
 			{
-				// while.g:100:10: ^( COMMAND 'for' expression commands )
+				// .\\while.g:100:10: ^( COMMAND 'for' expression commands )
 				{
 				Object root_1 = (Object)adaptor.nil();
 				root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(COMMAND, "COMMAND"), root_1);
@@ -1528,7 +1528,7 @@ public class whileParser extends Parser {
 
 
 	// $ANTLR start "command_foreach"
-	// while.g:103:1: command_foreach : 'foreach' v= VARIABLE 'in' expression 'do' commands 'od' -> ^( COMMAND 'foreach' $v expression commands ) ;
+	// .\\while.g:103:1: command_foreach : 'foreach' v= VARIABLE 'in' expression 'do' commands 'od' -> ^( COMMAND 'foreach' $v expression commands ) ;
 	public final whileParser.command_foreach_return command_foreach() throws RecognitionException {
 		whileParser.command_foreach_return retval = new whileParser.command_foreach_return();
 		retval.start = input.LT(1);
@@ -1557,8 +1557,8 @@ public class whileParser extends Parser {
 		RewriteRuleSubtreeStream stream_commands=new RewriteRuleSubtreeStream(adaptor,"rule commands");
 
 		try {
-			// while.g:103:17: ( 'foreach' v= VARIABLE 'in' expression 'do' commands 'od' -> ^( COMMAND 'foreach' $v expression commands ) )
-			// while.g:104:7: 'foreach' v= VARIABLE 'in' expression 'do' commands 'od'
+			// .\\while.g:103:17: ( 'foreach' v= VARIABLE 'in' expression 'do' commands 'od' -> ^( COMMAND 'foreach' $v expression commands ) )
+			// .\\while.g:104:7: 'foreach' v= VARIABLE 'in' expression 'do' commands 'od'
 			{
 			string_literal33=(Token)match(input,38,FOLLOW_38_in_command_foreach908);  
 			stream_38.add(string_literal33);
@@ -1586,7 +1586,7 @@ public class whileParser extends Parser {
 			stream_46.add(string_literal38);
 
 			// AST REWRITE
-			// elements: commands, v, 38, expression
+			// elements: v, commands, 38, expression
 			// token labels: v
 			// rule labels: retval
 			// token list labels: 
@@ -1599,7 +1599,7 @@ public class whileParser extends Parser {
 			root_0 = (Object)adaptor.nil();
 			// 105:7: -> ^( COMMAND 'foreach' $v expression commands )
 			{
-				// while.g:105:10: ^( COMMAND 'foreach' $v expression commands )
+				// .\\while.g:105:10: ^( COMMAND 'foreach' $v expression commands )
 				{
 				Object root_1 = (Object)adaptor.nil();
 				root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(COMMAND, "COMMAND"), root_1);
@@ -1644,7 +1644,7 @@ public class whileParser extends Parser {
 
 
 	// $ANTLR start "command"
-	// while.g:108:1: command : ( command_nop | command_var | command_if | command_while | command_for | command_foreach );
+	// .\\while.g:108:1: command : ( command_nop | command_var | command_if | command_while | command_for | command_foreach );
 	public final whileParser.command_return command() throws RecognitionException {
 		whileParser.command_return retval = new whileParser.command_return();
 		retval.start = input.LT(1);
@@ -1660,7 +1660,7 @@ public class whileParser extends Parser {
 
 
 		try {
-			// while.g:108:9: ( command_nop | command_var | command_if | command_while | command_for | command_foreach )
+			// .\\while.g:108:9: ( command_nop | command_var | command_if | command_while | command_for | command_foreach )
 			int alt9=6;
 			switch ( input.LA(1) ) {
 			case 45:
@@ -1700,7 +1700,7 @@ public class whileParser extends Parser {
 			}
 			switch (alt9) {
 				case 1 :
-					// while.g:109:7: command_nop
+					// .\\while.g:109:7: command_nop
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -1714,7 +1714,7 @@ public class whileParser extends Parser {
 					}
 					break;
 				case 2 :
-					// while.g:110:7: command_var
+					// .\\while.g:110:7: command_var
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -1728,7 +1728,7 @@ public class whileParser extends Parser {
 					}
 					break;
 				case 3 :
-					// while.g:111:7: command_if
+					// .\\while.g:111:7: command_if
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -1742,7 +1742,7 @@ public class whileParser extends Parser {
 					}
 					break;
 				case 4 :
-					// while.g:112:7: command_while
+					// .\\while.g:112:7: command_while
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -1756,7 +1756,7 @@ public class whileParser extends Parser {
 					}
 					break;
 				case 5 :
-					// while.g:113:7: command_for
+					// .\\while.g:113:7: command_for
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -1770,7 +1770,7 @@ public class whileParser extends Parser {
 					}
 					break;
 				case 6 :
-					// while.g:114:7: command_foreach
+					// .\\while.g:114:7: command_foreach
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -1812,7 +1812,7 @@ public class whileParser extends Parser {
 
 
 	// $ANTLR start "exprbase"
-	// while.g:117:1: exprbase : ( 'nil' -> ^( EXPRBASE 'nil' ) |v= VARIABLE -> ^( EXPRBASE $v) |s= SYMBOL -> ^( EXPRBASE $s) | '(' exprbase_paren ')' -> ^( EXPRBASE exprbase_paren ) );
+	// .\\while.g:117:1: exprbase : ( 'nil' -> ^( EXPRBASE 'nil' ) |v= VARIABLE -> ^( EXPRBASE $v) |s= SYMBOL -> ^( EXPRBASE $s) | '(' exprbase_paren ')' -> ^( EXPRBASE exprbase_paren ) );
 	public final whileParser.exprbase_return exprbase() throws RecognitionException {
 		whileParser.exprbase_return retval = new whileParser.exprbase_return();
 		retval.start = input.LT(1);
@@ -1839,7 +1839,7 @@ public class whileParser extends Parser {
 		RewriteRuleSubtreeStream stream_exprbase_paren=new RewriteRuleSubtreeStream(adaptor,"rule exprbase_paren");
 
 		try {
-			// while.g:118:5: ( 'nil' -> ^( EXPRBASE 'nil' ) |v= VARIABLE -> ^( EXPRBASE $v) |s= SYMBOL -> ^( EXPRBASE $s) | '(' exprbase_paren ')' -> ^( EXPRBASE exprbase_paren ) )
+			// .\\while.g:118:5: ( 'nil' -> ^( EXPRBASE 'nil' ) |v= VARIABLE -> ^( EXPRBASE $v) |s= SYMBOL -> ^( EXPRBASE $s) | '(' exprbase_paren ')' -> ^( EXPRBASE exprbase_paren ) )
 			int alt10=4;
 			switch ( input.LA(1) ) {
 			case 44:
@@ -1869,7 +1869,7 @@ public class whileParser extends Parser {
 			}
 			switch (alt10) {
 				case 1 :
-					// while.g:118:7: 'nil'
+					// .\\while.g:118:7: 'nil'
 					{
 					string_literal45=(Token)match(input,44,FOLLOW_44_in_exprbase1019);  
 					stream_44.add(string_literal45);
@@ -1887,7 +1887,7 @@ public class whileParser extends Parser {
 					root_0 = (Object)adaptor.nil();
 					// 118:29: -> ^( EXPRBASE 'nil' )
 					{
-						// while.g:118:32: ^( EXPRBASE 'nil' )
+						// .\\while.g:118:32: ^( EXPRBASE 'nil' )
 						{
 						Object root_1 = (Object)adaptor.nil();
 						root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(EXPRBASE, "EXPRBASE"), root_1);
@@ -1903,7 +1903,7 @@ public class whileParser extends Parser {
 					}
 					break;
 				case 2 :
-					// while.g:119:7: v= VARIABLE
+					// .\\while.g:119:7: v= VARIABLE
 					{
 					v=(Token)match(input,VARIABLE,FOLLOW_VARIABLE_in_exprbase1053);  
 					stream_VARIABLE.add(v);
@@ -1922,7 +1922,7 @@ public class whileParser extends Parser {
 					root_0 = (Object)adaptor.nil();
 					// 119:31: -> ^( EXPRBASE $v)
 					{
-						// while.g:119:34: ^( EXPRBASE $v)
+						// .\\while.g:119:34: ^( EXPRBASE $v)
 						{
 						Object root_1 = (Object)adaptor.nil();
 						root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(EXPRBASE, "EXPRBASE"), root_1);
@@ -1938,7 +1938,7 @@ public class whileParser extends Parser {
 					}
 					break;
 				case 3 :
-					// while.g:120:7: s= SYMBOL
+					// .\\while.g:120:7: s= SYMBOL
 					{
 					s=(Token)match(input,SYMBOL,FOLLOW_SYMBOL_in_exprbase1085);  
 					stream_SYMBOL.add(s);
@@ -1957,7 +1957,7 @@ public class whileParser extends Parser {
 					root_0 = (Object)adaptor.nil();
 					// 120:31: -> ^( EXPRBASE $s)
 					{
-						// while.g:120:34: ^( EXPRBASE $s)
+						// .\\while.g:120:34: ^( EXPRBASE $s)
 						{
 						Object root_1 = (Object)adaptor.nil();
 						root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(EXPRBASE, "EXPRBASE"), root_1);
@@ -1973,7 +1973,7 @@ public class whileParser extends Parser {
 					}
 					break;
 				case 4 :
-					// while.g:121:7: '(' exprbase_paren ')'
+					// .\\while.g:121:7: '(' exprbase_paren ')'
 					{
 					char_literal46=(Token)match(input,27,FOLLOW_27_in_exprbase1117);  
 					stream_27.add(char_literal46);
@@ -1999,7 +1999,7 @@ public class whileParser extends Parser {
 					root_0 = (Object)adaptor.nil();
 					// 121:30: -> ^( EXPRBASE exprbase_paren )
 					{
-						// while.g:121:33: ^( EXPRBASE exprbase_paren )
+						// .\\while.g:121:33: ^( EXPRBASE exprbase_paren )
 						{
 						Object root_1 = (Object)adaptor.nil();
 						root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(EXPRBASE, "EXPRBASE"), root_1);
@@ -2043,7 +2043,7 @@ public class whileParser extends Parser {
 
 
 	// $ANTLR start "exprbase_paren"
-	// while.g:124:1: exprbase_paren : ( 'list' lexpr -> ^( EXPRBASE 'list' lexpr ) | 'cons' lexpr -> ^( EXPRBASE 'cons' lexpr ) | 'hd' exprbase -> ^( EXPRBASE 'hd' exprbase ) | 'tl' exprbase -> ^( EXPRBASE 'tl' exprbase ) |s= SYMBOL lexpr -> ^( EXPRBASE $s lexpr ) );
+	// .\\while.g:124:1: exprbase_paren : ( 'list' lexpr -> ^( EXPRBASE 'list' lexpr ) | 'cons' lexpr -> ^( EXPRBASE 'cons' lexpr ) | 'hd' exprbase -> ^( EXPRBASE 'hd' exprbase ) | 'tl' exprbase -> ^( EXPRBASE 'tl' exprbase ) |s= SYMBOL lexpr -> ^( EXPRBASE $s lexpr ) );
 	public final whileParser.exprbase_paren_return exprbase_paren() throws RecognitionException {
 		whileParser.exprbase_paren_return retval = new whileParser.exprbase_paren_return();
 		retval.start = input.LT(1);
@@ -2075,7 +2075,7 @@ public class whileParser extends Parser {
 		RewriteRuleSubtreeStream stream_exprbase=new RewriteRuleSubtreeStream(adaptor,"rule exprbase");
 
 		try {
-			// while.g:125:5: ( 'list' lexpr -> ^( EXPRBASE 'list' lexpr ) | 'cons' lexpr -> ^( EXPRBASE 'cons' lexpr ) | 'hd' exprbase -> ^( EXPRBASE 'hd' exprbase ) | 'tl' exprbase -> ^( EXPRBASE 'tl' exprbase ) |s= SYMBOL lexpr -> ^( EXPRBASE $s lexpr ) )
+			// .\\while.g:125:5: ( 'list' lexpr -> ^( EXPRBASE 'list' lexpr ) | 'cons' lexpr -> ^( EXPRBASE 'cons' lexpr ) | 'hd' exprbase -> ^( EXPRBASE 'hd' exprbase ) | 'tl' exprbase -> ^( EXPRBASE 'tl' exprbase ) |s= SYMBOL lexpr -> ^( EXPRBASE $s lexpr ) )
 			int alt11=5;
 			switch ( input.LA(1) ) {
 			case 43:
@@ -2110,7 +2110,7 @@ public class whileParser extends Parser {
 			}
 			switch (alt11) {
 				case 1 :
-					// while.g:125:7: 'list' lexpr
+					// .\\while.g:125:7: 'list' lexpr
 					{
 					string_literal49=(Token)match(input,43,FOLLOW_43_in_exprbase_paren1146);  
 					stream_43.add(string_literal49);
@@ -2121,7 +2121,7 @@ public class whileParser extends Parser {
 
 					stream_lexpr.add(lexpr50.getTree());
 					// AST REWRITE
-					// elements: lexpr, 43
+					// elements: 43, lexpr
 					// token labels: 
 					// rule labels: retval
 					// token list labels: 
@@ -2133,7 +2133,7 @@ public class whileParser extends Parser {
 					root_0 = (Object)adaptor.nil();
 					// 125:29: -> ^( EXPRBASE 'list' lexpr )
 					{
-						// while.g:125:32: ^( EXPRBASE 'list' lexpr )
+						// .\\while.g:125:32: ^( EXPRBASE 'list' lexpr )
 						{
 						Object root_1 = (Object)adaptor.nil();
 						root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(EXPRBASE, "EXPRBASE"), root_1);
@@ -2150,7 +2150,7 @@ public class whileParser extends Parser {
 					}
 					break;
 				case 2 :
-					// while.g:126:7: 'cons' lexpr
+					// .\\while.g:126:7: 'cons' lexpr
 					{
 					string_literal51=(Token)match(input,33,FOLLOW_33_in_exprbase_paren1175);  
 					stream_33.add(string_literal51);
@@ -2173,7 +2173,7 @@ public class whileParser extends Parser {
 					root_0 = (Object)adaptor.nil();
 					// 126:29: -> ^( EXPRBASE 'cons' lexpr )
 					{
-						// while.g:126:32: ^( EXPRBASE 'cons' lexpr )
+						// .\\while.g:126:32: ^( EXPRBASE 'cons' lexpr )
 						{
 						Object root_1 = (Object)adaptor.nil();
 						root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(EXPRBASE, "EXPRBASE"), root_1);
@@ -2190,7 +2190,7 @@ public class whileParser extends Parser {
 					}
 					break;
 				case 3 :
-					// while.g:127:7: 'hd' exprbase
+					// .\\while.g:127:7: 'hd' exprbase
 					{
 					string_literal53=(Token)match(input,40,FOLLOW_40_in_exprbase_paren1204);  
 					stream_40.add(string_literal53);
@@ -2201,7 +2201,7 @@ public class whileParser extends Parser {
 
 					stream_exprbase.add(exprbase54.getTree());
 					// AST REWRITE
-					// elements: exprbase, 40
+					// elements: 40, exprbase
 					// token labels: 
 					// rule labels: retval
 					// token list labels: 
@@ -2213,7 +2213,7 @@ public class whileParser extends Parser {
 					root_0 = (Object)adaptor.nil();
 					// 127:29: -> ^( EXPRBASE 'hd' exprbase )
 					{
-						// while.g:127:32: ^( EXPRBASE 'hd' exprbase )
+						// .\\while.g:127:32: ^( EXPRBASE 'hd' exprbase )
 						{
 						Object root_1 = (Object)adaptor.nil();
 						root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(EXPRBASE, "EXPRBASE"), root_1);
@@ -2230,7 +2230,7 @@ public class whileParser extends Parser {
 					}
 					break;
 				case 4 :
-					// while.g:128:7: 'tl' exprbase
+					// .\\while.g:128:7: 'tl' exprbase
 					{
 					string_literal55=(Token)match(input,49,FOLLOW_49_in_exprbase_paren1232);  
 					stream_49.add(string_literal55);
@@ -2253,7 +2253,7 @@ public class whileParser extends Parser {
 					root_0 = (Object)adaptor.nil();
 					// 128:29: -> ^( EXPRBASE 'tl' exprbase )
 					{
-						// while.g:128:32: ^( EXPRBASE 'tl' exprbase )
+						// .\\while.g:128:32: ^( EXPRBASE 'tl' exprbase )
 						{
 						Object root_1 = (Object)adaptor.nil();
 						root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(EXPRBASE, "EXPRBASE"), root_1);
@@ -2270,7 +2270,7 @@ public class whileParser extends Parser {
 					}
 					break;
 				case 5 :
-					// while.g:129:7: s= SYMBOL lexpr
+					// .\\while.g:129:7: s= SYMBOL lexpr
 					{
 					s=(Token)match(input,SYMBOL,FOLLOW_SYMBOL_in_exprbase_paren1262);  
 					stream_SYMBOL.add(s);
@@ -2281,7 +2281,7 @@ public class whileParser extends Parser {
 
 					stream_lexpr.add(lexpr57.getTree());
 					// AST REWRITE
-					// elements: lexpr, s
+					// elements: s, lexpr
 					// token labels: s
 					// rule labels: retval
 					// token list labels: 
@@ -2294,7 +2294,7 @@ public class whileParser extends Parser {
 					root_0 = (Object)adaptor.nil();
 					// 129:31: -> ^( EXPRBASE $s lexpr )
 					{
-						// while.g:129:34: ^( EXPRBASE $s lexpr )
+						// .\\while.g:129:34: ^( EXPRBASE $s lexpr )
 						{
 						Object root_1 = (Object)adaptor.nil();
 						root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(EXPRBASE, "EXPRBASE"), root_1);
@@ -2339,7 +2339,7 @@ public class whileParser extends Parser {
 
 
 	// $ANTLR start "expression"
-	// while.g:132:1: expression : a= exprbase ( '=?' b= exprbase )? -> ^( EXPRESSION $a ( $b)? ) ;
+	// .\\while.g:132:1: expression : a= exprbase ( '=?' b= exprbase )? -> ^( EXPRESSION $a ( $b)? ) ;
 	public final whileParser.expression_return expression() throws RecognitionException {
 		whileParser.expression_return retval = new whileParser.expression_return();
 		retval.start = input.LT(1);
@@ -2355,15 +2355,15 @@ public class whileParser extends Parser {
 		RewriteRuleSubtreeStream stream_exprbase=new RewriteRuleSubtreeStream(adaptor,"rule exprbase");
 
 		try {
-			// while.g:132:12: (a= exprbase ( '=?' b= exprbase )? -> ^( EXPRESSION $a ( $b)? ) )
-			// while.g:133:7: a= exprbase ( '=?' b= exprbase )?
+			// .\\while.g:132:12: (a= exprbase ( '=?' b= exprbase )? -> ^( EXPRESSION $a ( $b)? ) )
+			// .\\while.g:133:7: a= exprbase ( '=?' b= exprbase )?
 			{
 			pushFollow(FOLLOW_exprbase_in_expression1305);
 			a=exprbase();
 			state._fsp--;
 
 			stream_exprbase.add(a.getTree());
-			// while.g:133:18: ( '=?' b= exprbase )?
+			// .\\while.g:133:18: ( '=?' b= exprbase )?
 			int alt12=2;
 			int LA12_0 = input.LA(1);
 			if ( (LA12_0==32) ) {
@@ -2371,7 +2371,7 @@ public class whileParser extends Parser {
 			}
 			switch (alt12) {
 				case 1 :
-					// while.g:133:19: '=?' b= exprbase
+					// .\\while.g:133:19: '=?' b= exprbase
 					{
 					string_literal58=(Token)match(input,32,FOLLOW_32_in_expression1308);  
 					stream_32.add(string_literal58);
@@ -2401,12 +2401,12 @@ public class whileParser extends Parser {
 			root_0 = (Object)adaptor.nil();
 			// 134:7: -> ^( EXPRESSION $a ( $b)? )
 			{
-				// while.g:134:10: ^( EXPRESSION $a ( $b)? )
+				// .\\while.g:134:10: ^( EXPRESSION $a ( $b)? )
 				{
 				Object root_1 = (Object)adaptor.nil();
 				root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(EXPRESSION, "EXPRESSION"), root_1);
 				adaptor.addChild(root_1, stream_a.nextTree());
-				// while.g:134:26: ( $b)?
+				// .\\while.g:134:26: ( $b)?
 				if ( stream_b.hasNext() ) {
 					adaptor.addChild(root_1, stream_b.nextTree());
 				}
@@ -2449,7 +2449,7 @@ public class whileParser extends Parser {
 
 
 	// $ANTLR start "lexpr"
-	// while.g:137:1: lexpr : (e= exprbase )* -> ^( LEXPR ( $e)* ) ;
+	// .\\while.g:137:1: lexpr : (e= exprbase )* -> ^( LEXPR ( $e)* ) ;
 	public final whileParser.lexpr_return lexpr() throws RecognitionException {
 		whileParser.lexpr_return retval = new whileParser.lexpr_return();
 		retval.start = input.LT(1);
@@ -2461,10 +2461,10 @@ public class whileParser extends Parser {
 		RewriteRuleSubtreeStream stream_exprbase=new RewriteRuleSubtreeStream(adaptor,"rule exprbase");
 
 		try {
-			// while.g:137:7: ( (e= exprbase )* -> ^( LEXPR ( $e)* ) )
-			// while.g:138:7: (e= exprbase )*
+			// .\\while.g:137:7: ( (e= exprbase )* -> ^( LEXPR ( $e)* ) )
+			// .\\while.g:138:7: (e= exprbase )*
 			{
-			// while.g:138:8: (e= exprbase )*
+			// .\\while.g:138:8: (e= exprbase )*
 			loop13:
 			while (true) {
 				int alt13=2;
@@ -2475,7 +2475,7 @@ public class whileParser extends Parser {
 
 				switch (alt13) {
 				case 1 :
-					// while.g:138:8: e= exprbase
+					// .\\while.g:138:8: e= exprbase
 					{
 					pushFollow(FOLLOW_exprbase_in_lexpr1356);
 					e=exprbase();
@@ -2504,11 +2504,11 @@ public class whileParser extends Parser {
 			root_0 = (Object)adaptor.nil();
 			// 138:19: -> ^( LEXPR ( $e)* )
 			{
-				// while.g:138:22: ^( LEXPR ( $e)* )
+				// .\\while.g:138:22: ^( LEXPR ( $e)* )
 				{
 				Object root_1 = (Object)adaptor.nil();
 				root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(LEXPR, "LEXPR"), root_1);
-				// while.g:138:31: ( $e)*
+				// .\\while.g:138:31: ( $e)*
 				while ( stream_e.hasNext() ) {
 					adaptor.addChild(root_1, stream_e.nextTree());
 				}
