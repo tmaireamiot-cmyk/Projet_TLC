@@ -1,15 +1,15 @@
-function main :
-read X, Y
+
+function and :
+read Op1, Op2
 %
-Z := (add X Y)
-%
-write Z, X
-function add :
-read X, Y
-%
-Result := X;
-for Y do
-Result := (cons nil Y Z T)
-od
+if (not Op1) then
+Result := (false)
+else
+if (not Op2) then
+Result := (false)
+else
+Result := (true)
+fi
+fi
 %
 write Result

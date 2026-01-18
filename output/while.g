@@ -135,7 +135,7 @@ exprbase_paren
     | 'cons' lexpr          -> ^(CONS lexpr)
     | 'hd' exprbase         -> ^(HD exprbase)
     | 'tl' exprbase         -> ^(TL exprbase)
-    | s=SYMBOL lexpr          -> ^(FUNC $s lexpr)
+    | s=SYMBOL lexpr          -> ^(FUNC $s lexpr?)
     ;
 
 expression :

@@ -1,4 +1,4 @@
-// $ANTLR 3.5.2 while.g 2025-12-19 10:08:31
+// $ANTLR 3.5.2 while.g 2025-12-19 11:01:39
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -2040,7 +2040,7 @@ public class whileParser extends Parser {
 
 
 	// $ANTLR start "exprbase_paren"
-	// while.g:133:1: exprbase_paren : ( 'list' lexpr -> ^( LIST lexpr ) | 'cons' lexpr -> ^( CONS lexpr ) | 'hd' exprbase -> ^( HD exprbase ) | 'tl' exprbase -> ^( TL exprbase ) |s= SYMBOL lexpr -> ^( FUNC $s lexpr ) );
+	// while.g:133:1: exprbase_paren : ( 'list' lexpr -> ^( LIST lexpr ) | 'cons' lexpr -> ^( CONS lexpr ) | 'hd' exprbase -> ^( HD exprbase ) | 'tl' exprbase -> ^( TL exprbase ) |s= SYMBOL lexpr -> ^( FUNC $s ( lexpr )? ) );
 	public final whileParser.exprbase_paren_return exprbase_paren() throws RecognitionException {
 		whileParser.exprbase_paren_return retval = new whileParser.exprbase_paren_return();
 		retval.start = input.LT(1);
@@ -2072,7 +2072,7 @@ public class whileParser extends Parser {
 		RewriteRuleSubtreeStream stream_exprbase=new RewriteRuleSubtreeStream(adaptor,"rule exprbase");
 
 		try {
-			// while.g:134:5: ( 'list' lexpr -> ^( LIST lexpr ) | 'cons' lexpr -> ^( CONS lexpr ) | 'hd' exprbase -> ^( HD exprbase ) | 'tl' exprbase -> ^( TL exprbase ) |s= SYMBOL lexpr -> ^( FUNC $s lexpr ) )
+			// while.g:134:5: ( 'list' lexpr -> ^( LIST lexpr ) | 'cons' lexpr -> ^( CONS lexpr ) | 'hd' exprbase -> ^( HD exprbase ) | 'tl' exprbase -> ^( TL exprbase ) |s= SYMBOL lexpr -> ^( FUNC $s ( lexpr )? ) )
 			int alt11=5;
 			switch ( input.LA(1) ) {
 			case 52:
@@ -2285,14 +2285,19 @@ public class whileParser extends Parser {
 					RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.getTree():null);
 
 					root_0 = (Object)adaptor.nil();
-					// 138:31: -> ^( FUNC $s lexpr )
+					// 138:31: -> ^( FUNC $s ( lexpr )? )
 					{
-						// while.g:138:34: ^( FUNC $s lexpr )
+						// while.g:138:34: ^( FUNC $s ( lexpr )? )
 						{
 						Object root_1 = (Object)adaptor.nil();
 						root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(FUNC, "FUNC"), root_1);
 						adaptor.addChild(root_1, stream_s.nextNode());
-						adaptor.addChild(root_1, stream_lexpr.nextTree());
+						// while.g:138:44: ( lexpr )?
+						if ( stream_lexpr.hasNext() ) {
+							adaptor.addChild(root_1, stream_lexpr.nextTree());
+						}
+						stream_lexpr.reset();
+
 						adaptor.addChild(root_0, root_1);
 						}
 
@@ -2351,7 +2356,7 @@ public class whileParser extends Parser {
 			// while.g:141:12: (a= exprbase ( '=?' b= exprbase )? -> $a ( $b)? )
 			// while.g:142:7: a= exprbase ( '=?' b= exprbase )?
 			{
-			pushFollow(FOLLOW_exprbase_in_expression1366);
+			pushFollow(FOLLOW_exprbase_in_expression1367);
 			a=exprbase();
 			state._fsp--;
 
@@ -2366,10 +2371,10 @@ public class whileParser extends Parser {
 				case 1 :
 					// while.g:142:19: '=?' b= exprbase
 					{
-					string_literal56=(Token)match(input,41,FOLLOW_41_in_expression1369);  
+					string_literal56=(Token)match(input,41,FOLLOW_41_in_expression1370);  
 					stream_41.add(string_literal56);
 
-					pushFollow(FOLLOW_exprbase_in_expression1373);
+					pushFollow(FOLLOW_exprbase_in_expression1374);
 					b=exprbase();
 					state._fsp--;
 
@@ -2463,7 +2468,7 @@ public class whileParser extends Parser {
 				case 1 :
 					// while.g:147:7: exprbase
 					{
-					pushFollow(FOLLOW_exprbase_in_lexpr1411);
+					pushFollow(FOLLOW_exprbase_in_lexpr1412);
 					exprbase57=exprbase();
 					state._fsp--;
 
@@ -2601,8 +2606,8 @@ public class whileParser extends Parser {
 	public static final BitSet FOLLOW_exprbase_in_exprbase_paren1297 = new BitSet(new long[]{0x0000000000000002L});
 	public static final BitSet FOLLOW_SYMBOL_in_exprbase_paren1323 = new BitSet(new long[]{0x0020001120000000L});
 	public static final BitSet FOLLOW_lexpr_in_exprbase_paren1325 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_exprbase_in_expression1366 = new BitSet(new long[]{0x0000020000000002L});
-	public static final BitSet FOLLOW_41_in_expression1369 = new BitSet(new long[]{0x0020001120000000L});
-	public static final BitSet FOLLOW_exprbase_in_expression1373 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_exprbase_in_lexpr1411 = new BitSet(new long[]{0x0020001120000002L});
+	public static final BitSet FOLLOW_exprbase_in_expression1367 = new BitSet(new long[]{0x0000020000000002L});
+	public static final BitSet FOLLOW_41_in_expression1370 = new BitSet(new long[]{0x0020001120000000L});
+	public static final BitSet FOLLOW_exprbase_in_expression1374 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_exprbase_in_lexpr1412 = new BitSet(new long[]{0x0020001120000002L});
 }
