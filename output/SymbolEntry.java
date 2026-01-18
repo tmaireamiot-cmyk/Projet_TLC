@@ -28,10 +28,10 @@ class SymbolEntry {
 /**
  * Gère les portées (scopes) en utilisant une pile de HashMaps.
  */
-class SymbolTable {
+class ScopedSymbolTable {
     private Stack<HashMap<String, SymbolEntry>> scopeStack = new Stack<>();
 
-    public SymbolTable() {
+    public ScopedSymbolTable() {
         // Initialiser la portée globale
         enterScope();
     }

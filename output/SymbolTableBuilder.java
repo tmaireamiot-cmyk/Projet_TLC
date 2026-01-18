@@ -10,7 +10,7 @@ import org.antlr.runtime.tree.CommonTree;
 
 public class SymbolTableBuilder { // Implémente MonVisiteur
 
-    private final SymbolTable symbolTable = new SymbolTable();
+    private final ScopedSymbolTable symbolTable = new ScopedSymbolTable();
     private boolean hasErrors = false;
     
     // Définitions de types de nœuds (À AJUSTER SELON VOTRE GRAMMAIRE ANTLR !)
@@ -30,7 +30,7 @@ public class SymbolTableBuilder { // Implémente MonVisiteur
         // Dans votre code, vous devriez utiliser directement whileParser.FUNCTION, etc.
     }
     
-    public SymbolTable getSymbolTable() {
+    public ScopedSymbolTable getSymbolTable() {
         return symbolTable;
     }
     
