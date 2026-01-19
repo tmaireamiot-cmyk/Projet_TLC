@@ -39,12 +39,17 @@ public class __Test__ {
             GenerateurTACArbre gen = new GenerateurTACArbre(tac);
             gen.generer(tree);   
 
-            System.out.println("=== TAC généré ===");
+            System.out.println(" TAC généré");
             tac.print();
 
             String codeC = TraducteurC.genererCodeC(tac);
-            System.out.println("=== CODE C ===");
+            System.out.println("CODE C");
             System.out.println(codeC);
+            try (PrintWriter w = new PrintWriter("prog.c")) {
+                w.print(codeC);
+            }
+            System.out.println("C écrit dans prog.c");
+            
         } catch (RecognitionException e) {
             e.printStackTrace();
         }

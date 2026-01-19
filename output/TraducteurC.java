@@ -5,7 +5,7 @@ public class TraducteurC {
 
         StringBuilder c = new StringBuilder();
 
-        // --- EN-TÊTE C ---
+        //EN-TÊTE C
         c.append("#include <stdio.h>\n");
         c.append("#include <stdlib.h>\n\n");
 

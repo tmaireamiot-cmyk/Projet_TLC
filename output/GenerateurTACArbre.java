@@ -85,6 +85,9 @@ public class GenerateurTACArbre {
             case "for":
                 genFor(commandNode);
                 break;
+            case "foreach":
+                genForEach(commandNode);
+                break;
             case "while":
                 genWhile(commandNode);
                 break;
@@ -181,6 +184,54 @@ public class GenerateurTACArbre {
 
         code.add(new Instruction3Addr(Instruction3Addr.Op.PLACE, Lend, null, null));
     }
+
+    // ========= FOREACH =========
+    private void genForEach(CommonTree cmd) {
+
+        String X = cmd.getChild(1).getText();          // variable foreach
+        CommonTree exprNode = (CommonTree) cmd.getChild(2); // expression après "in"
+        CommonTree bodyNode = (CommonTree) cmd.getChild(3); // corps
+
+    
+        String v = newTemp();
+        String e = genAnyExpr(exprNode);
+        code.add(new Instruction3Addr(Instruction3Addr.Op.COPY, v, e, null));
+
+        String Ltest = newLabel();
+        String Lbody = newLabel();
+        String Lend  = newLabel();
+
+        // Ltest:
+        code.add(new Instruction3Addr(Instruction3Addr.Op.PLACE, Ltest, null, null));
+
+        // if v goto Lbody else goto Lend
+        code.add(new Instruction3Addr(Instruction3Addr.Op.IF, v, null, null));
+        code.add(new Instruction3Addr(Instruction3Addr.Op.GOTO, Lbody, null, null));
+        code.add(new Instruction3Addr(Instruction3Addr.Op.GOTO, Lend, null, null));
+
+        // Lbody:
+        code.add(new Instruction3Addr(Instruction3Addr.Op.PLACE, Lbody, null, null));
+
+        // X = hd(v)
+        String head = newTemp();
+        code.add(new Instruction3Addr(Instruction3Addr.Op.HD, head, v, null));
+
+        code.getSymbols().declare(X);
+        code.add(new Instruction3Addr(Instruction3Addr.Op.COPY, X, head, null));
+
+        // corps
+        genCommands(bodyNode);
+
+        // v = tl(v)
+        code.add(new Instruction3Addr(Instruction3Addr.Op.TL, v, v, null));
+
+        // goto Ltest
+        code.add(new Instruction3Addr(Instruction3Addr.Op.GOTO, Ltest, null, null));
+
+        // Lend:
+        code.add(new Instruction3Addr(Instruction3Addr.Op.PLACE, Lend, null, null));
+}
+
 
     // ========= EXPRESSIONS =========
 

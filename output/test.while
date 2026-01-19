@@ -1,22 +1,9 @@
-function main:
-read X,Y %
-  Z := nil;
-  Z := (cons X Z);
-  Z := (hd Z);
-  Z := (tl Z);
+function main :
+read %
+    X := (cons nil (cons nil nil));
+    Y := nil;
+    foreach I in X do
+        Y := (cons I Y)
+    od
+% write Y
 
-  if X then
-    Z := nil
-  else
-    Z := (cons Y Z)
-  fi;
-
-  while X do
-    X := (tl X)
-  od;
-
-  for X do
-    Z := (cons (hd X) Z)
-  od
-%
-write Z
