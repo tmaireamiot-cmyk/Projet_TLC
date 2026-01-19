@@ -1,0 +1,22 @@
+function main:
+read X,Y %
+  Z := nil;
+  Z := (cons X Z);
+  Z := (hd Z);
+  Z := (tl Z);
+
+  if X then
+    Z := nil
+  else
+    Z := (cons Y Z)
+  fi;
+
+  while X do
+    X := (tl X)
+  od;
+
+  for X do
+    Z := (cons (hd X) Z)
+  od
+%
+write Z
